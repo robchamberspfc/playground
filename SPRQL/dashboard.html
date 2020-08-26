@@ -1,0 +1,24 @@
+<html>
+
+<body>
+    <div id="app">
+
+
+    </div>
+</body>
+
+<script>
+    console.log("Running")
+    let data =
+        "PREFIX%20dcat%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2Fns%2Fdcat%23%3E%0APREFIX%20dcterms%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX%20owl%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0APREFIX%20qb%3A%20%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23%3E%0APREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20sdmx%3A%20%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fsdmx%2F2009%2Fconcept%23%3E%0APREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0APREFIX%20void%3A%20%3Chttp%3A%2F%2Frdfs.org%2Fns%2Fvoid%23%3E%0APREFIX%20xsd%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0A%0ASELECT%20%2A%0AWHERE%20%7B%0A%20%20%3Fs%20%3Chttp%3A%2F%2Fopendatacommunities.org%2Fdef%2Fontology%2Fgeography%2FrefArea%3E%20%3Chttp%3A%2F%2Fopendatacommunities.org%2Fid%2Fgeography%2Fadministration%2Flsoa%2FE01002409%3E.%0A%20%20%3Fs%20%3Chttp%3A%2F%2Fopendatacommunities.org%2Fdef%2Fontology%2Ftime%2FrefPeriod%3E%20%3Chttp%3A%2F%2Freference.data.gov.uk%2Fid%2Fyear%2F2019%3E.%0A%20%20%3Fs%20%3Chttp%3A%2F%2Fopendatacommunities.org%2Fdef%2Fontology%2Fcommunities%2Fsocietal_wellbeing%2Fimd%2Findices%3E%20%3Chttp%3A%2F%2Fopendatacommunities.org%2Fdef%2Fconcept%2Fgeneral-concepts%2Fimd%2Fcombineddeprivation%3E.%0A%20%20%3Fs%20%3Chttp%3A%2F%2Fopendatacommunities.org%2Fdef%2Fontology%2Fcommunities%2Fsocietal_wellbeing%2Fimd%2FscoreObs%3E%20%3Fobs.%0A%7D%0A%0ALIMIT%20100%0A"
+
+    fetch('https://opendatacommunities.org/sparql.json?query=' + data)
+        .then((response) => {
+            return response.json();
+        }).then((myJson) => {
+            console.log(myJson.results.bindings[0].obs.value);
+        });;
+</script>
+
+
+</html>

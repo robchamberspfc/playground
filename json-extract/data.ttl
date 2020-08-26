@@ -1,0 +1,30 @@
+<EAID_07F328A7_9A10_400f_BA78_AECB65EE3511> <_xmi.id> 'Metadata is findable internally and externally' .
+<EAID_19BD5385_4E1C_4278_B2E6_6A675BDB82EC> <_xmi.id> 'Methodology selected' .
+<EAID_1B7C5A95_DF61_435f_A84C_F32255FA5EA8> <_xmi.id> 'Produce a river dataset enabling all our staff to maximise its use in their work for greater internal efficiency and business benefit.' .
+<EAID_1FBB7379_1CAC_4352_BBA9_99195F703280> <_xmi.id> 'Standard compliant metadata published' .
+<EAID_2D73EC99_3D72_4e9e_A0B0_8FD682FB2045> <_xmi.id> 'Discover and use data' .
+<EAID_3207659C_D55D_49d5_B4A9_957CD00CDD44> <_xmi.id> 'Regulate and implement policy that impact rivers' .
+<EAID_35937EEA_6EFF_4fff_8EA3_4DBC573E79E3> <_xmi.id> 'Standard Address dataset' .
+<EAID_3CCA59EA_46B4_4648_B86A_5788DC1800F9> <_xmi.id> 'Consistency in Reporting, Operations and Policy' .
+<EAID_3ED796DE_4F2F_44d4_9D6F_F91FDBDD7D4D> <_xmi.id> 'Single, standard river centreline for England and Wales providing a core-reference geography for network tracing and topological connectivity' .
+<EAID_41184039_B48F_403e_BD62_739CC2EA79DA> <_xmi.id> 'The quality of surface, ground, coastal waters and wetlands continue to improve for the benefit of people, the economy and wildlife' .
+<EAID_48D271BC_7515_40e4_8664_CDEC169DD17B> <_xmi.id> 'Reflect latest admin' .
+<EAID_49D8AB96_75FF_4557_B909_823DFB2172C5> <_xmi.id> 'Up-to-date list of Custodians which enables the Business to undertake Data Maturity and Governance' .
+<EAID_50AA87FF_751E_4a50_81F6_8EE3949CC57B> <_xmi.id> 'Single line extraction or centreline delineated from OS MasterMap?' .
+<EAID_597164F1_5294_48c7_A029_E38CB8FB064A> <_xmi.id> 'Standard River Network' .
+<EAID_5EB66A80_F135_4344_8C25_3F5AE9E0B1A9> <_xmi.id> 'Provide an addess look up and service to implement Address Standard' .
+<EAID_6253564C_1B91_44c3_A73F_61AED0A51740> <_xmi.id> 'List providing overview of datasets held by the Environment Agency including additional details about the holdings' .
+<EAID_8EDDC069_44D7_4ec1_A473_B2C9C1B0A4F9> <_xmi.id> 'Has metadata record been approved?' .
+<EAID_9416B7DE_CE39_49e7_A492_567A614B4226> <_xmi.id> 'Issue commerical licences to customers within FoI/EIR regulations' .
+<EAID_97FC219C_B054_4a0c_BF80_46A6CA6D2637> <_xmi.id> 'Comply with ePR Legislation' .
+<EAID_B32A5832_6E4A_49f3_87C4_3C55091D5796> <_xmi.id> 'Is the dataset published externally?' .
+<EAID_B4D92474_024A_42bf_A61F_2DA18800FD0D> <_xmi.id> 'Overview of datasets held by the Environment Agency' .
+<EAID_C90A78CE_D90A_4077_86E6_2694A5E1C3A5> <_xmi.id> 'Need to understand data custodians for business areas' .
+<EAID_C9D2C78A_D81E_4025_BE6F_CE80480D5C99> <_xmi.id> 'Classification required as part of monitoring and assessment for WFD' .
+<EAID_D3299AB5_59C3_4345_9FF5_165CB4BE9245> <_xmi.id> 'Publish Public Registers' .
+<EAID_D451ECB1_7D15_4fca_8566_86B3A079A4CC> <_xmi.id> 'Adhere to IFTS, RoPSI legislation and manage commerical data income' .
+<EAID_D828E840_9A28_412a_BCBD_75C1037660B5> <_xmi.id> 'Locate culvert survey' .
+<EAID_DB891064_CEAD_4420_97F2_ED551A0AE182> <_xmi.id> 'Implement Corporate Address Data Standard' .
+<EAID_E284E85E_EC63_4a3b_A794_82D494C739E6> <_xmi.id> 'Consistency in reporting, operations and policy' .
+<EAID_E5F82359_0193_48a4_AC50_7B08E7133B1E> <_xmi.id> 'Does a culvert exist?' .
+<EAID_FE3783D5_E966_47fd_B9C7_85B89C568E1B> <_xmi.id> 'Fulfil the Environment Agencys reporting obligations under INSPIRE' .

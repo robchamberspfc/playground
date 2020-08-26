@@ -1,0 +1,21 @@
+<html>
+
+
+<script>
+    fetch('https://admiraltyapi.azure-api.net/uktidalapi/api/V1/Stations',{    
+        mode: 'no-cors',
+        headers: {
+    //   'Content-Type': 'application/json',
+    //   'Host': 'admiraltyapi.azure-api.net',
+      'Ocp-Apim-Subscription-Key' : ''
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    }
+    }
+)
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {})
+</script>
+
+</html>

@@ -1,0 +1,266 @@
+{
+  "nodes": {
+    "http://api.stardog.com/EAID_649BD4F5_3990_4d5b_9178_A6327BAE378B": {
+      "x": -88.82554927106598,
+      "y": 12.404324894121643,
+      "fx": -88.82554927106598,
+      "fy": 12.404324894121643
+    },
+    "http://api.stardog.com/EAID_50AA87FF_751E_4a50_81F6_8EE3949CC57B": {
+      "x": -121.09789496403732,
+      "y": 10.500025194620463,
+      "fx": -121.09789496403732,
+      "fy": 10.500025194620463
+    },
+    "http://api.stardog.com/EAID_19BD5385_4E1C_4278_B2E6_6A675BDB82EC": {
+      "x": -19.23144123480433,
+      "y": 21.051760746476127,
+      "fx": -19.23144123480433,
+      "fy": 21.051760746476127
+    },
+    "Methodology selected-undefined-http://www.w3.org/2001/XMLSchema#string": {
+      "x": 129.34901062379592,
+      "y": -54.580375319016554,
+      "fx": null,
+      "fy": null
+    },
+    "http://api.stardog.com/EAID_B6DCD4D7_6EB8_4e3c_A18B_34809F19BAEC": {
+      "x": 18.54389242394248,
+      "y": -40.54376765263531,
+      "fx": 18.54389242394248,
+      "fy": -40.54376765263531
+    },
+    "http://api.stardog.com/EAID_FF077F9D_8DEC_4fed_BEF1_4BADDD518C63": {
+      "x": 11.06987649155473,
+      "y": 81.879190065688,
+      "fx": 11.06987649155473,
+      "fy": 81.879190065688
+    },
+    "http://api.stardog.com/EAID_25D69F61_81B4_44b8_8891_09C287827622": {
+      "x": -168.22850345296104,
+      "y": 15.131945305555952,
+      "fx": -168.22850345296104,
+      "fy": 15.131945305555952
+    },
+    "Single line extraction or centreline delineated from OS MasterMap?-undefined-http://www.w3.org/2001/XMLSchema#string": {
+      "x": 58.168243226096656,
+      "y": -106.15677295423387,
+      "fx": null,
+      "fy": null
+    },
+    "http://api.stardog.com/EAID_4B4FFA8B_3E45_41d9_905C_BF8494CD461F": {
+      "x": 72.03566154211812,
+      "y": -57.38152836276646,
+      "fx": 72.03566154211812,
+      "fy": -57.38152836276646
+    },
+    "http://api.stardog.com/EAID_C232AF9D_00DE_433e_AC7E_C16C42586AFE": {
+      "x": 43.13620174640317,
+      "y": 104.65600091629227,
+      "fx": 43.13620174640317,
+      "fy": 104.65600091629227
+    },
+    "Algorithm run to extract centreline from OS Master Map polygon-undefined-http://www.w3.org/2001/XMLSchema#string": {
+      "x": 49.3283074681967,
+      "y": -15.854279848508867,
+      "fx": null,
+      "fy": null
+    },
+    "http://api.stardog.com/EAID_A2D5863F_FB97_4c15_8E21_D214B4B30BEC": {
+      "x": 99.10595967325305,
+      "y": -11.146478582245614,
+      "fx": 99.10595967325305,
+      "fy": -11.146478582245614
+    },
+    "http://api.stardog.com/EAID_EA6FA26A_0AB1_4fa7_8F70_0F10149C5F85": {
+      "x": -207.16558084132078,
+      "y": 17.67774760265939,
+      "fx": -207.16558084132078,
+      "fy": 17.67774760265939
+    },
+    "http://api.stardog.com/EAID_1F5B4A67_EC36_4947_91F0_D5D4B4644E13": {
+      "x": -300.30656480834375,
+      "y": 11.472424747839156,
+      "fx": -300.30656480834375,
+      "fy": 11.472424747839156
+    },
+    "http://api.stardog.com/EAID_59EDF1C9_53F9_4f5d_B9D9_B99312B1C1E3": {
+      "x": -301.2741985070857,
+      "y": 48.718468551547666,
+      "fx": -301.2741985070857,
+      "fy": 48.718468551547666
+    },
+    "http://api.stardog.com/EAID_D9D11AC4_8E23_45be_93CD_B9611F216D34": {
+      "x": -292.6017502311928,
+      "y": -38.33688741869645,
+      "fx": -292.6017502311928,
+      "fy": -38.33688741869645
+    },
+    "Determine river centre line delineation-undefined-http://www.w3.org/2001/XMLSchema#string": {
+      "x": -145.792888147346,
+      "y": -14.33338518816308,
+      "fx": null,
+      "fy": null
+    },
+    "http://api.stardog.com/EAID_1B7C5A95_DF61_435f_A84C_F32255FA5EA8": {
+      "x": -415.2183172448619,
+      "y": -34.95406240114385,
+      "fx": -415.2183172448619,
+      "fy": -34.95406240114385
+    },
+    "http://api.stardog.com/EAID_3ED796DE_4F2F_44d4_9D6F_F91FDBDD7D4D": {
+      "x": -435.5693352635135,
+      "y": 14.344697490439358,
+      "fx": -435.5693352635135,
+      "fy": 14.344697490439358
+    },
+    "http://api.stardog.com/EAID_FE3783D5_E966_47fd_B9C7_85B89C568E1B": {
+      "x": -414.39467090395476,
+      "y": 63.1533744686501,
+      "fx": -414.39467090395476,
+      "fy": 63.1533744686501
+    },
+    "Fulfil the Environment Agencys reporting obligations under INSPIRE-undefined-http://www.w3.org/2001/XMLSchema#string": {
+      "x": -357.5669825370824,
+      "y": 62.828364994730364,
+      "fx": null,
+      "fy": null
+    },
+    "Single, standard river centreline for England and Wales providing a core-reference geography for network tracing and topological connectivity-undefined-http://www.w3.org/2001/XMLSchema#string": {
+      "x": -377.92179022071304,
+      "y": 7.279640660875081,
+      "fx": null,
+      "fy": null
+    },
+    "Produce a river dataset enabling all our staff to maximise its use in their work for greater internal efficiency and business benefit.-undefined-http://www.w3.org/2001/XMLSchema#string": {
+      "x": -358.89303145307605,
+      "y": -48.201609445250405,
+      "fx": null,
+      "fy": null
+    },
+    "OS MasterMap single line geometry is extracted (<1m Urban Areas, <2m Rural Areas) and any gaps <50m merged-undefined-http://www.w3.org/2001/XMLSchema#string": {
+      "x": 57.07921640153971,
+      "y": 31.193889950437516,
+      "fx": null,
+      "fy": null
+    },
+    "http://api.stardog.com/EAID_F73A358C_E941_46eb_B9A6_66FF4EB5A3E1": {
+      "x": 96.89315055902472,
+      "y": 61.4401636713555,
+      "fx": 96.89315055902472,
+      "fy": 61.4401636713555
+    },
+    "http://api.stardog.com/EAID_E5F82359_0193_48a4_AC50_7B08E7133B1E": {
+      "x": 120.0294684906914,
+      "y": 22.56715435439797,
+      "fx": 120.0294684906914,
+      "fy": 22.56715435439797
+    },
+    "http://api.stardog.com/EAID_4D803F25_2C14_4def_8404_E2B2D197475D": {
+      "x": 166.42219430123092,
+      "y": 26.800128676945192,
+      "fx": 166.42219430123092,
+      "fy": 26.800128676945192
+    },
+    "Does a culvert exist?-undefined-http://www.w3.org/2001/XMLSchema#string": {
+      "x": 166.13328298531343,
+      "y": -24.278557425912176,
+      "fx": null,
+      "fy": null
+    },
+    "http://api.stardog.com/EAID_D828E840_9A28_412a_BCBD_75C1037660B5": {
+      "x": 198.19047670277286,
+      "y": 12.54435796838283,
+      "fx": 198.19047670277286,
+      "fy": 12.54435796838283
+    },
+    "http://api.stardog.com/EAID_5BB3AF92_087B_44c8_98AD_12BD337283D6": {
+      "x": 247.194423631732,
+      "y": 34.546448524414096,
+      "fx": 247.194423631732,
+      "fy": 34.546448524414096
+    },
+    "http://api.stardog.com/EAID_94FFC886_DC20_4815_8C2F_45C81323B876": {
+      "x": 235.73310936037876,
+      "y": -10.185830693436774,
+      "fx": 235.73310936037876,
+      "fy": -10.185830693436774
+    },
+    "Locate culvert survey-undefined-http://www.w3.org/2001/XMLSchema#string": {
+      "x": 248.02386016263497,
+      "y": 8.465680258076842,
+      "fx": null,
+      "fy": null
+    },
+    "http://api.stardog.com/EAID_E3FD8299_5D1F_40f2_A624_7BF13AD1BD7B": {
+      "x": 283.6803117963938,
+      "y": -17.59279413733761,
+      "fx": 283.6803117963938,
+      "fy": -17.59279413733761
+    },
+    "http://api.stardog.com/EAID_6FD2CDFD_F34F_4057_9792_87F8AD0A07EE": {
+      "x": 286.80212727496223,
+      "y": 33.01300581241133,
+      "fx": 286.80212727496223,
+      "fy": 33.01300581241133
+    },
+    "If culvert survey exists for location extract from Sealed Main Rivers and append to join the >50m gap-undefined-http://www.w3.org/2001/XMLSchema#string": {
+      "x": 342.9820937809153,
+      "y": 30.990617876568944,
+      "fx": null,
+      "fy": null
+    },
+    "If no culvert survey gaps >50m are manually sorted for culverts and linked manually using inferred connectivity-undefined-http://www.w3.org/2001/XMLSchema#string": {
+      "x": 338.70073118785456,
+      "y": -26.50957164068962,
+      "fx": null,
+      "fy": null
+    }
+  },
+  "nodeGroupBy": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+  "nodeGroups": {
+    "__NO_GROUP_TYPE__": {
+      "colorIdx": 8,
+      "captionKey": "__USE_LABEL_PREDICATES__",
+      "isHidden": false
+    },
+    "__MULTI_GROUP_TYPE__": {
+      "colorIdx": 8,
+      "captionKey": "__USE_LABEL_PREDICATES__",
+      "isHidden": false
+    }
+  },
+  "linkGroupBy": "@type",
+  "linkGroups": {
+    "__NO_GROUP_TYPE__": {
+      "colorIdx": 8,
+      "captionKey": "__USE_LABEL_PREDICATES__",
+      "isHidden": false
+    },
+    "__MULTI_GROUP_TYPE__": {
+      "colorIdx": 8,
+      "captionKey": "__USE_LABEL_PREDICATES__",
+      "isHidden": false
+    },
+    "http://api.stardog.com/-source": {
+      "colorIdx": 0,
+      "captionKey": "@type",
+      "isHidden": false
+    },
+    "http://api.stardog.com/-target": {
+      "colorIdx": 1,
+      "captionKey": "@type",
+      "isHidden": false
+    }
+  },
+  "settings": {
+    "isDarkMode": true,
+    "isForceDisabled": false,
+    "showLiteralsAsNodes": false,
+    "hideNodeCaptions": false,
+    "hideLinkCaptions": false,
+    "showNodeHoverLabel": true,
+    "showLinkHoverLabel": true,
+    "showLinkDirectionArrow": true
+  }
+}

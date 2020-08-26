@@ -1,0 +1,111 @@
+<html>
+
+<body>
+    <div id="content">
+
+    </div>
+</body>
+
+
+<script>
+    // fetch('data.json')
+    //     .then((response) => {
+    //         return response.json();
+    //     })
+    //     .then((data) => {
+    //         //console.log(data);
+    //         data.map(map => {
+    //                 source = "<" + map["-xmi.id"] + ">" + " <-source> " + "<" + map["-source"] + ">" + " ."
+    //                 target = "<" + map["-xmi.id"] + ">" + " <-target> " + "<" + map["-target"] + ">" + " ."
+    //                 document.getElementById("content").append(source)
+    //                 document.getElementById("content").append(target)
+    //             }
+
+    //         )
+
+    //     })
+
+
+        // fetch('new.json')
+        // .then((response) => {
+        //     return response.json();
+        // })
+        // .then((data) => {
+        //     console.log(data);
+        //     let subset = data["XMI.extensions"].EAStub     
+        //     subset.map(map => {
+        //             // console.log(map)
+        //             name = "<" + map["_xmi.id"] + ">" + " <_xmi.id> " + "'" + map["_name"] + "'" + " ."
+        //             document.getElementById("content").append(name)
+
+        //         }
+
+        //     )
+
+        // })
+
+    // fetch('new.json')
+    //     .then((response) => {
+    //         return response.json();
+    //     })
+    //     .then((data) => {
+    //         let subset = data["XMI.extensions"].EANoteLink     
+    //         subset.map(map => {
+    //                 console.log(map)
+    //                 source = "<" + map["_xmi.id"] + ">" + " <-source> " + "<" + map["_source"] + ">" + " ."
+    //                 target = "<" + map["_xmi.id"] + ">" + " <-target> " + "<" + map["_target"] + ">" + " ."
+    //                 document.getElementById("content").append(source)
+    //                 document.getElementById("content").append(target)
+    //             }
+
+    //         )
+
+    //     })
+
+    // [""0""][""Namespace.ownedElement""].ActivityModel[""StateMachine.transitions""].Transition
+
+        fetch('new.json')
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            console.log(data["XMI.content"])
+            // console.log(data["XMI.content"].Model["Namespace.ownedElement"].Package[0]["Namespace.ownedElement"].ActivityModel)
+            // console.log(data["XMI.content"].Model["Namespace.ownedElement"].Package[0]["Namespace.ownedElement"].ActivityModel["StateMachine.transitions"])
+            // console.log(data["XMI.content"].Model["Namespace.ownedElement"].Package[0]["Namespace.ownedElement"].ActivityModel["StateMachine.transitions"].Transition)
+            // console.log(data["XMI.content"].Model["Namespace.ownedElement"].Package[0]["Namespace.ownedElement"].ActivityModel["StateMachine.top"].CompositeState["CompositeState.substate"].ActionState)
+            let subset = data["XMI.content"].Model["Namespace.ownedElement"].Package[0]["Namespace.ownedElement"].ActivityModel
+            let transition = data["XMI.content"].Model["Namespace.ownedElement"].Package[0]["Namespace.ownedElement"].ActivityModel["StateMachine.transitions"].Transition
+            let actionState = data["XMI.content"].Model["Namespace.ownedElement"].Package[0]["Namespace.ownedElement"].ActivityModel["StateMachine.top"].CompositeState["CompositeState.substate"].ActionState
+            let pseudoState = data["XMI.content"].Model["Namespace.ownedElement"].Package[0]["Namespace.ownedElement"].ActivityModel["StateMachine.top"].CompositeState["CompositeState.substate"].PseudoState
+            // console.log (subset)   
+            // transition.map(map => {
+            //         // console.log(map)
+            //         source = "<" + map["_xmi.id"] + ">" + " <-source> " + "<" + map["_source"] + ">" + " ."
+            //         target = "<" + map["_xmi.id"] + ">" + " <-target> " + "<" + map["_target"] + ">" + " ."
+            //         document.getElementById("content").append(source)
+            //         document.getElementById("content").append(target)
+            //     }
+
+            // )
+
+            // actionState.map(map => {
+            //         // console.log(map["_name"])
+            //         name = "<" + map["_xmi.id"] + ">" + " <_xmi.id> " + "'" + map["_name"] + "'" + " ."
+            //         document.getElementById("content").append(name)
+
+            //     })
+
+            pseudoState.map(map => {
+                    // console.log(map["_name"])
+                    name = "<" + map["_xmi.id"] + ">" + " <_xmi.id> " + "'" + map["_name"] + "'" + " ."
+                    document.getElementById("content").append(name)
+
+                })
+
+         })
+
+        
+</script>
+
+</html>

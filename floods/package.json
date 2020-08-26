@@ -1,0 +1,15 @@
+{
+  "name": "floods",
+  "version": "0.0.1",
+  "description": "Test",
+  "main": "fetch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-writer": "^1.6.0",
+    "node-fetch": "^2.6.0"
+  }
+}

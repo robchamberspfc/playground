@@ -1,0 +1,169 @@
+<html>
+<button onclick='controller()'>DO IT</button>
+
+<div id="content"></div>
+
+
+<script>
+    const URL = "https://environment.data.gov.uk/api/search?searchTerm=environment&orderBy=Relevancy";
+    const start = 0
+    const pageSize = 1
+    let totalResults = 0;
+
+
+    function getData(a, b) {
+        pageRequest = URL + '&from=' + a + '&to=' + b;
+        return fetch(pageRequest)
+            .then(response => response.json())
+            .then((data) => {
+                totalResults = data.totalResults
+
+                return fetch("https://environment.data.gov.uk/api/search/result/" + data.results[0].id)
+                    .then(response => response.json())
+                    .then((data) => {
+                        return data;
+                    })
+            })
+            .catch(error => {
+                console.error(error)
+                return;
+            })
+    }
+
+    function resolveAfter() {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                resolve('resolved');
+            }, 20);
+        });
+    }
+
+    async function controller() {
+        console.log('Button pressed')
+        const total = await getData(1, 1);
+        // temp override
+        // totalResults = 940
+        results = await results(totalResults);
+        addDataToPage(results)
+
+    }
+
+    async function results(data) {
+        d = []
+        for (i = start; i < data; i + pageSize) {
+            const wait = await resolveAfter();
+            result = await getData(i + 1, i + pageSize);
+            try {
+                d.push(result)
+            } catch (error) {
+                console.error(error);
+            }
+            i = i + pageSize
+        }
+        return d
+    }
+
+    function addDataToPage(data) {
+        content =
+            "Dataset title,Owner,Description,Metadata catalogue reference,Last updated,Licence1,Licence2,Licence3,LinkURL1,LinkName1,LinkURL2,LinkName2,LinkURL3,LinkName3,LinkURL4,LinkName4,LinkURL5,LinkName5,LinkURL6,LinkName6,LinkURL7,LinkName7,LinkURL8,LinkName8,LinkURL9,LinkName9,LinkURL10,LinkName10,LinkURL11,LinkName11,LinkURL12,LinkName12"
+        for (i = 0; i < data.length; i++) {
+            if (data[i] == null) {
+                console.log(i + ": no data")
+            } else {
+                licence = ""
+                // console.log(data[i].licenceLinks.length + ": " + data[i].licenceLinks)
+                for (j = 0; j < 3; j++) {
+                    if (data[i].licenceLinks[j] != null) {
+                        if (data[i].licenceLinks[j].url != null) {
+                            licence = licence + data[i].licenceLinks[j].url + ","
+                        } else {
+
+                            if (data[i].keywords != null) {
+                                let keywords = []
+                                for (k = 0; k < data[i].keywords.length; k++) {
+                                    let keyword = data[i].keywords[k].toLowerCase()
+                                    keywords.push(keyword)
+                                }
+
+                                let open = keywords.find(keywords => keywords === "opendata")
+                                let notOpen = keywords.find(keywords => keywords === "notopen")
+
+                                if (open == "opendata") {
+                                    licence = licence +
+                                        "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/,"
+                                    console.log("Substituted: " + data[i].id)
+                                }
+                                if (notOpen == "notopen") {
+                                    licence = licence +
+                                        "https://www.gov.uk/government/publications/environment-agency-conditional-licence/environment-agency-conditional-licence\,"
+                                    console.log("Substituted: " + data[i].id)
+                                }
+
+                            } else {
+                                console.log("no keywords: " + data[i].id)
+
+
+                                // if (data[i].licenceLinks[j].detail == "DOpen Government Licence") {
+                                //     licence = licence +
+                                //         "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/,"
+                                //     console.log("Substituted: " + data[i].id)
+                                // } else {
+                                //     if (data[i].licenceLinks[j].detail ==
+                                //         "Open Government Licence\n© Environment Agency copyright and/or database right 2020. All rights reserved."
+                                //     ) {
+                                //         licence = licence +
+                                //             "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/,"
+                                //         console.log("Substituted: " + data[i].id)
+                                //     } else
+
+
+                                //         console.log(data[i].id)
+                                //     licence = licence + ","
+                                // }
+                            }
+                        }
+                    } else {
+                        // console.log(licence)
+                        if (licence === "") {
+                            // console.log(data[i].licenceLinks)
+                            if (data[i].licenceLinks != null) {
+                                // console.log(j)
+                                // console.log(data[i].licenceLinks[0])
+                                if (data[i].licenceLinks[0] != null) {
+                                if (data[i].licenceLinks[0].detail ==
+                                    "Public data (Crown Copyright) - Open Government Licence Terms and Conditions apply"
+                                    ) {
+                                    licence = licence +
+                                        "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/,"
+                                    console.log("Substituted: " + data[i].id)
+                                }
+                            }
+                            }
+                        }
+
+                        licence = licence + ","
+
+                    }
+                }
+                links = ""
+                for (k = 0; k < 12; k++) {
+                    if (data[i].links[k] != null) {
+                        links = links + data[i].links[k].url + ',"' + data[i].links[k].name + '",'
+                    } else {
+                        links = links + ","
+                    }
+                }
+                title = data[i].title.replace(/\"/g, "'")
+                abstract = data[i].abstract.replace(/\"/g, "'")
+                abstract = abstract.replace(/\</g, " less than ")
+                content = content + '<br>"' + title + '","' + data[i].publishedByName + '","' + abstract + '",' + data[
+                        i]
+                    .id + ',' + data[i].revisionDate + ',' + licence + links + ','
+            }
+        }
+        document.getElementById("content").innerHTML = content
+
+    }
+</script>
+
+</html>
