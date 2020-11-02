@@ -1,0 +1,111 @@
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+    integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+    crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<body>
+    <div id="app">
+        <h1> Simple PMD SPARQL query example</h1>
+        
+        <p>
+            The first query finds the measures associated with this dataset and adds them to this select. (<a href = "http://localhost:3000/tools/sparql?query=PREFIX%20owl%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0APREFIX%20void%3A%20%3Chttp%3A%2F%2Frdfs.org%2Fns%2Fvoid%23%3E%0APREFIX%20pmdkos%3A%20%3Chttp%3A%2F%2Fpublishmydata.com%2Fdef%2Fpmdkos%2F%3E%0APREFIX%20dcterms%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20dcat%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2Fns%2Fdcat%23%3E%0APREFIX%20pmdui%3A%20%3Chttp%3A%2F%2Fpublishmydata.com%2Fdef%2Fpmdui%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20markdown%3A%20%3Chttps%3A%2F%2Fwww.w3.org%2Fns%2Fiana%2Fmedia-types%2Ftext%2Fmarkdown%23%3E%0APREFIX%20qb%3A%20%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23%3E%0APREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0APREFIX%20xsd%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0A%0ASELECT%20%3Fdate%20%3Fobservation%0AWHERE%20%7B%3FobservationUri%20%3Fb%20%3Chttp%3A%2F%2Fenvironment.data.gov.uk%2Fdata%2Fobservations-milk-dataset-annual%3E%20.%0A%20%3FobservationUri%20%3Chttp://environment.data.gov.uk/def/measure/price%3E%20%3Fobservation%20.%0A%20%3FobservationUri%20%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fsdmx%2F2009%2Fdimension%23refPeriod%3E%20%3FdateUri%20.%0A%20%3FdateUri%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23label%3E%20%3Fdate%20.%20%0A%7D%0A%0ALIMIT%20100">See query in PMD</a>)
+            <!-- <pre>
+                SELECT DISTINCT ?o ?measures
+                WHERE { <http://environment.data.gov.uk/data/observations-milk-dataset-annual/codes-used/measure_type> <http://www.w3.org/2004/02/skos/core#member> ?o . 
+                ?o <http://www.w3.org/2000/01/rdf-schema#label> ?measures .}
+                LIMIT 10        
+                </pre> -->
+        </p>
+        <p><strong> Pick an option
+                <select name="chooseMeasure" onchange="chart()" id="chooseMeasure">
+                    <option>--- click to select ---</option>
+                </select>
+            </strong>
+        </p>
+        <p>Note: Data from <a href = "#">Annual milk dataset</a></p>
+        <p id ="secondMessage" style ="display:none">
+            The second query uses the selected option to return the data for this measure which is then added to the chart. (<a href = "http://localhost:3000/tools/sparql?query=PREFIX%20owl%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0APREFIX%20void%3A%20%3Chttp%3A%2F%2Frdfs.org%2Fns%2Fvoid%23%3E%0APREFIX%20pmdkos%3A%20%3Chttp%3A%2F%2Fpublishmydata.com%2Fdef%2Fpmdkos%2F%3E%0APREFIX%20dcterms%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20dcat%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2Fns%2Fdcat%23%3E%0APREFIX%20pmdui%3A%20%3Chttp%3A%2F%2Fpublishmydata.com%2Fdef%2Fpmdui%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20markdown%3A%20%3Chttps%3A%2F%2Fwww.w3.org%2Fns%2Fiana%2Fmedia-types%2Ftext%2Fmarkdown%23%3E%0APREFIX%20qb%3A%20%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23%3E%0APREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0APREFIX%20xsd%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0A%0ASELECT%20%3Fdate%20%3Fobservation%0AWHERE%20%7B%3FobservationUri%20%3Fb%20%3Chttp%3A%2F%2Fenvironment.data.gov.uk%2Fdata%2Fobservations-milk-dataset-annual%3E%20.%0A%20%3FobservationUri%20%3Chttp://environment.data.gov.uk/def/measure/price%3E%20%3Fobservation%20.%0A%20%3FobservationUri%20%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fsdmx%2F2009%2Fdimension%23refPeriod%3E%20%3FdateUri%20.%0A%20%3FdateUri%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23label%3E%20%3Fdate%20.%20%0A%7D%0A%0ALIMIT%20100">See query in PMD</a>)
+            <!-- <pre>
+            SELECT ?date ?observation
+                WHERE {
+                ?observationUri ?b <http://environment.data.gov.uk/data/observations-milk-dataset-annual> .
+                ?observationUri <http://environment.data.gov.uk/def/measure/price> ?observation .
+                ?observationUri <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> ?dateUri .
+                ?dateUri <http://www.w3.org/2000/01/rdf-schema#label> ?date . 
+                }
+                LIMIT 100
+            </pre> -->
+        </p>
+        
+        <div class="chart-container" style="position: relative; height:30vh; width:70vw">
+            <canvas id="milkChart"></canvas>
+        </div>
+        
+    </div>
+</body>
+
+<script>
+    const select = document.getElementById("chooseMeasure");
+    const root = "http://localhost:3001/v1/sparql/live?query="
+    let chartData = [];
+    let chartLabel = [];
+    let dataLabel = "Milk price including bonus payments"
+    let selectQuery =
+        "PREFIX%20owl%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0APREFIX%20void%3A%20%3Chttp%3A%2F%2Frdfs.org%2Fns%2Fvoid%23%3E%0APREFIX%20pmdkos%3A%20%3Chttp%3A%2F%2Fpublishmydata.com%2Fdef%2Fpmdkos%2F%3E%0APREFIX%20dcterms%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20dcat%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2Fns%2Fdcat%23%3E%0APREFIX%20pmdui%3A%20%3Chttp%3A%2F%2Fpublishmydata.com%2Fdef%2Fpmdui%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20markdown%3A%20%3Chttps%3A%2F%2Fwww.w3.org%2Fns%2Fiana%2Fmedia-types%2Ftext%2Fmarkdown%23%3E%0APREFIX%20qb%3A%20%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23%3E%0APREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0APREFIX%20xsd%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0A%0ASELECT%20DISTINCT%20%3Fo%20%3Fmeasures%0AWHERE%20%7B%20%3Chttp%3A%2F%2Fenvironment.data.gov.uk%2Fdata%2Fobservations-milk-dataset-annual%2Fcodes-used%2Fmeasure_type%3E%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23member%3E%20%3Fo%20.%20%0A%20%20%20%20%20%20%3Fo%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23label%3E%20%3Fmeasures%20.%7D%0ALIMIT%2010"
+
+    fetch(root + selectQuery, {
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then((response) => {
+            return response.json();
+        }).then((data) => {
+            for (i = 0; i < data.results.bindings.length; i++) {
+                select.options[select.options.length] = new Option(data.results.bindings[i].measures.value, data
+                    .results.bindings[i].o.value);
+            }
+        })
+
+    chart = a => {
+        document.getElementById("secondMessage").style.display = "";
+        let chartData = [];
+        let chartLabel = [];
+        let query =
+            'PREFIX%20owl%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0APREFIX%20void%3A%20%3Chttp%3A%2F%2Frdfs.org%2Fns%2Fvoid%23%3E%0APREFIX%20pmdkos%3A%20%3Chttp%3A%2F%2Fpublishmydata.com%2Fdef%2Fpmdkos%2F%3E%0APREFIX%20dcterms%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20dcat%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2Fns%2Fdcat%23%3E%0APREFIX%20pmdui%3A%20%3Chttp%3A%2F%2Fpublishmydata.com%2Fdef%2Fpmdui%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20markdown%3A%20%3Chttps%3A%2F%2Fwww.w3.org%2Fns%2Fiana%2Fmedia-types%2Ftext%2Fmarkdown%23%3E%0APREFIX%20qb%3A%20%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23%3E%0APREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0APREFIX%20xsd%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0A%0ASELECT%20%3Fdate%20%3Fobservation%0AWHERE%20%7B%3FobservationUri%20%3Fb%20%3Chttp%3A%2F%2Fenvironment.data.gov.uk%2Fdata%2Fobservations-milk-dataset-annual%3E%20.%0A%20%3FobservationUri%20%3C' +
+            encodeURI(select.value) +
+            '%3E%20%3Fobservation%20.%0A%20%3FobservationUri%20%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fsdmx%2F2009%2Fdimension%23refPeriod%3E%20%3FdateUri%20.%0A%20%3FdateUri%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23label%3E%20%3Fdate%20.%20%0A%7D%0A%0ALIMIT%20100';
+        let dataLabel = select.selectedOptions[0].text
+        // console.log(document.getElementById("chooseMeasure").selectedOptions[0].text)
+        fetch(root + query, {
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then((response) => {
+                return response.json();
+            }).then((data) => {
+                for (i = 0; i < data.results.bindings.length; i++) {
+                    chartData.push(data.results.bindings[i].observation.value)
+                    chartLabel.push(data.results.bindings[i].date.value)
+                }
+                const myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: chartLabel,
+                        datasets: [{
+                            label: dataLabel,
+                            data: chartData,
+                            borderWidth: 1
+                        }]
+                    },
+                });
+            });;
+    }
+    const ctx = document.getElementById('milkChart').getContext('2d');
+</script>
+
+</html>
