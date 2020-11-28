@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <button onclick='deleteCookies()'>Delete cookies</button>
+    </body>
+    <script>
+        console.log(document.cookie)
+
+        deleteCookies = () => {
+            document.cookie = "cookies_preferences_set=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.cookie = "analytics_preferences_set=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        }
+    </script>
+</html>

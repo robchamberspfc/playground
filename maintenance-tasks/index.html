@@ -1,0 +1,116 @@
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+    integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+    crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<body>
+    <div class="container">
+        <h1> Simple Maintenance Tasks PMD SPARQL query example</h1>
+        <p>Example showing a simple set of queries run on the <a
+                href="https://defra-staging.publishmydata.com/linked-data/dataset/explore?uri=http%3A%2F%2Fenvironment.data.gov.uk%2Fdata%2Fmaintenance-tasks-ds">Maintenance
+                Tasks</a> dataset on the <a href="https://defra-staging.publishmydata.com/linked-data/">DEFRA instance
+                of PMD</a>.</p>
+        <hr>
+        <p>
+            <h3> Pick a Regional Flood & Coastal Committee
+                <select name="chooseRFCC" onchange="second()" id="chooseRFCC">
+                    <option>--- click to select ---</option>
+                </select>
+            </h3>
+        </p>
+        <div id="secondSelect" style="display:none">
+            <p>
+                <h4> Pick a Maintenance activity sub-type
+                    <select name="chooseActivity" onchange="third()" id="chooseActivity">
+                        <option>--- click to select ---</option>
+                    </select>
+                </h4>
+            </p>
+        </div>
+        <hr>
+        <br><br>
+        <div id="finalContent"></div>
+        <br><br>
+        <hr>
+    </div>
+</body>
+<script>
+    const select = document.getElementById("chooseRFCC");
+    const selectTwo = document.getElementById("chooseActivity");
+    const root = "https://defra-staging.publishmydata.com/linked-data/sparql?query="
+    let dataLabel = "Milk price including bonus payments"
+    let selectQuery =
+        'PREFIX%20owl%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0APREFIX%20void%3A%20%3Chttp%3A%2F%2Frdfs.org%2Fns%2Fvoid%23%3E%0APREFIX%20pmdkos%3A%20%3Chttp%3A%2F%2Fpublishmydata.com%2Fdef%2Fpmdkos%2F%3E%0APREFIX%20dcterms%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20dcat%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2Fns%2Fdcat%23%3E%0APREFIX%20pmdui%3A%20%3Chttp%3A%2F%2Fpublishmydata.com%2Fdef%2Fpmdui%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20markdown%3A%20%3Chttps%3A%2F%2Fwww.w3.org%2Fns%2Fiana%2Fmedia-types%2Ftext%2Fmarkdown%23%3E%0APREFIX%20qb%3A%20%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23%3E%0APREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0APREFIX%20xsd%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0A%0ASELECT%20DISTINCT%20%3Fo%20%3Ft%0AWHERE%20%7B%20%3Fs%20%3Chttp%3A%2F%2Fenvironment.data.gov.uk%2Fasset-management%2Fdef%2Fcore%2FhasRfcc%3E%20%3Fo%20.%0A%20%20%20%20%20%20%3Fo%20rdfs%3Alabel%20%3Ft%20.%7D%0ALIMIT%20100'
+    fetch(root + selectQuery, {
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then((response) => {
+            return response.json();
+        }).then((data) => {
+
+            for (i = 0; i < data.results.bindings.length; i++) {
+                select.options[select.options.length] = new Option(data.results.bindings[i].t.value, data
+                    .results.bindings[i].o.value);
+            }
+        })
+
+    second = a => {
+        document.getElementById("secondSelect").style.display = "";
+        let chartData = [];
+        let chartLabel = [];
+        let query =
+            'PREFIX%20owl%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0APREFIX%20void%3A%20%3Chttp%3A%2F%2Frdfs.org%2Fns%2Fvoid%23%3E%0APREFIX%20pmdkos%3A%20%3Chttp%3A%2F%2Fpublishmydata.com%2Fdef%2Fpmdkos%2F%3E%0APREFIX%20dcterms%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20dcat%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2Fns%2Fdcat%23%3E%0APREFIX%20pmdui%3A%20%3Chttp%3A%2F%2Fpublishmydata.com%2Fdef%2Fpmdui%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20markdown%3A%20%3Chttps%3A%2F%2Fwww.w3.org%2Fns%2Fiana%2Fmedia-types%2Ftext%2Fmarkdown%23%3E%0APREFIX%20qb%3A%20%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23%3E%0APREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0APREFIX%20xsd%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0A%0ASELECT%20DISTINCT%20%3Fo%3Ft%0AWHERE%20%7B%20%3Fs%20%3Chttp%3A%2F%2Fenvironment.data.gov.uk%2Fasset-management%2Fdef%2Fmaintenance%2FactivitySubType%3E%20%3Fo%20.%0A%20%20%20%20%20%20%3Fo%20rdfs%3Alabel%20%3Ft%20.%7D%0ALIMIT%20100'
+        let dataLabel = select.selectedOptions[0].text
+        fetch(root + query, {
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then((response) => {
+                return response.json();
+            }).then((data) => {
+                for (i = 0; i < data.results.bindings.length; i++) {
+                    selectTwo.options[selectTwo.options.length] = new Option(data.results.bindings[i].t.value,
+                        data
+                        .results.bindings[i].o.value);
+                }
+            });;
+    }
+
+    third = a => {
+        document.getElementById('finalContent').innerHTML = "<h2> ----- Loading ----- </h2>"
+        document.getElementById("secondSelect").style.display = "";
+        let chartData = [];
+        let chartLabel = [];
+        let final = [];
+        let query =
+            'PREFIX%20owl%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0APREFIX%20void%3A%20%3Chttp%3A%2F%2Frdfs.org%2Fns%2Fvoid%23%3E%0APREFIX%20pmdkos%3A%20%3Chttp%3A%2F%2Fpublishmydata.com%2Fdef%2Fpmdkos%2F%3E%0APREFIX%20dcterms%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20dcat%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2Fns%2Fdcat%23%3E%0APREFIX%20pmdui%3A%20%3Chttp%3A%2F%2Fpublishmydata.com%2Fdef%2Fpmdui%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20markdown%3A%20%3Chttps%3A%2F%2Fwww.w3.org%2Fns%2Fiana%2Fmedia-types%2Ftext%2Fmarkdown%23%3E%0APREFIX%20qb%3A%20%3Chttp%3A%2F%2Fpurl.org%2Flinked-data%2Fcube%23%3E%0APREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0APREFIX%20xsd%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0A%0ASELECT%20%3Fa%0AWHERE%20%7B%20%3Fa%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23type%3E%20%3Chttp%3A%2F%2Fenvironment.data.gov.uk%2Fasset-management%2Fdef%2Fmaintenance%2FTask%3E%20.%0A%20%20%20%20%20%20%20%3Fa%20%3Chttp%3A%2F%2Fenvironment.data.gov.uk%2Fasset-management%2Fdef%2Fmaintenance%2FactivitySubType%3E%20%3C' +
+            encodeURI(selectTwo.value) +
+            '%3E%20.%0A%20%20%20%20%20%20%20%3Fa%20%3Chttp%3A%2F%2Fenvironment.data.gov.uk%2Fasset-management%2Fdef%2Fcore%2FhasRfcc%3E%20%3C' +
+            encodeURI(select.value) + '%3E%20.%0A%20%20%7D%0A%0ALIMIT%201000'
+
+        let dataLabel = select.selectedOptions[0].text
+        fetch(root + query, {
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then((response) => {
+                return response.json();
+            }).then((data) => {
+                for (i = 0; i < data.results.bindings.length; i++) {
+                    final.push(data.results.bindings[i].a.value)
+                }
+                document.getElementById('finalContent').innerHTML = "<h2>" + select.selectedOptions[0].text +
+                    " has " +
+                    final.length + " " + selectTwo.selectedOptions[0].text + ". </h2>"
+            });;
+    }
+</script>
+
+</html>

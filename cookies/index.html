@@ -1,0 +1,85 @@
+<html>
+
+<head>
+<script>
+    const GaID = 'ga-disable-UA-82810278-1'
+    window[GaID] = true;
+
+    //get a specific cookie
+    getCookie = (cookieName) => {
+        let name = cookieName + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    //enable analytics if preference set
+    cookiePreferences = getCookie("analytics_preferences_set")
+    if (cookiePreferences === "true") {
+        window[GaID] = false;
+    }
+
+    //check banner cookie and unhide
+    checkCookieBanner = () => {
+        cookiePreferences = getCookie("cookies_preferences_set")
+        if (cookiePreferences != "true") {
+            document.getElementById('cookieBanner').removeAttribute("hidden");
+        }
+    }
+
+</script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-82810278-1', 'auto');
+    ga('send', 'pageview');
+</script>
+</head>
+<body onload="checkCookieBanner()">
+    <div id="cookieBanner" hidden>
+        Cookie Banner
+        <button id='acceptAll' onClick='setCookie("cookies_preferences_set","true");setCookie("analytics_preferences_set","true")'>Accept all</button>
+        <button id='rejectAnalytics' onClick='setCookie("cookies_preferences_set","true");setCookie("analytics_preferences_set","false")'>Reject analytics</button>
+    </div>
+</body>
+
+<script>
+    //add days to date
+    addDays = (date, days) => {
+        let result = new Date(date);
+        result.setDate(result.getDate() + days);
+        return result;
+    }
+
+    let today = new Date();
+    let cookieLength = 365 //days for cookie to last
+    let cookieExpiryDate = addDays(today, cookieLength)
+
+    setCookie = (name, value) => {
+        document.cookie = name + ' = ' + value +
+            '; expires=' + cookieExpiryDate.toUTCString() +
+            ' path=/';
+    }
+
+</script>
+
+</html>
