@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+<h1>New CDE water body counter</h1>
+<p>Paste in link to page you want to count water bodies below</p>
+<input id="input" type="text">
+<button onClick="count()">Go</button>
+<h2 id="waterbodies"></h2>
+<div id="list"></div>
+<script>
+    function count() {
+        let page = document.getElementById('input').value
+        let url = page + "/objectives.csv"
+
+        let waterBody = []
+        d3.csv(url, function (data) {
+            for (var i = 0; i < data.length; i++) {
+                newItem = data[i]["Water Body ID"];
+                waterBody.indexOf(newItem) === -1 ? waterBody.push(newItem) : console.log();
+            }
+
+            document.getElementById('waterbodies').innerHTML = "There are " + waterBody.length + " water bodies"
+            for (i = 0; i < waterBody.length; i++) {
+                document.getElementById('list').append(waterBody[i] + ", ")
+            }
+        });
+    }
+</script>
+
+</html>
