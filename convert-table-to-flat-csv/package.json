@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "csv-writer": "^1.6.0",
-    "d3": "5",
+    "d3": "7",
     "d3-fetch": "^1.2.0",
     "node-fetch": "^2.6.0",
     "node-fetch-polyfill": "^2.0.6"
