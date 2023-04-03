@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+      <title>OpenLayers GML Layer Example</title>
+    <!-- <link rel="stylesheet" href="../theme/default/style.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css"> -->
+    <!-- <script src="../lib/OpenLayers.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.9.0/build/ol.js"></script>
+    <script type="text/javascript">
+        var lon = 5;
+        var lat = 40;
+        var zoom = 5;
+        var map, layer;
+
+        function init(){
+            map = new OpenLayers.Map('map');
+            layer = new OpenLayers.Layer.WMS( "OpenLayers WMS",
+                    "http://vmap0.tiles.osgeo.org/wms/vmap0", {layers: 'basic'} );
+            map.addLayer(layer);
+            map.zoomToExtent(new OpenLayers.Bounds(-3.922119,44.335327,4.866943,49.553833));
+            map.addLayer(new OpenLayers.Layer.GML("GML", "gml/polygon.xml"));
+        }
+    </script>
+  </head>
+  <body onload="init()">
+      <h1 id="title">GML Layer Example</h1>
+
+      <div id="tags">
+        GML
+      </div>
+
+      <p id="shortdesc">
+          Loads locally stored GML vector data on a basemap. Includes GML example file.
+      </p>
+
+    <div id="map" class="smallmap"></div>
+
+    <div id="docs"></div>
+  </body>
+</html>
+
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.9.0/css/ol.css" type="text/css">
+    <style>
+      .map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.9.0/build/ol.js"></script>
+    <title>OpenLayers example</title>
+  </head>
+  <body>
+    <h2>My Map</h2>
+    <div id="map" class="map"></div>
+    <script type="text/javascript">
+      var map = new ol.Map({
+        target: 'map',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          }),    
+          new ol.layer.Vector({
+             source: new ol.source.Vector({
+                 url: 'test.gml',
+                 format: new ol.format.GML()
+             }),
+           }),
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([37.41, 8.82]),
+          zoom: 4
+        })
+      });
+    </script>
+  </body>
+</html> -->
+ <!-- <!doctype html>
+ <html lang="en">
+   <head>
+    <style>
+        .map {
+          height: 400px;
+          width: 100%;
+        }
+      </style>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.9.0/build/ol.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.9.0/css/ol.css">
+   </head>
+   <body>
+     <h1>My Map</h1>
+     <div id="map"></div>
+     <script type="text/javascript">
+       var map = new ol.Map({
+         target: 'map',
+         layers: [
+           new ol.layer.Tile({
+             title: 'Global Imagery',
+             source: new ol.source.TileWMS({
+               url: 'https://ahocevar.com/geoserver/wms',
+               params: {LAYERS: 'nasa:bluemarble', TILED: true}
+             })
+           }),
+           new ol.layer.Vector({
+             source: new ol.source.Vector({
+                 url: 'test.gml',
+                 format: new ol.format.GML()
+             }),
+           }),
+         ],
+         view: new ol.View({
+           projection: 'EPSG:4326',
+           center: [0, 0],
+           zoom: 0,
+           maxResolution: 0.703125
+         })
+       });
+     </script>
+   </body>
+ </html> -->
+
+
+<!-- <html>
+    <head>
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.7.0/proj4.js"></script>  
+    </head>
+
+    <body>
+        <div id="map"></div>
+
+    </body>
+
+
+    <script>
+        let GML='<gml:Polygon xmlns:gml="http://www.opengis.net/gml" srsName="os:BNG"><gml:exterior><gml:LinearRing><gml:posList srsDimension="2">192145.5 58347.4 192119.1 58371 192059.5 58437.8 191717.7 58594.7 191474.7 58726.7 191260.2 58825.2 191289.4 59315.9 191169 59371.2 191113.6 59492.1 190956.4 59632.5 190669 59721.2 190514.3 59776.7 190384 59769 190221.8 60024.1 190126.5 60121.3 189761.9 59822.1 189576.7 59614.8 189345.4 59628.6 188864.1 59726.9 188512.3 59831.4 187939.8 60071.3 187427.5 59961.9 187020.3 59986.2 186770.3 59971.3 186350.5 59996.3 186171.6 59871.4 186034.2 59808.3 185610.6 60168.6 185471.6 60324.3 185418.8 60371.4 185216.6 60650 184811.6 61012 184618.8 61071.5 184350.7 61279.3 184213.8 61271.1 184110.6 61386.6 184178.7 61705 184167.7 61888.5 183999.8 62038.5 183800.6 62130 183671.5 62274.5 183500.2 62321.7 183321.5 62121.7 183233.9 62043.4 182893.3 61996.3 182759.3 62023.4 182818.5 62172 182860 62869.1 182852.1 63053.1 183011.4 63063.3 183080.3 63100 183207.7 63207.1 183251.9 63326.7 183376.8 63466.3 183338.2 63642.8 183418.7 63674.6 183591.3 63812.4 183731.5 63955.1 183788 64145.1 183918.5 64341.6 184015.6 64424.5 184145.1 64348.3 184222.9 64326 184519.3 64088.9 185095.1 64016.9 185195.1 64029.4 185393.3 64004.8 185622.9 64070.4 185717.4 64126 185972.9 64220.4 186373.9 64459.7 186722.9 64520.4 186867.4 64576 187545.2 64598.1 187593.6 64445.2 187819.3 64272.1 187921.2 64224.1 188068.3 64146.2 188221.2 64074.1 188370.5 63912.9 188640.5 63705.8 188820.3 63801 188972.9 63720.1 189204 63729.3 189321.2 63674 189369.3 63622 189547.9 63537.8 189843.7 63320.8 190076.6 62924.6 190492 62778.9 190955.4 62760.6 191187.1 62883.2 191675 62816.5 191897.5 62711.5 192199.8 62385.2 192319.5 62321.8 192439.7 62265.1 192571.4 62073.7 192660 61886 192745.7 61793.5 193019.5 61721.7 193231.4 61671.3 193509.5 61524.1 193620.5 61519.7 193720.5 61523.7 193808.6 61520.2 193971.5 61571.7 194306.5 61395.7 194268.5 60922.6 194279 60792.4 194064.4 60571.6 193968.7 60424.4 193922.4 60370.7 193766.8 60301.3 193541.5 60175.6 193223.2 60292.5 193068.6 60074.4 193004.3 59930.3 192741.8 59851.3 192522.3 59770.7 192325.6 59711.5 192301.9 59416.2 192373.9 59220.2 192322.4 58770.6 192268.6 58674.3 192222.4 58570.6 192168.6 58474.3 192145.5 58347.4</gml:posList></gml:LinearRing></gml:exterior></gml:Polygon>'
+
+        mapboxToken = 'pk.eyJ1Ijoicm9iMTFwZmMiLCJhIjoiY2s2N3NsdndwMGIxeDNqcGJqdno1aXlqOCJ9.JmqgMDa_Q__r1DZV99ggsg';
+
+        mapboxgl.accessToken = mapboxToken;
+        const map = new mapboxgl.Map({
+            container: 'map', // container ID
+            style: 'mapbox://styles/mapbox/streets-v11', // style URL
+            center: GML, // starting position [lng, lat]
+            zoom: 9 // starting zoom
+        });
+    </script>
+</html> -->

@@ -1,0 +1,36 @@
+<html>
+<table>
+    <thead id="header"></thead>
+    <tbody id="tableBody"></tbody>
+</table>
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script>
+    const tableRef = document.getElementById("tableBody");
+    const thead = document.getElementById('header');
+    const csvUrl = "http://127.0.0.1:8887/excel2csv/licence-dataset.csv";
+
+    d3.csv(csvUrl).then(function (d) {
+        headerNames = Object.keys(d[0])
+        populateTable(d, headerNames)
+    })
+
+    populateTable = (data, header) => {
+        //set table header
+        for (i = 0; i < header.length; i++) {
+            thead.appendChild(document.createElement("th")).
+            appendChild(document.createTextNode(header[i]));
+        }
+
+        //set table data
+        for (i = 0; i < data.length; i++) {
+            let newRow = tableRef.insertRow(-1);
+            for (j = 0; j < header.length; j++) {
+                let Cell = newRow.insertCell(j);
+                let Text = document.createTextNode(data[i][header[j]]);
+                Cell.appendChild(Text);
+            }
+        }
+    };
+</script>
+
+</html>

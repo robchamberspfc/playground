@@ -1,0 +1,20 @@
+{
+  "name": "defra-licence-transform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "prep-csv2rdf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "csv-writer": "^1.6.0",
+    "d3": "5",
+    "node-fetch": "^2.6.0",
+    "node-fetch-polyfill": "^2.0.6",
+    "serve": "^11.3.2",
+    "xlsx": "^0.16.9"
+  },
+  "author": "",
+  "license": "ISC"
+}

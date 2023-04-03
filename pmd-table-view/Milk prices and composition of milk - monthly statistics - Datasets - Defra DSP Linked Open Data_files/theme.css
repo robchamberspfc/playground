@@ -1,0 +1,6953 @@
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    font-size: 12px
+}
+
+body {
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #292d33
+}
+
+main {
+    display: block
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+    border-bottom-style: solid;
+    border-bottom-width: 1px
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted
+}
+
+b,
+strong {
+    font-weight: bolder
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+small {
+    font-size: 80%;
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 6.56px;
+    margin-bottom: 17.44px
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sub {
+    bottom: -.25em
+}
+
+sup {
+    top: -.5em
+}
+
+img {
+    border-style: none
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0
+}
+
+button,
+input {
+    overflow: visible
+}
+
+button,
+select {
+    text-transform: none
+}
+
+[type=button],
+[type=reset],
+[type=submit],
+button {
+    -webkit-appearance: button
+}
+
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring,
+button:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+fieldset {
+    border: 0;
+    padding: 1rem 0;
+    display: block
+}
+
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal
+}
+
+progress {
+    vertical-align: baseline
+}
+
+textarea {
+    overflow: auto
+}
+
+[type=checkbox],
+[type=radio] {
+    box-sizing: border-box;
+    padding: 0
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+
+[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+details {
+    display: block
+}
+
+summary {
+    display: list-item
+}
+
+[hidden],
+template {
+    display: none
+}
+
+html * {
+    box-sizing: border-box
+}
+
+*,
+:after,
+:before {
+    box-sizing: inherit;
+    line-height: 1em;
+    margin: 0;
+    padding: 0
+}
+
+body * {
+    -webkit-font-smoothing: inherit
+}
+
+@media (prefers-color-scheme:dark) {
+    nope-body:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -3;
+        display: block;
+        background: linear-gradient(180deg, #ff0400, #ff0400 1px, transparent 0, transparent);
+        background-size: 100% 12px;
+        opacity: .5
+    }
+}
+
+.wide-right {
+    text-align: right
+}
+
+.wide-right .Button {
+    width: 100%
+}
+
+@media screen and (max-width:960px) {
+    .wide-right {
+        text-align: left
+    }
+
+    .wide-right .Button {
+        width: auto
+    }
+}
+
+ol.Baseline,
+ul.Baseline {
+    list-style-type: none;
+    padding-top: 2rem;
+    margin-left: 4rem
+}
+
+ol.Baseline li,
+ul.Baseline li {
+    display: block;
+    font-size: 21px;
+    line-height: 24px;
+    padding: 4.86px 0 0;
+    margin: -2rem 0 19.14px
+}
+
+ol.Baseline li:before,
+ul.Baseline li:before {
+    content: "\2022";
+    font-weight: 700;
+    display: inline-block;
+    width: 1.5rem;
+    margin-left: -1.5rem
+}
+
+ol.Baseline li ol,
+ol.Baseline li ul,
+ul.Baseline li ol,
+ul.Baseline li ul {
+    padding-top: 0;
+    margin-top: 19.14px
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+    margin-left: 4rem
+}
+
+ol.Baseline.plain,
+ul.Baseline.plain {
+    margin-left: 0;
+    margin-top: -2rem
+}
+
+ol.Baseline.plain li,
+ul.Baseline.plain li {
+    margin-top: 0
+}
+
+ol.Baseline.plain li:before,
+ul.Baseline.plain li:before {
+    display: none
+}
+
+ol.Baseline.plain ol,
+ol.Baseline.plain ul,
+ul.Baseline.plain ol,
+ul.Baseline.plain ul {
+    margin-top: 7.1px;
+    margin-left: 2rem
+}
+
+ol.Flat,
+ul.Flat {
+    list-style-type: none;
+    margin-left: 0;
+    font-size: 21px;
+    line-height: 24px;
+    padding-top: 4.86px;
+    margin-bottom: 19.14px;
+    margin-top: calc(2rem - 35.32px)
+}
+
+ol.Flat ol,
+ol.Flat ul,
+ul.Flat ol,
+ul.Flat ul {
+    display: inline
+}
+
+ol.Flat ol:before,
+ol.Flat ul:before,
+ul.Flat ol:before,
+ul.Flat ul:before {
+    content: "; "
+}
+
+ol.Flat li,
+ul.Flat li {
+    display: inline;
+    font-size: 21px;
+    line-height: 24px;
+    padding: 4.86px 0 0;
+    margin-bottom: 19.14px
+}
+
+ol.Flat li:not(:last-child):after,
+ul.Flat li:not(:last-child):after {
+    content: ", "
+}
+
+.p,
+p {
+    display: block;
+    font-size: 21px;
+    line-height: 24px;
+    padding-top: 4.86px;
+    margin-bottom: 19.14px
+}
+
+.panel {
+    position: relative;
+    padding: 12px 24px 0;
+    border-radius: 1rem;
+    margin-bottom: 24px
+}
+
+table {
+    margin-bottom: 4rem;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed
+}
+
+table tr td.numeric,
+table tr th.numeric {
+    font-family: monospace;
+    text-align: right;
+    align: right
+}
+
+table tr td,
+table tr th {
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    text-align: left;
+    font-size: 21px;
+    line-height: 24px;
+    padding-top: 4.86px;
+    margin-bottom: 19.14px;
+    padding-bottom: 6.14px
+}
+
+table tr td:not(:last-child),
+table tr th:not(:last-child) {
+    padding-right: 4rem
+}
+
+table tr td ol,
+table tr th ol {
+    text-indent: 0;
+    padding: 0;
+    margin: 0
+}
+
+table tr td li,
+table tr th li {
+    display: block;
+    overflow: hidden;
+    height: 23px;
+    margin: 0 0 1px
+}
+
+table tr td p,
+table tr th p {
+    font-size: 21px;
+    line-height: 24px;
+    padding-top: 0;
+    margin-bottom: 0
+}
+
+table tr td .h3,
+table tr th .h3 {
+    position: relative;
+    font-size: 24px;
+    line-height: 24px;
+    padding-top: 3.84px;
+    margin-top: -6px;
+    margin-bottom: 0
+}
+
+table tr td .h3+.p,
+table tr td .h3+p,
+table tr th .h3+.p,
+table tr th .h3+p {
+    position: relative;
+    margin-top: -18px
+}
+
+.table {
+    display: table;
+    margin-bottom: 4rem;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed
+}
+
+.table .thead {
+    display: table-header-group
+}
+
+.table .tbody {
+    display: table-row-group
+}
+
+.table .tr {
+    display: table-row
+}
+
+.table .tr .td,
+.table .tr .th {
+    display: table-cell
+}
+
+.table .tr .td.numeric,
+.table .tr .th.numeric {
+    font-family: monospace;
+    text-align: right;
+    align: right
+}
+
+.table .tr .th {
+    font-weight: 700
+}
+
+.table .tr .td,
+.table .tr .th {
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    text-align: left;
+    font-size: 21px;
+    line-height: 24px;
+    padding-top: 4.86px;
+    margin-bottom: 19.14px;
+    padding-bottom: 6.14px
+}
+
+.table .tr .td:not(:last-child),
+.table .tr .th:not(:last-child) {
+    padding-right: 4rem
+}
+
+.table .tr .td ol,
+.table .tr .th ol {
+    text-indent: 0;
+    padding: 0;
+    margin: 0
+}
+
+.table .tr .td li,
+.table .tr .th li {
+    display: block;
+    overflow: hidden;
+    height: 23px;
+    margin: 0 0 1px
+}
+
+.table .tr .td p,
+.table .tr .th p {
+    font-size: 21px;
+    line-height: 24px;
+    padding-top: 0;
+    margin-bottom: 0
+}
+
+.table .tr .td .h3,
+.table .tr .th .h3 {
+    position: relative;
+    font-size: 24px;
+    line-height: 24px;
+    padding-top: 3.84px;
+    margin-top: -6px;
+    margin-bottom: 0
+}
+
+.table .tr .td .h3+.p,
+.table .tr .td .h3+p,
+.table .tr .th .h3+.p,
+.table .tr .th .h3+p {
+    position: relative;
+    margin-top: -18px
+}
+
+@media screen and (min-width:961px) {
+    .TableWhenWide {
+        display: table;
+        margin-bottom: 4rem;
+        border-collapse: collapse;
+        width: 100%;
+        table-layout: fixed
+    }
+
+    .TableWhenWide .thead {
+        display: table-header-group
+    }
+
+    .TableWhenWide .tbody {
+        display: table-row-group
+    }
+
+    .TableWhenWide .tr {
+        display: table-row
+    }
+
+    .TableWhenWide .tr .td,
+    .TableWhenWide .tr .th {
+        display: table-cell
+    }
+
+    .TableWhenWide .tr .td.numeric,
+    .TableWhenWide .tr .th.numeric {
+        font-family: monospace;
+        text-align: right;
+        align: right
+    }
+
+    .TableWhenWide .tr .th {
+        font-weight: 700
+    }
+
+    .TableWhenWide .tr .td,
+    .TableWhenWide .tr .th {
+        overflow: hidden;
+        position: relative;
+        vertical-align: top;
+        text-align: left;
+        padding-bottom: 6.14px;
+        margin-bottom: 19.14px;
+        padding-top: 4.86px;
+        line-height: 24px;
+        font-size: 21px
+    }
+
+    .TableWhenWide .tr .td:not(:last-child),
+    .TableWhenWide .tr .th:not(:last-child) {
+        padding-right: 4rem
+    }
+
+    .TableWhenWide .tr .td ol,
+    .TableWhenWide .tr .th ol {
+        text-indent: 0;
+        padding: 0;
+        margin: 0
+    }
+
+    .TableWhenWide .tr .td li,
+    .TableWhenWide .tr .th li {
+        display: block;
+        overflow: hidden;
+        height: 23px;
+        margin: 0 0 1px
+    }
+
+    .TableWhenWide .tr .td p,
+    .TableWhenWide .tr .th p {
+        margin-bottom: 19.14px;
+        padding-top: 4.86px;
+        line-height: 24px;
+        font-size: 21px
+    }
+
+    .TableWhenWide .tr .td .h3,
+    .TableWhenWide .tr .th .h3 {
+        position: relative;
+        margin-top: -6px;
+        margin-bottom: 20.16px;
+        padding-top: 3.84px;
+        line-height: 24px;
+        font-size: 24px
+    }
+
+    .TableWhenWide .tr .td .h3+.p,
+    .TableWhenWide .tr .td .h3+p,
+    .TableWhenWide .tr .th .h3+.p,
+    .TableWhenWide .tr .th .h3+p {
+        position: relative;
+        margin-top: -18px
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0
+}
+
+.strong {
+    font-weight: 700
+}
+
+.sc {
+    font-variant: small-caps;
+    text-transform: lowercase
+}
+
+.Select {
+    display: block;
+    position: relative
+}
+
+.Select.Inline .wrap {
+    positon: relative;
+    display: flex
+}
+
+.Select.Inline .wrap label {
+    flex: 0;
+    padding-right: 6px;
+    white-space: nowrap
+}
+
+.Select.Inline .wrap .Inner {
+    flex: 1
+}
+
+.Select select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    -webkit-font-smoothing: inherit;
+    letter-spacing: inherit;
+    background: none;
+    border-radius: 0;
+    vertical-align: top;
+    cursor: pointer;
+    border: 0;
+    height: 3rem;
+    line-height: 2rem;
+    font-size: 1.75rem;
+    padding: 0 6rem 0 1rem;
+    margin-bottom: 2rem;
+    width: 100%
+}
+
+.Select .Inner:after {
+    display: block;
+    content: "\25bc";
+    color: inherit;
+    font-size: 1rem;
+    top: 1rem;
+    right: 1rem;
+    position: absolute;
+    pointer-events: none
+}
+
+.Select+.Button {
+    margin-left: 2rem
+}
+
+.InputWrapper.Select .Inner {
+    display: inline-block;
+    position: relative
+}
+
+.Sparql .CodeMirror {
+    height: auto;
+    margin-bottom: 2rem
+}
+
+.Sparql .CodeMirror,
+.Sparql .CodeMirror * {
+    font-size: 21px;
+    font-family: Menlo, monospace;
+    box-shadow: none !important;
+    line-height: 24px
+}
+
+.Sparql .CodeMirror,
+.Sparql .CodeMirror :not(.CodeMirror-selected) {
+    background: transparent !important
+}
+
+.Sparql .status-info .CodeMirror,
+.Sparql .status-info .CodeMirror * {
+    color: #000 !important
+}
+
+.Sparql .status-info .Button {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: inset 0 0 0 2px #000
+}
+
+.Sparql .status-info .Navigation,
+.Sparql .status-info .Navigation div,
+.Sparql .status-info table thead tr,
+.Sparql .status-info table tr:not(:last-child) {
+    border-color: #000 !important
+}
+
+.Sparql .RawResult .CodeMirror,
+.Sparql .RawResult .CodeMirror * {
+    font-size: 12px;
+    line-height: 12px
+}
+
+.Sparql .TabularResult {
+    width: 100%
+}
+
+.Sparql .TabularResult td {
+    padding-right: 12px;
+    word-break: break-all
+}
+
+.Sparql .History {
+    margin-top: 2rem
+}
+
+.Sparql .Editor {
+    padding: 1rem 1rem .1px;
+    border-radius: 1rem
+}
+
+.Sparql .Editor .Button,
+.Sparql .Editor .Columns,
+.Sparql .Editor .Switch {
+    margin-bottom: 0
+}
+
+.Sparql .Editor .Message {
+    margin-bottom: 1rem
+}
+
+.Sparql .Editor .Endpoint,
+.Sparql .Editor .Options {
+    margin-bottom: 2rem
+}
+
+.Sparql .Editor .Endpoint .weak {
+    font-size: .8em
+}
+
+.Sparql .Editor .Downloads .Button:not(:last-child) {
+    margin-right: 1rem
+}
+
+.Sparql .Editor .Downloads {
+    padding-bottom: 1rem
+}
+
+.Sparql .Editor .Templates {
+    margin-bottom: 4rem
+}
+
+.Sparql .Editor .SparqlCurlCommand {
+    margin-top: 2rem
+}
+
+.Sparql .Editor .status-error pre {
+    margin-top: 1rem;
+    white-space: pre-wrap
+}
+
+.AdminHeader {
+    padding: 0
+}
+
+.AdminHeader address {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 6.56px;
+    margin-bottom: 17.44px
+}
+
+.AdminHeader .Heading.h1 {
+    padding: 1rem 0;
+    margin-top: 0
+}
+
+.AdminHeader .halves {
+    display: flex
+}
+
+.AdminHeader .halves>div {
+    flex: 0 0 50%
+}
+
+.AdminHeader .halves>div:last-child {
+    text-align: right
+}
+
+.Badge {
+    font-size: 16px;
+    line-height: 12px;
+    margin-bottom: 0;
+    padding: 1px 1rem 4px;
+    display: inline-block;
+    white-space: nowrap;
+    position: relative;
+    margin-right: 2px;
+    margin-left: 6px;
+    font-weight: 400;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    border-radius: 2px
+}
+
+.Badge,
+.Button {
+    overflow: hidden
+}
+
+.Button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.75rem;
+    font-weight: 700;
+    height: 3rem;
+    letter-spacing: inherit;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+    outline: 0;
+    padding: 0 2rem;
+    vertical-align: top;
+    border-radius: 2rem
+}
+
+.Button:active {
+    color: inherit
+}
+
+.Button+.Button {
+    margin-left: 1rem
+}
+
+.Button.DoubleHeight {
+    height: 6rem;
+    line-height: 2rem;
+    padding: 0 2rem
+}
+
+.Button.DoubleHeight .knockback {
+    font-size: 18px
+}
+
+.when-narrow {
+    display: none !important
+}
+
+@media screen and (max-width:960px) {
+    .Catalogue .TableWhenWide .tr {
+        padding-bottom: 1rem
+    }
+
+    .Catalogue .TableWhenWide .thead {
+        display: none
+    }
+
+    .Catalogue .TableWhenWide .date {
+        font-size: 1.4rem
+    }
+
+    .Catalogue .TableWhenWide .when-narrow {
+        display: block !important;
+        font-weight: 700;
+        font-size: 1.4rem;
+        margin-bottom: 1rem
+    }
+
+    .Catalogue .TableWhenWide .td:first-child .Heading,
+    .Catalogue .TableWhenWide .td:first-child p {
+        max-width: 100% !important
+    }
+
+    .Catalogue .TableWhenWide .tr:not(:first-child) {
+        border-top-width: 2px;
+        border-top-style: solid
+    }
+}
+
+@media screen and (min-width:961px) {
+    .Catalogue .TableWhenWide .tbody .td:first-child {
+        padding-bottom: 1rem
+    }
+
+    .Catalogue .TableWhenWide .tbody .tr:first-child {
+        border-top-width: 3px;
+        border-top-style: solid
+    }
+}
+
+.Catalogue {
+    padding-top: 1rem
+}
+
+.Catalogue .Constraints {
+    margin-top: 4px;
+    margin-bottom: 1rem
+}
+
+.Catalogue .Constraints .InlineButton {
+    font-size: 14px;
+    margin-top: 7px
+}
+
+.Catalogue .Constraints .Heading {
+    margin-bottom: 0
+}
+
+.Catalogue .Constraints .Columns {
+    margin-bottom: 8px
+}
+
+.Catalogue .panel {
+    padding-top: 1rem;
+    margin-bottom: 8px
+}
+
+.Catalogue .Columns,
+.Catalogue .Columns .Column {
+    margin: 0
+}
+
+.Catalogue .Columns .Column:last-child {
+    text-align: right
+}
+
+.Catalogue .TextInput {
+    padding-bottom: 1rem
+}
+
+.Catalogue .no-break {
+    white-space: nowrap
+}
+
+.Catalogue .InlineButton {
+    margin-left: 4px
+}
+
+.Catalogue a {
+    border-bottom: 0
+}
+
+.Catalogue .Badge {
+    top: -2px
+}
+
+.Catalogue li,
+.Catalogue ol {
+    text-indent: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.Catalogue .td,
+.Catalogue .th,
+.Catalogue td,
+.Catalogue th {
+    padding: 1rem 0;
+    overflow-wrap: break-word;
+    word-break: normal
+}
+
+.Catalogue .td:not(last-child),
+.Catalogue .th:not(last-child),
+.Catalogue td:not(last-child),
+.Catalogue th:not(last-child) {
+    padding-right: 12px
+}
+
+.Catalogue .th,
+.Catalogue th {
+    padding-bottom: 13px
+}
+
+.Catalogue .td:first-child .Heading,
+.Catalogue td:first-child .Heading {
+    margin: 12px 0 14px;
+    overflow-wrap: break-word;
+    max-width: 50vw
+}
+
+.Catalogue .td:first-child p,
+.Catalogue td:first-child p {
+    margin: 0;
+    padding-bottom: 17px;
+    max-width: 50vw
+}
+
+.Catalogue .td:not(:first-child),
+.Catalogue td:not(:first-child) {
+    padding-top: 28px
+}
+
+.Checkbox {
+    height: 24px;
+    margin-bottom: 12px
+}
+
+.Checkbox input[type=checkbox] {
+    opacity: 0
+}
+
+.Checkbox input[type=checkbox]:focus+label:before {
+    outline: 5px auto #3b99fc
+}
+
+.Checkbox input[type=checkbox]:checked+label:after {
+    content: ""
+}
+
+.Checkbox label {
+    position: relative;
+    display: inline-block;
+    padding-left: 36px
+}
+
+.Checkbox label:after,
+.Checkbox label:before {
+    position: absolute;
+    display: inline-block
+}
+
+.Checkbox label:before {
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 0;
+    top: 6px
+}
+
+.Checkbox label:after {
+    content: none;
+    height: 8px;
+    width: 16px;
+    transform: rotate(-45deg);
+    left: 5px;
+    top: 12px
+}
+
+.ColumnsDebug .Column {
+    background: hsla(0, 0%, 100%, .5);
+    border: 1px solid #00f
+}
+
+.Columns {
+    display: flex;
+    margin: 0 -1rem 2rem;
+    align-items: flex-start;
+    flex-direction: columm
+}
+
+.Columns .Column {
+    flex: 1;
+    margin: 0 1rem
+}
+
+.Columns .Column.quarter {
+    flex: 0 0 calc(25% - 2rem)
+}
+
+.Columns .Column.third {
+    flex: 0 0 33%
+}
+
+.Columns .Column.half {
+    flex: 0 0 calc(50% - 2rem)
+}
+
+.Columns .Column.shrink {
+    flex: 0 1 auto
+}
+
+.Columns.Always,
+.Columns.Always .Column {
+    margin: 0
+}
+
+.Columns.Always .Column:not(:first-child) {
+    text-align: right
+}
+
+@media screen and (max-width:960px) {
+    .Columns {
+        display: block;
+        margin: 0
+    }
+
+    .Columns .Column {
+        margin: 0
+    }
+
+    .Columns.Always {
+        display: flex;
+        margin: 0 -1rem 2rem
+    }
+
+    .Columns.Always .Column {
+        margin: 0 1rem
+    }
+}
+
+.Flat {
+    margin-top: 1rem
+}
+
+.Nested {
+    margin: 0;
+    overflow: hidden;
+    padding: 0
+}
+
+.Nested,
+.Nested .NestedConcept {
+    list-style: none;
+    position: relative;
+    text-indent: 0
+}
+
+.Nested .NestedConcept {
+    margin: 0 !important;
+    display: block;
+    padding: 1px 0 0
+}
+
+.Nested .NestedConcept .item {
+    display: block;
+    position: relative
+}
+
+.Nested .NestedConcept .item .spacer {
+    display: block;
+    position: relative;
+    padding: 9px 0 0
+}
+
+.Nested .NestedConcept .item .spacer .box {
+    margin-left: 2rem;
+    padding: 0;
+    display: block;
+    position: relative
+}
+
+.Nested .NestedConcept .item .spacer .box:before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 2rem;
+    height: 3px;
+    left: -2rem;
+    top: 24px
+}
+
+.Nested .NestedConcept .item .spacer .box .CodelistConcept.concept {
+    margin-bottom: 0 !important
+}
+
+.Nested .NestedConcept .children,
+.Nested .NestedConcept .instead {
+    display: block;
+    margin: 0 0 0 3rem;
+    padding: 0;
+    text-indent: 0;
+    list-style: none;
+    position: relative;
+    z-index: 0
+}
+
+.Nested>.NestedConcept>.item .spacer .box {
+    margin-left: 0
+}
+
+.Nested>.NestedConcept>.item .spacer .box:before {
+    display: none !important
+}
+
+.Nested>.NestedConcept>.children {
+    margin: 0 0 0 1rem;
+    overflow: visible
+}
+
+.Nested>.NestedConcept:last-child:before {
+    border-left: 0
+}
+
+.Nested .NestedConcept:last-child {
+    border-left: 1px solid transparent !important
+}
+
+.Nested .children .NestedConcept:last-child:before {
+    width: 40px;
+    height: 34px;
+    left: -1px;
+    top: 0;
+    content: "";
+    display: block;
+    position: absolute
+}
+
+.CodelistViewDrilldown .Breadcrumbs {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+    position: relative;
+    text-indent: 0;
+    min-height: 2rem
+}
+
+.CodelistViewDrilldown .Breadcrumbs li {
+    font-size: 1.4rem;
+    display: inline-block;
+    list-style: none
+}
+
+.CodelistViewDrilldown .Breadcrumbs li+li:before {
+    content: ">";
+    padding: 0 1rem;
+    display: inline-block
+}
+
+.CodelistViewDrilldown .Driller {
+    position: relative
+}
+
+.CodelistViewDrilldown .Driller .scrolling {
+    width: 100%;
+    height: 400px;
+    margin: 0;
+    padding: 6px;
+    overflow-x: auto
+}
+
+.CodelistViewDrilldown .Driller .Generation {
+    width: 100%;
+    position: absolute;
+    top: 0
+}
+
+.CodelistViewDrilldown .Driller .clip {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: 400px
+}
+
+.CodelistViewDrilldown .Driller .Frame {
+    pointer-events: none;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 400px;
+    top: 0;
+    left: 0
+}
+
+.left .gen-enter {
+    left: 500px
+}
+
+.left .gen-enter.gen-enter-active {
+    left: 0;
+    transition: left .5s
+}
+
+.left .gen-exit {
+    left: 0
+}
+
+.left .gen-exit.gen-exit-active {
+    left: -100%;
+    transition: left .5s
+}
+
+.right .gen-enter {
+    left: -100%
+}
+
+.right .gen-enter.gen-enter-active {
+    left: 0;
+    transition: left .5s
+}
+
+.right .gen-exit {
+    left: 0
+}
+
+.right .gen-exit.gen-exit-active {
+    left: 100%;
+    transition: left .5s
+}
+
+.Selection .details {
+    display: none
+}
+
+.Selection.showDetails .details {
+    display: block;
+    margin-bottom: 2rem
+}
+
+.Selection .wide-right {
+    padding-top: 1rem
+}
+
+.Selection .Columm:last-child {
+    flex: 0 0 100px
+}
+
+.View {
+    padding-bottom: 2rem
+}
+
+.View .Columns {
+    margin-bottom: 0
+}
+
+.View .Selects {
+    display: flex
+}
+
+.View .Selects>div {
+    flex: 1
+}
+
+.Geography .SelectableHeading {
+    margin-top: -15px;
+    display: flex
+}
+
+.Geography .SelectableHeading .Widget {
+    flex: 0 0 4rem
+}
+
+.Geography .SelectableHeading .Widget span:focus {
+    outline: 0
+}
+
+.Geography .SelectableHeading .Widget .clickable {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 18px
+}
+
+.Geography .SelectableHeading .Widget .clickable.selected:before {
+    content: "L";
+    position: absolute;
+    left: 9px;
+    top: 1px;
+    transform: scaleX(-1) rotate(-35deg);
+    font-size: 24px;
+    font-weight: 700
+}
+
+.Geography .SelectableHeading .Heading {
+    flex: 1
+}
+
+.Geography .Find {
+    display: flex
+}
+
+@media screen and (max-width:960px) {
+    .Geography .Find {
+        display: block
+    }
+
+    .Geography .Find>div {
+        display: block;
+        padding-left: 0 !important
+    }
+
+    .Geography .Find .inner {
+        width: 100%
+    }
+
+    .Geography .Find .Button {
+        margin-top: 1rem !important
+    }
+}
+
+.Geography .Find .Button {
+    margin-top: -1rem
+}
+
+.Geography .Find>div {
+    flex: 1
+}
+
+.Geography .Find>div:not(:first-child) {
+    padding-left: 6px
+}
+
+.Geography .Placeholder {
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.Geography .Placeholder>div {
+    flex: 1;
+    text-align: center
+}
+
+.CodelistConcept.concept {
+    padding: 0;
+    margin-bottom: 3px !important;
+    display: flex;
+    position: relative;
+    border-radius: 1rem
+}
+
+.CodelistConcept.concept .Finger {
+    cursor: pointer
+}
+
+.CodelistConcept.concept span:focus {
+    outline: 0
+}
+
+.CodelistConcept.concept .notations,
+.CodelistConcept.concept .notations .notation {
+    list-style-type: none;
+    margin-left: 0;
+    text-indent: 0
+}
+
+.CodelistConcept.concept .notations .notation {
+    display: inline
+}
+
+.CodelistConcept.concept .notations .notation:first-child {
+    font-weight: 700
+}
+
+.CodelistConcept.concept .notations .notation:not(:last-child):after {
+    content: ", ";
+    opacity: .5
+}
+
+.CodelistConcept.concept .indicator {
+    flex: 0 0 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.CodelistConcept.concept .indicator .clickable {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer
+}
+
+.CodelistConcept.concept .indicator .clickable.selected:before {
+    content: "L";
+    position: absolute;
+    left: 10px;
+    top: 3px;
+    transform: scaleX(-1) rotate(-35deg);
+    font-size: 24px
+}
+
+.CodelistConcept.concept .payload {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 3rem 1rem 1rem;
+    position: relative
+}
+
+.CodelistConcept.concept .payload>span {
+    flex: 1;
+    line-height: 1.25em
+}
+
+.CodelistConcept.concept .payload .label {
+    font-size: 21px;
+    font-weight: 700
+}
+
+.CodelistConcept.concept .payload .code,
+.CodelistConcept.concept .payload .description,
+.CodelistConcept.concept .payload .identifier {
+    font-size: 18px
+}
+
+.CodelistConcept.concept .payload .ancestors,
+.CodelistConcept.concept .payload .descendents {
+    font-size: 12px
+}
+
+.CodelistConcept.concept .drill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 1rem;
+    cursor: pointer
+}
+
+.CodelistConcept.concept .drill .Icon {
+    flex: 0 0 36px
+}
+
+.Copiable {
+    margin-bottom: 10px
+}
+
+.Copiable .Field {
+    display: flex;
+    width: 100%
+}
+
+.Copiable .Field>div:first-child {
+    flex: 1;
+    padding-right: 1rem
+}
+
+.Copiable .Field>div:first-child textarea {
+    font-family: Menlo, monospace;
+    width: 100%;
+    -webkit-font-smoothing: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border-radius: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    height: 3rem;
+    letter-spacing: inherit;
+    outline: 0;
+    overflow: hidden;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 12px;
+    white-space: nowrap
+}
+
+.Copiable .Field>div:last-child {
+    flex: 0 0 130px;
+    text-align: right;
+    padding-right: .5rem
+}
+
+.Copiable .Field>div:last-child button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    outline: 0
+}
+
+.Copiable .Badge {
+    top: 2px
+}
+
+.underline {
+    font-weight: 700;
+    text-decoration: underline
+}
+
+.WithDataMarker:before {
+    content: attr(data-marker)
+}
+
+.DataMarker,
+.WithDataMarker:before {
+    display: inline-block;
+    font-size: 11px;
+    font-family: monospace;
+    background: #fffe54;
+    color: #000;
+    border-radius: 50%;
+    padding: 3px;
+    margin-right: 12px;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    overflow: hidden;
+    font-weight: 700;
+    line-height: 9px;
+    top: -3px;
+    position: relative
+}
+
+.DataMarker,
+.WithDataMarker,
+.WithDataMarker:before {
+    cursor: pointer
+}
+
+.DataMarker+.DataMarker {
+    left: -10px
+}
+
+.Download {
+    padding-top: 2rem
+}
+
+.FakeButton {
+    display: inline-block;
+    line-height: 3rem
+}
+
+.FileUpload {
+    position: relative
+}
+
+.FileUpload input {
+    width: .1px;
+    height: .1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1
+}
+
+.FileUpload .button {
+    background: none;
+    display: inline-block;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.75rem;
+    font-weight: 700;
+    height: 3rem;
+    letter-spacing: inherit;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+    outline: 0;
+    overflow: hidden;
+    padding: 0 2rem;
+    vertical-align: top;
+    border-radius: 2rem
+}
+
+.FileUpload .p {
+    display: inline-block;
+    margin-left: 2rem;
+    position: relative;
+    top: -2px
+}
+
+.FileUpload svg {
+    margin-right: 6px;
+    position: relative;
+    top: 6px;
+    stroke-width: 2px;
+    opacity: .5
+}
+
+.FileUpload input.has-focus+label,
+.FileUpload input:focus+label {
+    outline: 1px dotted #000;
+    outline: 5px auto -webkit-focus-ring-color
+}
+
+.Filters {
+    margin-bottom: 1rem
+}
+
+.Filters table {
+    table-layout: fixed
+}
+
+@media screen and (min-width:961px) {
+    .Filters .edit {
+        text-align: right
+    }
+}
+
+.Filters button {
+    margin-right: 2px !important
+}
+
+@media screen and (max-width:960px) {
+    .Filters {
+        margin-bottom: 2rem;
+        display: block
+    }
+
+    .Filters thead {
+        display: none
+    }
+
+    .Filters tbody,
+    .Filters td,
+    .Filters th,
+    .Filters tr {
+        display: block;
+        border: 0 !important
+    }
+
+    .Filters td.dimension {
+        padding-top: 2rem;
+        font-size: 2rem;
+        font-weight: 700
+    }
+
+    .Filters td.dimension:before {
+        content: "Dimension: ";
+        font-weight: 400;
+        display: block;
+        font-size: 18px
+    }
+
+    .Filters td.codelist:before {
+        content: "Codelist: ";
+        display: block;
+        font-size: 18px
+    }
+
+    .Filters td.selected:before {
+        content: "Selected: ";
+        display: block;
+        font-size: 18px;
+        margin-bottom: 6px
+    }
+}
+
+.Footer {
+    margin-top: 36px;
+    padding-bottom: 6rem
+}
+
+.Footer .Page {
+    padding-top: 2rem
+}
+
+.Heading {
+    display: block;
+    font-weight: 700;
+    position: relative
+}
+
+.Heading.h1 {
+    font-size: 48px;
+    line-height: 48px;
+    padding-top: 7.68px;
+    top: 2px;
+    margin-bottom: 8px
+}
+
+.Heading.h2 {
+    font-size: 36px;
+    line-height: 36px;
+    padding-top: 5.76px;
+    margin-bottom: 18.24px;
+    top: -2px
+}
+
+.Heading.h3 {
+    font-size: 24px;
+    line-height: 24px;
+    padding-top: 3.84px;
+    margin-bottom: 20.16px
+}
+
+.Heading.h4 {
+    font-size: 21px;
+    line-height: 24px;
+    padding-top: 4.86px;
+    margin-bottom: 19.14px
+}
+
+.Heading.h1+.Heading.h1 {
+    margin-top: -15px
+}
+
+.Heading.h2+.Heading.h1,
+.Heading.h3+.Heading.h1 {
+    margin-top: -27px
+}
+
+.Heading.h4+.Heading.h1 {
+    margin-top: -24px
+}
+
+.Column>.Heading {
+    margin-top: 0 !important;
+    padding-top: 0
+}
+
+.Column>.Heading small {
+    display: inline;
+    font-size: 1em;
+    font-weight: 400;
+    opacity: .6
+}
+
+svg {
+    shape-rendering: geometricPrecision
+}
+
+.Icon {
+    display: inline-block;
+    fill: none !important;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    vertical-align: middle
+}
+
+.IconButton {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    outline: 0
+}
+
+.IconButton+.IconButton {
+    margin-left: 2rem
+}
+
+.InlineButton {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border: 0;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    cursor: pointer;
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    outline: 0
+}
+
+.MarkedDown ol,
+.MarkedDown ul {
+    list-style-type: none;
+    padding-top: 2rem;
+    margin-left: 4rem
+}
+
+.MarkedDown ol li,
+.MarkedDown ul li {
+    display: block;
+    font-size: 21px;
+    line-height: 24px;
+    padding: 4.86px 0 0;
+    margin: -2rem 0 19.14px
+}
+
+.MarkedDown ol li:before,
+.MarkedDown ul li:before {
+    content: "\2022";
+    font-weight: 700;
+    display: inline-block;
+    width: 1.5rem;
+    margin-left: -1.5rem
+}
+
+.MarkedDown ol li ol,
+.MarkedDown ol li ul,
+.MarkedDown ul li ol,
+.MarkedDown ul li ul {
+    padding-top: 0;
+    margin-top: 19.14px
+}
+
+.MarkedDown ol p,
+.MarkedDown ul p {
+    display: inline;
+    margin-bottom: 0
+}
+
+.MarkedDown code {
+    white-space: pre;
+    border: 1px solid #777;
+    background: rgba(0, 0, 0, .1);
+    display: inline;
+    font-family: monospace;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 0 5px;
+    margin-bottom: 18.12px
+}
+
+.MarkedDown pre>code {
+    overflow: scroll;
+    display: block;
+    padding: 24px
+}
+
+.MarkedDown blockquote,
+.MarkedDown h1,
+.MarkedDown h2,
+.MarkedDown h3,
+.MarkedDown h4,
+.MarkedDown h5,
+.MarkedDown img {
+    display: none
+}
+
+.MarkedDown.extended h1,
+.MarkedDown.extended h2,
+.MarkedDown.extended h3 {
+    display: block;
+    color: #fff;
+    background: red;
+    padding: .5rem;
+    font-size: 1rem;
+    margin: 0 0 2rem
+}
+
+.MarkedDown.extended h1:before,
+.MarkedDown.extended h2:before,
+.MarkedDown.extended h3:before {
+    content: "element not allowed: "
+}
+
+.MarkedDown.extended h4 {
+    font-weight: 700;
+    display: block;
+    font-size: 24px;
+    line-height: 24px;
+    padding-top: 3.84px;
+    margin-bottom: 20.16px
+}
+
+.MarkedDown.extended h5 {
+    font-weight: 700;
+    display: block;
+    font-size: 21px;
+    line-height: 24px;
+    padding-top: 4.86px;
+    margin-bottom: 19.14px
+}
+
+.MarkedDown.extended img {
+    display: block;
+    margin: 2rem 0;
+    max-width: 100%
+}
+
+.MarkedDown.extended blockquote {
+    display: block;
+    font-style: italic;
+    font-size: 21px;
+    line-height: 24px;
+    padding: 4.86px 48px 24px;
+    margin-bottom: 19.14px
+}
+
+.Loading span {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    display: block
+}
+
+.Loading span:after,
+.Loading span:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0)
+}
+
+.Loading span:before {
+    -webkit-animation: pulse2 2s ease-in-out infinite;
+    animation: pulse2 2s ease-in-out infinite
+}
+
+.Loading span:after {
+    -webkit-animation: pulse2 2s ease-in-out 1s infinite;
+    animation: pulse2 2s ease-in-out 1s infinite
+}
+
+@-webkit-keyframes pulse2 {
+
+    0%,
+    to {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0
+    }
+}
+
+@keyframes pulse2 {
+
+    0%,
+    to {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0
+    }
+}
+
+.Message {
+    display: flex;
+    margin-bottom: 2rem;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 1rem
+}
+
+.Message .Icon {
+    flex: 0 0 5rem;
+    margin-top: 1px
+}
+
+.Message .Payload {
+    flex: 1;
+    font-size: 21px;
+    line-height: 24px;
+    padding-top: 4.86px;
+    margin-bottom: 19.14px
+}
+
+.Message .Button {
+    margin: 0
+}
+
+.Metadata .Columns:not(:first-child) {
+    padding: 11px 0 0
+}
+
+.Metadata dl {
+    margin-top: 2rem
+}
+
+.Metadata dl dt {
+    font-weight: 700
+}
+
+.Metadata dl dt a {
+    font-weight: 400
+}
+
+.Metadata .content {
+    display: block;
+    font-size: 21px;
+    line-height: 24px;
+    padding-top: 4.86px;
+    margin-bottom: 19.14px
+}
+
+.Metadata .uri {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 6.56px;
+    margin-bottom: 17.44px;
+    margin-top: -2rem
+}
+
+.Metadata dd .content[lang]:before,
+.Metadata dd .prefix,
+.Metadata dd .type,
+.Metadata dt .content[lang]:before,
+.Metadata dt .prefix,
+.Metadata dt .type {
+    display: inline-block;
+    font-size: .8em
+}
+
+.Metadata dd .content[lang]:before,
+.Metadata dt .content[lang]:before {
+    content: "@"attr(lang);
+    margin-right: .5rem
+}
+
+.Metadata dd .content[lang=en]:before,
+.Metadata dt .content[lang=en]:before {
+    content: "@"attr(lang) " (English)"
+}
+
+.Metadata dd .content[lang=en-gb]:before,
+.Metadata dt .content[lang=en-gb]:before {
+    content: "@"attr(lang) " (UK English)"
+}
+
+.Metadata dd .content[lang=fr]:before,
+.Metadata dt .content[lang=fr]:before {
+    content: "@"attr(lang) " (French)"
+}
+
+.Metadata dd .content[lang=de]:before,
+.Metadata dt .content[lang=de]:before {
+    content: "@"attr(lang) " (German)"
+}
+
+.Modal {
+    z-index: 999;
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden
+}
+
+.Modal header {
+    flex: 0 0 4.5rem
+}
+
+.Modal .scroll {
+    overflow-y: scroll;
+    flex: 1;
+    padding: 1rem 0
+}
+
+.ModalGDPR {
+    overflow: hidden;
+    z-index: 999;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+    display: flex;
+    flex-direction: column
+}
+
+.ModalGDPR .Family {
+    margin: 4rem 0 2rem
+}
+
+.ModalGDPR .Family .Twirl label .Heading {
+    font-size: 1.5rem !important
+}
+
+.ModalGDPR .Switch .Heading {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0
+}
+
+.ModalGDPR .Inner {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden
+}
+
+.ModalGDPR .Inner .content {
+    flex: 1;
+    overflow-y: scroll;
+    padding: 1rem 2rem
+}
+
+.ModalGDPR .Inner .footer {
+    flex: 0 0 5rem;
+    padding: 1rem 2rem;
+    overflow: hidden;
+    display: flex
+}
+
+.ModalGDPR .Inner .footer>div:first-child {
+    flex: 1
+}
+
+.ModalGDPR .Inner .footer>div:last-child {
+    flex: 1;
+    text-align: right
+}
+
+.ModalGDPR .Inner .footer>div:last-child .Button:last-child {
+    margin-left: 6px
+}
+
+.Navigation nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2px -1rem 0
+}
+
+.Navigation nav .outer {
+    flex: 0 0 25%;
+    border-bottom: 10px solid transparent
+}
+
+.Navigation nav .outer .inner {
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 0 1rem 2rem;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    padding-top: 3px;
+    padding-bottom: 18px
+}
+
+.Navigation nav .outer .inner a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: none;
+    font-size: 24px;
+    line-height: 24px;
+    padding-top: 3.84px;
+    margin-bottom: 20.16px
+}
+
+.Navigation nav .selected {
+    border-bottom: 6px
+}
+
+.Navigation nav .selected .inner {
+    border-bottom-width: 6px
+}
+
+@media screen and (min-width:961px) {
+    .Navigation {
+        border-bottom-width: 2px;
+        border-bottom-style: solid
+    }
+
+    .Navigation nav .outer {
+        flex: 1;
+        border: 0
+    }
+
+    .Navigation nav .outer .inner {
+        border-bottom: 0;
+        margin: 0 1rem;
+        padding-bottom: 24px
+    }
+
+    .Navigation nav .selected .inner {
+        border-bottom-width: 6px;
+        border-bottom-style: solid
+    }
+}
+
+.Collapsible #burger,
+.Collapsible #menuBurger {
+    display: none
+}
+
+@media screen and (max-width:960px) {
+    .Collapsible .Navigation {
+        border-bottom-width: 0
+    }
+
+    .Collapsible nav {
+        height: 0;
+        overflow: hidden;
+        display: block;
+        margin: 0
+    }
+
+    .Collapsible nav div {
+        overflow: hidden;
+        box-sizing: border-box;
+        margin: 1rem 0;
+        padding-top: 1rem;
+        border-bottom-style: solid;
+        border-bottom-width: 1px
+    }
+
+    .Collapsible nav div.selected {
+        border-bottom-width: 1px !important
+    }
+
+    .Collapsible nav div.selected a {
+        margin-bottom: 28.32px;
+        padding-top: -4.32px;
+        line-height: 24px;
+        font-size: 48px
+    }
+
+    .Collapsible nav div a {
+        text-align: center;
+        display: block;
+        border: none;
+        margin-bottom: 20.16px;
+        padding-top: 3.84px;
+        line-height: 24px;
+        font-size: 24px
+    }
+
+    .Collapsible #menuBurger {
+        height: 36px;
+        width: 36px;
+        display: inline-block;
+        position: absolute;
+        top: 2rem;
+        right: 4rem
+    }
+
+    .Collapsible #menuBurger span {
+        border-radius: 3px;
+        cursor: pointer;
+        display: block;
+        height: 2px;
+        margin-bottom: 10px;
+        position: relative;
+        transform-origin: 4px 0;
+        width: 100%;
+        transform: .5s cubic-bezier(.77, .2, .05, 1), opacity .55s ease
+    }
+
+    .Collapsible #menuBurger span:first-of-type,
+    .Collapsible #menuBurger span:nth-last-child(2) {
+        transform-origin: 0 0
+    }
+
+    .Collapsible #burger {
+        display: none
+    }
+
+    .Collapsible #burger:checked~#menuBurger span {
+        opacity: 1;
+        transform: translateY(-22px) rotate(45deg)
+    }
+
+    .Collapsible #burger:checked~#menuBurger span:nth-last-child(2) {
+        transform: translateY(13px) rotate(-45deg)
+    }
+
+    .Collapsible #burger:checked~#menuBurger span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(.2)
+    }
+
+    .Collapsible #burger:checked~.Navigation nav {
+        height: auto
+    }
+}
+
+dl.OntologyContent div:not(:first-child) {
+    margin-bottom: 2rem;
+    padding-top: 23px
+}
+
+dl.OntologyContent dt {
+    font-weight: 700;
+    display: block;
+    font-size: 21px;
+    line-height: 24px;
+    padding-top: 4.86px;
+    margin-bottom: 19.14px
+}
+
+dl.OntologyContent dd {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 6.56px;
+    margin-bottom: 17.44px
+}
+
+dl.OntologyContent ul {
+    display: inline
+}
+
+.Page {
+    margin: 0 4rem;
+    overflow: visible !important;
+    overflow: hidden
+}
+
+p .Pill,
+p .pill {
+    margin-right: 4px
+}
+
+.Pill.Clearable,
+.pill.clearable {
+    cursor: pointer
+}
+
+.Pill.Clearable .Inner,
+.pill.clearable .Inner {
+    padding: 0 0 0 6px
+}
+
+a.pill,
+a.Pill,
+button.pill,
+button.Pill {
+    cursor: pointer
+}
+
+.Pill,
+.pill {
+    position: relative;
+    top: -4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border: 0;
+    display: inline-flex;
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 18px;
+    text-decoration: none !important;
+    height: 18px
+}
+
+.Pill .Inner,
+.pill .Inner {
+    flex: 1;
+    display: block;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 18px
+}
+
+.Pill:after,
+.pill:after,
+.Pill:before,
+.pill:before {
+    flex: 0 0 18px;
+    display: block;
+    content: "x";
+    background: red;
+    padding: 1px 6px 0;
+    font-size: 14px;
+    font-weight: 900;
+    height: 18px
+}
+
+.Pill:before,
+.pill:before {
+    border-radius: 20px 0 0 20px
+}
+
+.Pill:after,
+.pill:after {
+    border-radius: 0 20px 20px 0
+}
+
+.PaginatedBox {
+    display: flex;
+    padding-bottom: 1rem
+}
+
+.PaginatedBox .content {
+    flex: 1
+}
+
+.PaginatedBox .content p {
+    margin-top: -2rem
+}
+
+.PaginatedBox .content p:last-child {
+    margin-top: 0
+}
+
+.PaginatedBox nav {
+    flex: 0 0 48px;
+    text-align: center;
+    border-left: 1px solid rgba(0, 0, 0, .3);
+    padding: 0 0 0 12px;
+    margin-left: 12px
+}
+
+.PaginatedBox nav .Heading {
+    text-align: center
+}
+
+.PaginatedBox nav span {
+    display: block;
+    padding: 6px 0
+}
+
+.PaginatedBox nav span .InlineButton {
+    font-size: 24px
+}
+
+.RawSource {
+    font-size: 1.7rem;
+    line-height: 2rem;
+    white-space: pre;
+    width: 100%;
+    padding: .5rem;
+    margin-bottom: 2rem
+}
+
+.Sparqlv2 .Editor {
+    padding: 1rem 1rem .1px;
+    border-radius: 1rem
+}
+
+.Sparqlv2 .Editor .formats .LabelledSelect {
+    margin-bottom: .5rem
+}
+
+.Sparqlv2 .Editor .formats .LabelledSelect .Label {
+    flex: 0 0 50%
+}
+
+.Sparqlv2 .Editor .buttons {
+    display: flex
+}
+
+.Sparqlv2 .Editor .buttons>div {
+    padding: 1rem 3rem 1rem 0;
+    flex: 0 0 2rem
+}
+
+.Sparqlv2 .Editor .buttons>div:last-child {
+    flex: 1;
+    text-align: right;
+    padding: 1rem 0 0
+}
+
+.Sparqlv2 .Editor .Columns,
+.Sparqlv2 .Editor .Switch {
+    margin-bottom: 0
+}
+
+.Sparqlv2 .Editor .Message {
+    margin-bottom: 1rem
+}
+
+.Sparqlv2 .Editor .Endpoint,
+.Sparqlv2 .Editor .Options {
+    margin-bottom: 2rem
+}
+
+.Sparqlv2 .Editor .Endpoint .weak {
+    font-size: .8em
+}
+
+.Sparqlv2 .Editor .Templates {
+    margin-bottom: 4rem
+}
+
+.Sparqlv2 .Editor .SparqlCurlCommand {
+    margin-top: 2rem
+}
+
+.Sparqlv2 .Editor .status-error pre {
+    margin-top: 1rem;
+    white-space: pre-wrap
+}
+
+.Sparqlv2 .HistoryItem {
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 1rem
+}
+
+.Sparqlv2 .HistoryItem .Header {
+    dbackground: hsla(0, 0%, 100%, .1);
+    padding: 1rem;
+    display: flex
+}
+
+.Sparqlv2 .HistoryItem .Header>div {
+    flex: 0 0 2rem
+}
+
+.Sparqlv2 .HistoryItem .Header>div:first-child {
+    padding: 0 2rem 0 1rem;
+    flex: 1 0 0
+}
+
+.Sparqlv2 .HistoryItem .Header>div:first-child .Accessory {
+    top: -12px
+}
+
+.Sparqlv2 .HistoryItem .Header>div:first-child .label {
+    display: inline-block;
+    margin-left: 2rem
+}
+
+.Sparqlv2 .HistoryItem .Header>div:first-child .label>span {
+    display: block;
+    font-size: 18px
+}
+
+.Sparqlv2 .HistoryItem .Header>div:first-child .label .bottom .query {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 21px;
+    margin-right: 1rem
+}
+
+.Sparqlv2 .HistoryItem .Header>div .IconButton {
+    margin: 0 1rem
+}
+
+.Sparqlv2 .HistoryItem .Main {
+    display: none;
+    padding: 2rem
+}
+
+.Sparqlv2 .HistoryItem .Main.open {
+    display: block
+}
+
+.Sparqlv2 .CodeMirror {
+    height: auto;
+    margin-bottom: 2rem
+}
+
+.Sparqlv2 .CodeMirror,
+.Sparqlv2 .CodeMirror * {
+    font-size: 21px;
+    font-family: Menlo, monospace;
+    box-shadow: none !important;
+    line-height: 24px
+}
+
+.Sparqlv2 .CodeMirror,
+.Sparqlv2 .CodeMirror :not(.CodeMirror-selected) {
+    background: transparent !important
+}
+
+.Sparqlv2 .status-info .CodeMirror,
+.Sparqlv2 .status-info .CodeMirror * {
+    color: #000 !important
+}
+
+.Sparqlv2 .status-info .Button {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: inset 0 0 0 2px #000
+}
+
+.Sparqlv2 .status-info .Navigation,
+.Sparqlv2 .status-info .Navigation div,
+.Sparqlv2 .status-info table thead tr,
+.Sparqlv2 .status-info table tr:not(:last-child) {
+    border-color: #000 !important
+}
+
+.Sparqlv2 .RawResult .CodeMirror,
+.Sparqlv2 .RawResult .CodeMirror * {
+    font-size: 12px;
+    line-height: 12px
+}
+
+.Sparqlv2 .TabularResult {
+    width: 100%
+}
+
+.Sparqlv2 .TabularResult td {
+    padding-right: 12px;
+    word-break: break-all
+}
+
+.Sparqlv2 .History {
+    margin-top: 2rem
+}
+
+.Select.trailingMargin {
+    margin-bottom: 2rem
+}
+
+.LabelledSelect {
+    display: flex;
+    margin-bottom: 1rem
+}
+
+.LabelledSelect .Select {
+    flex: 1
+}
+
+.LabelledSelect .Label {
+    flex: initial;
+    font-size: 21px;
+    padding-right: 2rem;
+    padding-top: 9px;
+    font-weight: 700
+}
+
+.LabelledSelect .Select+.Label {
+    padding-left: 2rem;
+    padding-right: 0
+}
+
+.LabelledSelectAbove {
+    display: block
+}
+
+.LabelledSelectAbove .Label {
+    padding: 0 0 .5rem
+}
+
+.Select .react-select__menu,
+.Select .react-select__multi-value,
+.Select .react-select__placeholder,
+.Select .react-select__single-value {
+    font-size: 21px
+}
+
+.PopoutSelect {
+    position: relative;
+    margin-bottom: 2rem
+}
+
+.PopoutSelect .DropdownIndicator {
+    color: #999;
+    height: 24px;
+    width: 32px
+}
+
+.PopoutSelect .menu {
+    box-shadow: 0 0 0 1px rgba(13, 22, 38, .1), 0 4px 11px rgba(13, 22, 38, .1);
+    margin-top: 8px;
+    position: absolute;
+    width: 100%;
+    z-index: 2
+}
+
+.PopoutSelect .blanket {
+    background: rgba(0, 0, 0, .5);
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    position: fixed;
+    zIndex: 1
+}
+
+.PopoutSelect .Button {
+    margin-bottom: 0
+}
+
+.PopoutSelect .ChevronDown {
+    position: relative;
+    top: 4px
+}
+
+.PopoutSelect .Select .react-select__menu {
+    boxShadow: inset 0 1px 0 rgba(0, 0, 0, .1)
+}
+
+.PopoutSelect .Select .react-select__control {
+    minWidth: 240;
+    margin: 8
+}
+
+.Sorter {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    overflow: hidden;
+    padding: 0;
+    margin: -6px 1rem 0;
+    height: 28px;
+    width: 1rem;
+    position: relative
+}
+
+.Sorter,
+.Sorter svg {
+    vertical-align: middle
+}
+
+.Sorter svg {
+    width: 100%;
+    height: 100%;
+    stroke-width: 1px;
+    display: inline-block;
+    fill: none !important;
+    stroke-linecap: round;
+    stroke-miterlimit: 10
+}
+
+.Spacer {
+    overflow: hidden;
+    height: 0
+}
+
+.StickyList .heading {
+    position: sticky;
+    top: 0;
+    margin: 0
+}
+
+.StickyList .heading h4 {
+    height: 36px;
+    line-height: 36px;
+    margin: 0;
+    font-size: 21px;
+    font-weight: 700;
+    padding-left: 12px
+}
+
+.StickyList .item {
+    font-size: 21px;
+    line-height: 24px;
+    padding: 17px 0 18px;
+    text-indent: 12px
+}
+
+.Switch {
+    padding-bottom: 1rem
+}
+
+.Switch label {
+    display: inline-flex;
+    align-items: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: relative;
+    vertical-align: middle;
+    margin-bottom: 0
+}
+
+.Switch label:hover {
+    cursor: pointer
+}
+
+.Switch label .h3 {
+    margin: 0 0 6px 1rem !important
+}
+
+.Switch label .h3:first-child {
+    margin: 0 1rem 6px 0 !important
+}
+
+.Switch label>input {
+    position: absolute;
+    opacity: 0
+}
+
+.Switch label>input+.Accessory {
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    width: 85px;
+    height: 36px;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background .2s linear, box-shadow .2s linear
+}
+
+.Switch label>input+.Accessory>.switch {
+    display: block;
+    height: 100%;
+    width: 36px;
+    position: absolute;
+    right: 0;
+    box-sizing: border-box;
+    border-radius: 50px;
+    border-width: 3px;
+    border-style: solid;
+    transition: right .2s linear, border-color .2s linear
+}
+
+.Switch label>input:not(:checked)+.Accessory>.switch {
+    right: calc(100% - 36px)
+}
+
+.Switch label>input+.Accessory:before {
+    content: "ON";
+    opacity: 0;
+    right: 50%
+}
+
+.Switch label>input+.Accessory:after,
+.Switch label>input+.Accessory:before {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: all .2s linear
+}
+
+.Switch label>input+.Accessory:after {
+    content: "OFF";
+    left: 50%
+}
+
+.Switch label>input+.Accessory+.label {
+    margin-left: 10px
+}
+
+.Switch label>input:checked+.Accessory:before {
+    opacity: 1
+}
+
+.Switch label>input:checked+.Accessory:after {
+    opacity: 0
+}
+
+.HideStatus .Accessory:after,
+.HideStatus .Accessory:before {
+    display: none !important
+}
+
+.Tabs {
+    padding-bottom: 3rem
+}
+
+.Tabs .Navigation {
+    margin-bottom: 1rem
+}
+
+.Tabs .Navigation+p {
+    margin-top: -9px
+}
+
+.Tabs .Navigation p {
+    font-size: 24px;
+    margin-bottom: 0
+}
+
+.Tabs .Navigation .InlineButton {
+    width: 100%;
+    display: block;
+    text-align: left
+}
+
+.TabularData {
+    margin-bottom: 2rem
+}
+
+.TabularData ol {
+    margin: -2px 0 0;
+    padding: 0;
+    list-style: none;
+    text-indent: 0;
+    display: table;
+    min-width: 100%
+}
+
+.TabularData ol li {
+    display: table-row;
+    margin: 0;
+    padding: 0;
+    list-style: 0;
+    text-indent: 0
+}
+
+.TabularData ol li>span {
+    max-width: 20vw;
+    padding-right: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: table-cell;
+    text-align: left;
+    padding-bottom: 5.12px
+}
+
+.TabularData ol li:first-child>span,
+.TabularData ol li>span {
+    font-size: 18px;
+    margin-bottom: 18.12px;
+    padding-top: 5.88px;
+    line-height: 24px;
+    font-size: 21px
+}
+
+.TabularData ol li:first-child>span {
+    font-weight: 700;
+    padding-bottom: 4.12px
+}
+
+.TabularList {
+    margin: -2px 0 0;
+    padding: 0;
+    list-style: none;
+    text-indent: 0;
+    display: table;
+    table-layout: fixed;
+    width: 100%
+}
+
+.TabularList ol,
+.TabularList ul {
+    margin-left: 0
+}
+
+.TabularList li {
+    display: table-row;
+    margin: 0;
+    padding: 0;
+    list-style: 0;
+    text-indent: 0
+}
+
+.TabularList li>span:first-child {
+    font-weight: 700
+}
+
+.TabularList li>span {
+    word-wrap: break-word;
+    display: table-cell;
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 18.12px;
+    padding: 5.88px 1rem 5.12px;
+    line-height: 24px;
+    font-size: 21px
+}
+
+.TabularList li>span:not(:last-child) {
+    padding-right: 2rem
+}
+
+.TabularList li:first-child>span {
+    font-weight: 700;
+    font-size: 18px;
+    padding-bottom: 4.12px;
+    margin-bottom: 18.12px;
+    padding-top: 5.88px;
+    line-height: 24px;
+    font-size: 21px
+}
+
+.TextArea {
+    margin-bottom: -1rem
+}
+
+.TextArea textarea {
+    width: 100%;
+    -webkit-font-smoothing: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border-radius: 0;
+    box-sizing: border-box;
+    font-size: 21px;
+    height: 3rem;
+    letter-spacing: inherit;
+    margin-bottom: 1rem;
+    margin-top: -1rem;
+    outline: 0;
+    padding: 1rem;
+    vertical-align: top
+}
+
+.TextArea .label {
+    font-size: 21px;
+    line-height: 24px;
+    padding-top: 4.86px;
+    margin-bottom: 19.14px;
+    display: block
+}
+
+.TextArea .label .strong {
+    font-weight: 700
+}
+
+.TextArea .Note {
+    font-size: 16px;
+    line-height: 12px;
+    padding-top: .56px;
+    margin-bottom: 23.44px
+}
+
+.TextInput {
+    margin-bottom: -1rem
+}
+
+.TextInput input {
+    width: 100%;
+    -webkit-font-smoothing: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border-radius: 0;
+    box-sizing: border-box;
+    font-size: 21px;
+    height: 3rem;
+    letter-spacing: inherit;
+    margin-bottom: 1rem;
+    margin-top: -1rem;
+    outline: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    vertical-align: top;
+    min-width: 100px
+}
+
+.TextInput input.Clearable {
+    padding-right: 3rem
+}
+
+.TextInput button {
+    position: absolute;
+    right: 12px;
+    top: -17px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    overflow: hidden;
+    outline: 0;
+    -webkit-font-smoothing: inherit;
+    letter-spacing: inherit;
+    background: none;
+    vertical-align: top;
+    cursor: pointer;
+    border: 0;
+    transform: rotate(45deg);
+    font-size: 36px
+}
+
+.InputWrapper .label {
+    font-size: 21px;
+    line-height: 24px;
+    padding-top: 4.86px;
+    margin-bottom: 19.14px;
+    display: block
+}
+
+.InputWrapper .label .strong {
+    font-weight: 700
+}
+
+.InputWrapper .empty .label {
+    display: none
+}
+
+.InputWrapper .Note {
+    font-size: 16px;
+    line-height: 12px;
+    padding-top: .56px;
+    margin-bottom: 23.44px
+}
+
+.InputWrapper .fields {
+    position: relative;
+    display: block
+}
+
+.Twirl label {
+    position: relative
+}
+
+.Twirl label>input {
+    position: absolute;
+    opacity: 0
+}
+
+.Twirl label .Accessory {
+    margin-left: .5rem;
+    width: 1em;
+    height: 1em;
+    border-style: solid;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    position: relative
+}
+
+.Twirl label>input:checked+.Accessory {
+    transform: rotate(45deg);
+    top: -2px
+}
+
+.Twirl label .h3 {
+    display: inline-block;
+    margin-left: 2rem
+}
+
+.Twirl label .h3:first-child {
+    margin-left: 0
+}
+
+.URL {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word
+}
+
+.Wizard .contents {
+    position: relative;
+    padding-top: 5rem
+}
+
+.Progress {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    position: relative;
+    margin: 5px 0 4rem;
+    padding: 0 0 10px;
+    text-indent: 0;
+    counter-reset: step
+}
+
+.Progress li {
+    display: table-cell;
+    text-align: center;
+    vertical-align: top;
+    overflow: visible;
+    position: relative;
+    font-size: 18px;
+    padding-top: 4px;
+    counter-increment: step
+}
+
+.Progress li.current {
+    font-weight: 700
+}
+
+.Progress li .node {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 43px;
+    left: 50%;
+    margin-left: -1rem
+}
+
+.Progress li .node:before {
+    content: counter(step)
+}
+
+.Progress li.complete .node:before {
+    content: "✓"
+}
+
+.Progress li:not(:last-child):before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 54px;
+    background-color: #ccc;
+    height: 2px;
+    width: 100%
+}
+
+.Progress.rounded li .node {
+    border-radius: 100%
+}
+
+.status-error .BrandSwirrl .Logo {
+    background: #000 !important
+}
+
+.BrandSwirrl .Logo {
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    display: block;
+    height: 5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    width: 14rem;
+    background: linear-gradient(0deg, #ff0505, #ff5b00)
+}
+
+.BrandSwirrl .Logo svg {
+    fill: #fff;
+    left: 2rem;
+    position: absolute;
+    top: -3.7rem;
+    width: 10rem
+}
+
+body .RawSource {
+    border: 1px solid rgba(0, 0, 0, .4)
+}
+
+body .RawSource,
+body .URL {
+    font-family: Menlo, monospace
+}
+
+@media (prefers-color-scheme:dark) {
+    body {
+        color: #fff;
+        background: #292d33
+    }
+}
+
+body svg {
+    fill: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body svg {
+        fill: #fff
+    }
+}
+
+body a {
+    color: #000;
+    border-bottom-color: #000
+}
+
+@media (prefers-color-scheme:dark) {
+    body a {
+        border-bottom-color: #fff;
+        color: #fff
+    }
+}
+
+body a:visted {
+    color: #000;
+    border-bottom-color: #000
+}
+
+@media (prefers-color-scheme:dark) {
+    body a:visted {
+        border-bottom-color: #fff;
+        color: #fff
+    }
+}
+
+body a:active {
+    color: #000;
+    border-bottom-color: #000
+}
+
+@media (prefers-color-scheme:dark) {
+    body a:active {
+        border-bottom-color: #fff;
+        color: #fff
+    }
+}
+
+body fieldset {
+    border-top: 1px solid rgba(0, 0, 0, .1)
+}
+
+@media (prefers-color-scheme:dark) {
+    body fieldset {
+        border-top: 1px solid hsla(0, 0%, 100%, .1)
+    }
+}
+
+body .panel {
+    background: rgba(0, 0, 0, .1)
+}
+
+@media (prefers-color-scheme:dark) {
+    body .panel {
+        background: hsla(0, 0%, 100%, .1)
+    }
+}
+
+body .status-attention,
+body .status-cool,
+body .status-error,
+body .status-info,
+body .status-success {
+    color: #000 !important
+}
+
+body .status-attention a,
+body .status-attention a:active,
+body .status-attention a:hover,
+body .status-attention a:visited,
+body .status-cool a,
+body .status-cool a:active,
+body .status-cool a:hover,
+body .status-cool a:visited,
+body .status-error a,
+body .status-error a:active,
+body .status-error a:hover,
+body .status-error a:visited,
+body .status-info a,
+body .status-info a:active,
+body .status-info a:hover,
+body .status-info a:visited,
+body .status-success a,
+body .status-success a:active,
+body .status-success a:hover,
+body .status-success a:visited {
+    color: #000 !important;
+    border-color: #000 !important
+}
+
+body .status-attention {
+    background: #fcc5fc
+}
+
+body .status-cool {
+    background: #c5e6fc
+}
+
+body .status-info {
+    background: #fffe54 !important
+}
+
+body.status-error,
+body .status-error,
+body.status-error>*,
+body .status-error>* {
+    background: #ffbdbd !important
+}
+
+body.status-error *,
+body .status-error * {
+    color: #000
+}
+
+body.status-error .weak,
+body .status-error .weak {
+    color: rgba(0, 0, 0, .5) !important
+}
+
+body.status-error *>* * svg,
+body .status-error *>* * svg {
+    stroke: #000 !important
+}
+
+body.status-error .Navigation .inner,
+body .status-error .Navigation .inner {
+    border-color: #000 !important
+}
+
+body.status-error #menuBurger span,
+body .status-error #menuBurger span {
+    background: #000
+}
+
+body.status-error .Footer .Page,
+body .status-error .Footer .Page {
+    border-color: #000
+}
+
+body.status-error .Footer .InlineButton,
+body .status-error .Footer .InlineButton,
+body.status-error .Footer a,
+body .status-error .Footer a,
+body.status-error .Footer a:active,
+body .status-error .Footer a:active,
+body.status-error .Footer a:hover,
+body .status-error .Footer a:hover,
+body.status-error .Footer a:visited,
+body .status-error .Footer a:visited {
+    border-color: #000 !important
+}
+
+@media screen and (max-width:960px) {
+
+    body.status-error header .Sidebar,
+    body .status-error header .Sidebar {
+        display: none
+    }
+}
+
+@media screen and (min-width:961px) {
+
+    body.status-error .Navigation,
+    body .status-error .Navigation {
+        border-bottom-color: #000 !important
+    }
+}
+
+body .status-success {
+    background: #8dfb88 !important
+}
+
+body table thead tr {
+    border-bottom: 2px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body table thead tr {
+        border-bottom: 2px solid #fff
+    }
+}
+
+body table .thead .tr {
+    border-bottom: 2px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body table .thead .tr {
+        border-bottom: 2px solid #fff
+    }
+}
+
+body .table thead tr {
+    border-bottom: 2px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .table thead tr {
+        border-bottom: 2px solid #fff
+    }
+}
+
+body .table .thead .tr {
+    border-bottom: 2px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .table .thead .tr {
+        border-bottom: 2px solid #fff
+    }
+}
+
+body table tr:not(:last-child) {
+    border-bottom: 1px solid #999
+}
+
+@media (prefers-color-scheme:dark) {
+    body table tr:not(:last-child) {
+        border-bottom: 1px solid #999
+    }
+}
+
+body table .tr:not(:last-child) {
+    border-bottom: 1px solid #999
+}
+
+@media (prefers-color-scheme:dark) {
+    body table .tr:not(:last-child) {
+        border-bottom: 1px solid #999
+    }
+}
+
+body .table tr:not(:last-child) {
+    border-bottom: 1px solid #999
+}
+
+@media (prefers-color-scheme:dark) {
+    body .table tr:not(:last-child) {
+        border-bottom: 1px solid #999
+    }
+}
+
+body .table .tr:not(:last-child) {
+    border-bottom: 1px solid #999
+}
+
+@media (prefers-color-scheme:dark) {
+    body .table .tr:not(:last-child) {
+        border-bottom: 1px solid #999
+    }
+}
+
+@media screen and (min-width:961px) {
+    body .TableWhenWide .thead .tr {
+        border-bottom: 2px solid #fff
+    }
+
+    @media (prefers-color-scheme:dark) {
+        body .TableWhenWide .thead .tr {
+            border-bottom: 2px solid #fff
+        }
+    }
+
+    body .TableWhenWide .tr:not(:last-child) {
+        border-bottom: 1px solid #999
+    }
+
+    @media (prefers-color-scheme:dark) {
+        body .TableWhenWide .tr:not(:last-child) {
+            border-bottom: 1px solid #999
+        }
+    }
+}
+
+body .weak {
+    color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    body .weak {
+        color: #999
+    }
+}
+
+body .knockback {
+    color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    body .knockback {
+        color: #999
+    }
+}
+
+body .AdminHeader {
+    background: rgba(0, 0, 0, .1)
+}
+
+@media (prefers-color-scheme:dark) {
+    body .AdminHeader {
+        background: rgba(0, 0, 0, .2)
+    }
+}
+
+body .AdminHeader address {
+    color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    body .AdminHeader address {
+        color: #999
+    }
+}
+
+body .Button {
+    background: #fff;
+    box-shadow: inset 0 0 0 2px #000;
+    color: #000
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Button {
+        color: #fff;
+        box-shadow: inset 0 0 0 2px #fff;
+        background: #292d33
+    }
+}
+
+body .Button.Hero {
+    background: #000;
+    color: #fff
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Button.Hero {
+        color: #292d33;
+        background: #fff
+    }
+}
+
+body .Button.Danger {
+    box-shadow: inset 0 0 0 2px red;
+    color: red
+}
+
+body .Button.Disabled {
+    box-shadow: inset 0 0 0 2px #999;
+    color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Button.Disabled {
+        color: #999;
+        box-shadow: inset 0 0 0 2px #999
+    }
+}
+
+body .Catalogue td button.pill {
+    box-shadow: inset 0 0 0 2px #fff
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Catalogue td button.pill {
+        box-shadow: inset 0 0 0 2px #292d33
+    }
+}
+
+body .Catalogue .TableWhenWide .tr {
+    border-top-color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Catalogue .TableWhenWide .tr {
+        border-top-color: #fff
+    }
+}
+
+body .Checkbox label:before {
+    border: 1px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Checkbox label:before {
+        border: 1px solid #fff
+    }
+}
+
+body .Checkbox label:after {
+    border-left: 2px solid #292d33;
+    border-bottom: 2px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Checkbox label:after {
+        border-bottom: 2px solid #fff;
+        border-left: 2px solid #fff
+    }
+}
+
+body .CodelistViewDrilldown .scrolling {
+    background: rgba(0, 0, 0, .2)
+}
+
+@media (prefers-color-scheme:dark) {
+    body .CodelistViewDrilldown .scrolling {
+        background: rgba(0, 0, 0, .2);
+        background: #292d33
+    }
+}
+
+body .Nested .children .NestedConcept {
+    border-left: 1px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Nested .children .NestedConcept {
+        border-left: 1px solid #fff
+    }
+}
+
+body .Nested .children .NestedConcept:last-child:before {
+    border-left: 1px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Nested .children .NestedConcept:last-child:before {
+        border-left: 1px solid #fff
+    }
+}
+
+body .Nested .children .NestedConcept .instead {
+    border-left: 1px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Nested .children .NestedConcept .instead {
+        border-left: 1px solid #fff
+    }
+}
+
+body .Nested .NestedConcept .box:before {
+    border-top: 1px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Nested .NestedConcept .box:before {
+        border-top: 1px solid #fff
+    }
+}
+
+body .Selection {
+    background: #fff !important
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Selection {
+        background: #181a1e !important
+    }
+}
+
+body .Geography .clickable {
+    border: 3px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Geography .clickable {
+        border: 3px solid #fff
+    }
+}
+
+body .Geography .clickable.selected {
+    background: #fff
+}
+
+body .Geography .clickable.selected:before {
+    color: #000
+}
+
+body .CodelistConcept.concept {
+    background: #efefef
+}
+
+body .CodelistConcept.concept .clickable {
+    border: 1px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .CodelistConcept.concept .clickable {
+        border: 1px solid #fff
+    }
+}
+
+body .CodelistConcept.concept .clickable.selected {
+    background: #fff
+}
+
+body .CodelistConcept.concept .clickable.selected:before {
+    color: #000
+}
+
+@media (prefers-color-scheme:dark) {
+    body .CodelistConcept.concept {
+        background: #efefef;
+        background: hsla(0, 0%, 100%, .1)
+    }
+}
+
+body .Geography .CodelistConcept.concept {
+    background: #efefef
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Geography .CodelistConcept.concept {
+        background: #efefef;
+        background: hsla(0, 0%, 100%, .1)
+    }
+}
+
+body .Copiable .Field {
+    background: rgba(0, 0, 0, .1)
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Copiable .Field {
+        background: hsla(0, 0%, 100%, .1)
+    }
+}
+
+body .Copiable textarea {
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Copiable textarea {
+        color: #fff
+    }
+}
+
+body .Footer .Page {
+    border-top: 2px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Footer .Page {
+        border-top: 2px solid #fff
+    }
+}
+
+@media screen and (max-width:960px) {
+    body td.dimension {
+        border-top: 1px solid #fff !important
+    }
+
+    @media (prefers-color-scheme:dark) {
+        body td.dimension {
+            border-top: 1px solid #fff !important
+        }
+    }
+}
+
+body .FileUpload svg {
+    fill: none;
+    stroke: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .FileUpload svg {
+        fill: none;
+        stroke: #fff
+    }
+}
+
+body .FileUpload .button {
+    background: #fff;
+    box-shadow: inset 0 0 0 2px #000;
+    color: #000
+}
+
+@media (prefers-color-scheme:dark) {
+    body .FileUpload .button {
+        color: #fff;
+        box-shadow: inset 0 0 0 2px #fff;
+        background: #292d33
+    }
+}
+
+body .highlight {
+    background: #ffffb3;
+    color: #000 !important
+}
+
+body .Icon {
+    stroke: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Icon {
+        stroke: #fff
+    }
+}
+
+body .status-error .Icon,
+body .status-info .Icon {
+    stroke: #000
+}
+
+body .IconButton.Hero {
+    background: #292d33;
+    border-radius: 50%;
+    padding: 1rem
+}
+
+@media (prefers-color-scheme:dark) {
+    body .IconButton.Hero {
+        border-radius: 50%;
+        padding: 1rem;
+        background: #fff
+    }
+}
+
+body .IconButton.Hero .Icon {
+    stroke: #fff
+}
+
+@media (prefers-color-scheme:dark) {
+    body .IconButton.Hero .Icon {
+        stroke: #292d33
+    }
+}
+
+body .IconButton.Danger .Icon {
+    stroke: red
+}
+
+body .IconButton.Disabled .Icon {
+    opacity: .3
+}
+
+body .InlineButton {
+    color: inherit;
+    border-bottom-color: #000
+}
+
+@media (prefers-color-scheme:dark) {
+    body .InlineButton {
+        color: inherit;
+        border-bottom-color: #fff
+    }
+}
+
+body .InlineButton.invisible {
+    border-bottom: 0 !important
+}
+
+body .Message {
+    background: #fffe54;
+    color: #000 !important
+}
+
+body .Message>.Icon {
+    stroke: #000 !important
+}
+
+body .Message .Button,
+body .Message a {
+    color: #000 !important;
+    border-color: #000 !important
+}
+
+body .Message .Button {
+    box-shadow: inset 0 0 0 2px #000 !important
+}
+
+body .Loading,
+body .Message .Button {
+    background: transparent
+}
+
+body .Loading span:before {
+    background: #000
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Loading span:before {
+        background: #fff
+    }
+}
+
+body .Loading span:after {
+    background: #000
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Loading span:after {
+        background: #fff
+    }
+}
+
+body .Metadata .Columns:not(:first-child) {
+    border-top: 1px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Metadata .Columns:not(:first-child) {
+        border-top: 1px solid #fff
+    }
+}
+
+body dd .content[lang]:before {
+    color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    body dd .content[lang]:before {
+        color: #999
+    }
+}
+
+body dd .prefix {
+    color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    body dd .prefix {
+        color: #999
+    }
+}
+
+body dd .type {
+    color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    body dd .type {
+        color: #999
+    }
+}
+
+body dt .content[lang]:before {
+    color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    body dt .content[lang]:before {
+        color: #999
+    }
+}
+
+body dt .prefix {
+    color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    body dt .prefix {
+        color: #999
+    }
+}
+
+body dt .type {
+    color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    body dt .type {
+        color: #999
+    }
+}
+
+body .Modal {
+    background: #f2f2f2
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Modal {
+        background: #292d33
+    }
+}
+
+body .ModalGDPR {
+    background: #fff
+}
+
+@media (prefers-color-scheme:dark) {
+    body .ModalGDPR {
+        background: #292d33
+    }
+}
+
+body .ModalGDPR .footer {
+    background: rgba(0, 0, 0, .1)
+}
+
+@media (prefers-color-scheme:dark) {
+    body .ModalGDPR .footer {
+        background: hsla(0, 0%, 100%, .1)
+    }
+}
+
+body .Navigation {
+    border-color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Navigation {
+        border-color: #fff
+    }
+}
+
+body .Navigation .inner {
+    border-color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Navigation .inner {
+        border-color: #fff
+    }
+}
+
+body .Navigation .inner a {
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Navigation .inner a {
+        color: #fff
+    }
+}
+
+body #menuBurger span {
+    background: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body #menuBurger span {
+        background: #fff
+    }
+}
+
+body .OntologyContent div:not(:first-child) {
+    border-top: 1px solid #999
+}
+
+@media (prefers-color-scheme:dark) {
+    body .OntologyContent div:not(:first-child) {
+        border-top: 1px solid #999
+    }
+}
+
+body .pill .Inner,
+body .Pill .Inner {
+    background-color: #ddd;
+    color: #000 !important
+}
+
+body .pill:after,
+body .Pill:after,
+body .pill:before,
+body .Pill:before {
+    background-color: #ddd;
+    color: #ddd
+}
+
+body .Pill.Clearable:before {
+    background-color: #292d33;
+    color: #fff
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Pill.Clearable:before {
+        color: #292d33;
+        background-color: #fff
+    }
+}
+
+@media (prefers-color-scheme:light) {
+    body .Pill.Clearable .Inner {
+        background: #fff !important;
+        color: #292d33 !important;
+        background: #292d33 !important;
+        color: #fff !important
+    }
+
+    @media (prefers-color-scheme:dark) {
+        body .Pill.Clearable .Inner {
+            color: #fff !important;
+            background: #292d33 !important
+        }
+    }
+
+    body .pill.Clearable .Inner {
+        background: #fff !important;
+        color: #292d33 !important;
+        background: #292d33 !important;
+        color: #fff !important
+    }
+
+    @media (prefers-color-scheme:dark) {
+        body .pill.Clearable .Inner {
+            color: #fff !important;
+            background: #292d33 !important
+        }
+    }
+
+    body .Pill.Clearable:after {
+        background: #fff !important;
+        color: #fff !important;
+        background: #292d33 !important;
+        color: #292d33 !important
+    }
+
+    @media (prefers-color-scheme:dark) {
+        body .Pill.Clearable:after {
+            color: #292d33 !important;
+            background: #292d33 !important
+        }
+    }
+
+    body .pill.Clearable:after {
+        background: #fff !important;
+        color: #fff !important;
+        background: #292d33 !important;
+        color: #292d33 !important
+    }
+
+    @media (prefers-color-scheme:dark) {
+        body .pill.Clearable:after {
+            color: #292d33 !important;
+            background: #292d33 !important
+        }
+    }
+}
+
+@media (prefers-color-scheme:dark) {
+    body .RawSource {
+        border: 1px solid rgba(0, 0, 0, .4);
+        background: rgba(0, 0, 0, .2)
+    }
+}
+
+body .RawSource.Highlighted {
+    color: #999
+}
+
+body .Select select {
+    background: #fff;
+    box-shadow: inset 0 0 0 1px #292d33;
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Select select {
+        color: #fff;
+        box-shadow: inset 0 0 0 1px #fff;
+        background: #292d33
+    }
+}
+
+body .Select .react-select__menu {
+    background: #fff;
+    border: 1px solid #fff
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Select .react-select__menu {
+        background: #292d33;
+        border: 1px solid #fff
+    }
+}
+
+body .Select .react-select__control {
+    background: #fff
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Select .react-select__control {
+        background: #292d33
+    }
+}
+
+body .Select .react-select__single-value {
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Select .react-select__single-value {
+        color: #fff
+    }
+}
+
+body .Select .react-select__multi-value,
+body .Select .react-select__multi-value__remove {
+    background: #ddd;
+    color: #000
+}
+
+body .Select .react-select__option--is-disabled {
+    color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Select .react-select__option--is-disabled {
+        color: #999
+    }
+}
+
+body .Select .react-select__option--is-focused {
+    color: #000
+}
+
+body .Sorter svg {
+    stroke: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Sorter svg {
+        stroke: #999
+    }
+}
+
+body .Sorter.ascending .asc {
+    stroke: #000;
+    stroke-width: 4px
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Sorter.ascending .asc {
+        stroke-width: 4px;
+        stroke: #fff
+    }
+}
+
+body .Sorter.descending .desc {
+    stroke: #000;
+    stroke-width: 4px
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Sorter.descending .desc {
+        stroke-width: 4px;
+        stroke: #fff
+    }
+}
+
+body .Sparql .Editor {
+    border: 1px solid rgba(0, 0, 0, .4)
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Sparql .Editor {
+        border: 1px solid rgba(0, 0, 0, .4);
+        background: rgba(0, 0, 0, .2)
+    }
+}
+
+body .Sparqlv2 .Editor,
+body .Sparqlv2 .HistoryItem {
+    border: 1px solid rgba(0, 0, 0, .4)
+}
+
+@media (prefers-color-scheme:dark) {
+
+    body .Sparqlv2 .Editor,
+    body .Sparqlv2 .HistoryItem {
+        border: 1px solid hsla(0, 0%, 100%, .2)
+    }
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Sparqlv2 .Editor {
+        background: rgba(0, 0, 0, .2)
+    }
+}
+
+body .Sparqlv2 .HistoryItem .Header.favourite {
+    background: #fffe54;
+    color: #000
+}
+
+body .Sparqlv2 .HistoryItem .Header.favourite svg {
+    stroke: #000
+}
+
+body .Sparqlv2 .HistoryItem .Header.favourite .toggleFavourite svg {
+    fill: #000 !important
+}
+
+body .Sparqlv2 .HistoryItem .Header.favourite .Accessory {
+    border-color: #000
+}
+
+body .StickyList .heading {
+    background: #fff
+}
+
+@media (prefers-color-scheme:dark) {
+    body .StickyList .heading {
+        background: #292d33
+    }
+}
+
+body .StickyList .heading h4 {
+    background: rgba(0, 0, 0, .1);
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .StickyList .heading h4 {
+        color: #fff;
+        background: hsla(0, 0%, 100%, .1)
+    }
+}
+
+body .StickyList .item {
+    border-top: 1px solid #999
+}
+
+@media (prefers-color-scheme:dark) {
+    body .StickyList .item {
+        border-top: 1px solid #999
+    }
+}
+
+body .StickyList .heading+.item {
+    border-top: 1px solid transparent
+}
+
+body .Switch label {
+    color: #fff
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Switch label {
+        color: #292d33
+    }
+}
+
+body .Switch label .h3 {
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Switch label .h3 {
+        color: #fff
+    }
+}
+
+body .Switch label>input+.Accessory>.switch {
+    background: #fff
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Switch label>input+.Accessory>.switch {
+        background: #292d33
+    }
+}
+
+body .Switch label>input+.Accessory+.label {
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Switch label>input+.Accessory+.label {
+        color: #fff
+    }
+}
+
+body .Switch label>input:not(:checked)+.Accessory {
+    background: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Switch label>input:not(:checked)+.Accessory {
+        background: #999
+    }
+}
+
+body .Switch label>input:not(:checked)+.Accessory>.switch {
+    border-color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Switch label>input:not(:checked)+.Accessory>.switch {
+        border-color: #999
+    }
+}
+
+body .Switch label>input:checked+.Accessory {
+    background: #ff5a05
+}
+
+body .Switch label>input:checked+.Accessory>.switch {
+    border-color: #ff5a05
+}
+
+body .Switch label>input.active+.Accessory,
+body .Switch label>input:focus+.Accessory {
+    box-shadow: 0 0 5px 3px rgba(0, 119, 200, .5)
+}
+
+body .TabularData ol li:first-child>span {
+    border-bottom: 2px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .TabularData ol li:first-child>span {
+        border-bottom: 2px solid #fff
+    }
+}
+
+body .TabularData ol li>span {
+    border-bottom: 1px solid rgba(0, 0, 0, .1)
+}
+
+@media (prefers-color-scheme:dark) {
+    body .TabularData ol li>span {
+        border-bottom: 1px solid hsla(0, 0%, 100%, .1)
+    }
+}
+
+body .TabularData ol li:last-child>span {
+    oborder-bottom: 0
+}
+
+body .TabularList li:first-child>span {
+    border-bottom: 2px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .TabularList li:first-child>span {
+        border-bottom: 2px solid #fff
+    }
+}
+
+body .TabularList li>span {
+    border-bottom: 1px solid rgba(0, 0, 0, .1)
+}
+
+@media (prefers-color-scheme:dark) {
+    body .TabularList li>span {
+        border-bottom: 1px solid hsla(0, 0%, 100%, .1)
+    }
+}
+
+body .TabularList li:last-child>span {
+    border-bottom: 0
+}
+
+body .TextArea {
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .TextArea {
+        color: #fff
+    }
+}
+
+body .TextArea textarea {
+    background: #fff;
+    border: 1px solid #292d33;
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .TextArea textarea {
+        color: #fff;
+        border: 1px solid #fff;
+        background: #292d33
+    }
+}
+
+body .TextArea textarea:focus {
+    box-shadow: inset 0 0 0 1px #1e90ff
+}
+
+body .TextInput {
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .TextInput {
+        color: #fff
+    }
+}
+
+body .TextInput input {
+    background: #fff;
+    border: 1px solid #292d33;
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .TextInput input {
+        color: #fff;
+        border: 1px solid #fff;
+        background: #292d33
+    }
+}
+
+body .TextInput input:focus {
+    box-shadow: inset 0 0 0 1px #1e90ff
+}
+
+body .TextInput button {
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .TextInput button {
+        color: #fff
+    }
+}
+
+body .Twirl .Accessory {
+    border-color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Twirl .Accessory {
+        border-color: #fff
+    }
+}
+
+body .Twirl .weak {
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Twirl .weak {
+        color: #fff
+    }
+}
+
+body .status-error .Twirl .Accessory,
+body .status-info .Twirl .Accessory,
+body .status-success .Twirl .Accessory {
+    border-color: #000
+}
+
+body .Progress li {
+    color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Progress li {
+        color: #999
+    }
+}
+
+body .Progress li .node {
+    border: 2px solid #999;
+    background-color: #fff
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Progress li .node {
+        background-color: #292d33;
+        border: 2px solid #999
+    }
+}
+
+body .Progress li.current {
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Progress li.current {
+        color: #fff
+    }
+}
+
+body .Progress li.current .node {
+    border-color: #292d33;
+    background-color: #292d33;
+    color: #fff
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Progress li.current .node {
+        color: #292d33;
+        background-color: #fff;
+        border-color: #fff
+    }
+}
+
+body .Progress li.complete {
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Progress li.complete {
+        color: #fff
+    }
+}
+
+body .Progress li.complete .node {
+    border-color: #292d33;
+    background-color: #8dfb88;
+    color: #000
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Progress li.complete .node {
+        background-color: #8dfb88;
+        color: #000;
+        border-color: #fff
+    }
+}
+
+body .Progress li:not(:last-child):before {
+    background-color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Progress li:not(:last-child):before {
+        background-color: #999
+    }
+}
+
+body .Progress li.complete:before {
+    background-color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Progress li.complete:before {
+        background-color: #fff
+    }
+}
+
+body .Progress li.current:before {
+    background: linear-gradient(90deg, #292d33 0, #999)
+}
+
+@media (prefers-color-scheme:dark) {
+    body .Progress li.current:before {
+        background: linear-gradient(90deg, #fff 0, #999)
+    }
+}
+
+@media (prefers-color-scheme:dark) {
+
+    body .status-attention,
+    body .status-cool,
+    body .status-error,
+    body .status-info,
+    body .status-success {
+        color: #000 !important
+    }
+
+    body .status-attention a,
+    body .status-attention a:active,
+    body .status-attention a:hover,
+    body .status-attention a:visited,
+    body .status-cool a,
+    body .status-cool a:active,
+    body .status-cool a:hover,
+    body .status-cool a:visited,
+    body .status-error a,
+    body .status-error a:active,
+    body .status-error a:hover,
+    body .status-error a:visited,
+    body .status-info a,
+    body .status-info a:active,
+    body .status-info a:hover,
+    body .status-info a:visited,
+    body .status-success a,
+    body .status-success a:active,
+    body .status-success a:hover,
+    body .status-success a:visited {
+        color: #000 !important;
+        border-color: #000 !important
+    }
+
+    body .status-attention {
+        background: #fcc5fc
+    }
+
+    body .status-cool {
+        background: #c5e6fc
+    }
+
+    body .status-info {
+        background: #fffe54 !important
+    }
+
+    body.status-error,
+    body .status-error,
+    body.status-error>*,
+    body .status-error>* {
+        background: #ffbdbd !important
+    }
+
+    body.status-error *,
+    body .status-error * {
+        color: #000
+    }
+
+    body.status-error .weak,
+    body .status-error .weak {
+        color: rgba(0, 0, 0, .5) !important
+    }
+
+    body.status-error *>* * svg,
+    body .status-error *>* * svg {
+        stroke: #000 !important
+    }
+
+    body.status-error .Navigation .inner,
+    body .status-error .Navigation .inner {
+        border-color: #000 !important
+    }
+
+    body.status-error #menuBurger span,
+    body .status-error #menuBurger span {
+        background: #000
+    }
+
+    body.status-error .Footer .Page,
+    body .status-error .Footer .Page {
+        border-color: #000
+    }
+
+    body.status-error .Footer .InlineButton,
+    body .status-error .Footer .InlineButton,
+    body.status-error .Footer a,
+    body .status-error .Footer a,
+    body.status-error .Footer a:active,
+    body .status-error .Footer a:active,
+    body.status-error .Footer a:hover,
+    body .status-error .Footer a:hover,
+    body.status-error .Footer a:visited,
+    body .status-error .Footer a:visited {
+        border-color: #000 !important
+    }
+
+    body .status-success {
+        background: #8dfb88 !important
+    }
+
+    body .Button.Danger {
+        box-shadow: inset 0 0 0 2px red;
+        color: red
+    }
+
+    body .Geography .clickable.selected {
+        background: #fff
+    }
+
+    body .Geography .clickable.selected:before {
+        color: #000
+    }
+
+    body .CodelistConcept.concept .clickable.selected {
+        background: #fff
+    }
+
+    body .CodelistConcept.concept .clickable.selected:before {
+        color: #000
+    }
+
+    body .highlight {
+        background: #ffffb3;
+        color: #000 !important
+    }
+
+    body .status-error .Icon,
+    body .status-info .Icon {
+        stroke: #000
+    }
+
+    body .IconButton.Danger .Icon {
+        stroke: red
+    }
+
+    body .IconButton.Disabled .Icon {
+        opacity: .3
+    }
+
+    body .InlineButton.invisible {
+        border-bottom: 0 !important
+    }
+
+    body .Message {
+        background: #fffe54;
+        color: #000 !important
+    }
+
+    body .Message>.Icon {
+        stroke: #000 !important
+    }
+
+    body .Message .Button,
+    body .Message a {
+        color: #000 !important;
+        border-color: #000 !important
+    }
+
+    body .Message .Button {
+        box-shadow: inset 0 0 0 2px #000 !important
+    }
+
+    body .Loading,
+    body .Message .Button {
+        background: transparent
+    }
+
+    body .pill .Inner,
+    body .Pill .Inner {
+        background-color: #ddd;
+        color: #000 !important
+    }
+
+    body .pill:after,
+    body .Pill:after,
+    body .pill:before,
+    body .Pill:before {
+        background-color: #ddd;
+        color: #ddd
+    }
+
+    body .RawSource.Highlighted {
+        color: #999
+    }
+
+    body .Select .react-select__multi-value,
+    body .Select .react-select__multi-value__remove {
+        background: #ddd;
+        color: #000
+    }
+
+    body .Select .react-select__option--is-focused {
+        color: #000
+    }
+
+    body .Sparqlv2 .HistoryItem .Header.favourite {
+        background: #fffe54;
+        color: #000
+    }
+
+    body .Sparqlv2 .HistoryItem .Header.favourite svg {
+        stroke: #000
+    }
+
+    body .Sparqlv2 .HistoryItem .Header.favourite .toggleFavourite svg {
+        fill: #000 !important
+    }
+
+    body .Sparqlv2 .HistoryItem .Header.favourite .Accessory {
+        border-color: #000
+    }
+
+    body .StickyList .heading+.item {
+        border-top: 1px solid transparent
+    }
+
+    body .Switch label>input:checked+.Accessory {
+        background: #ff5a05
+    }
+
+    body .Switch label>input:checked+.Accessory>.switch {
+        border-color: #ff5a05
+    }
+
+    body .Switch label>input.active+.Accessory,
+    body .Switch label>input:focus+.Accessory {
+        box-shadow: 0 0 5px 3px rgba(0, 119, 200, .5)
+    }
+
+    body .TabularData ol li:last-child>span {
+        oborder-bottom: 0
+    }
+
+    body .TabularList li:last-child>span {
+        border-bottom: 0
+    }
+
+    body .TextArea textarea:focus,
+    body .TextInput input:focus {
+        box-shadow: inset 0 0 0 1px #1e90ff
+    }
+
+    body .status-error .Twirl .Accessory,
+    body .status-info .Twirl .Accessory,
+    body .status-success .Twirl .Accessory {
+        border-color: #000
+    }
+}
+
+.BrandDefra {
+    background: #000;
+    color: #fff !important;
+    overflow: hidden;
+    border-bottom: 4px solid #11a140;
+    margin-bottom: 2rem
+}
+
+.BrandDefra a {
+    text-decoration: none;
+    border-bottom: 0;
+    color: #fff !important
+}
+
+.BrandDefra .dsp {
+    color: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400 !important;
+    height: 25px;
+    letter-spacing: 0;
+    line-height: 28px;
+    overflow: hidden;
+    padding-left: 0;
+    margin: 2rem 0
+}
+
+.BrandDefra .dsp>span {
+    display: inline-block;
+    padding-left: 2rem;
+    background: transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxNSIgYXJpYS1oaWRkZW49InRydWUiIGNsYXNzPSJpY29uLWhvbWUiPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik03IDE1di01aDR2NWg0VjhoM0w5IDAgMCA4aDN2N2g0eiIvPjwvc3ZnPg==") no-repeat 0 1px
+}
+
+.BrandDefra .dsp a {
+    text-decoration: underline;
+    color: #fff !important
+}
+
+@media screen and (min-width:961px) {
+    .BrandDefra {
+        margin-bottom: 20px
+    }
+
+    .BrandDefra .dsp {
+        margin-top: 32px
+    }
+
+    .BrandDefra .Page>div {
+        display: flex
+    }
+
+    .BrandDefra .Page>div>div {
+        flex: 1
+    }
+
+    .BrandDefra .Page>div>div:last-child {
+        text-align: right
+    }
+}
+
+.BrandDefra .Logo {
+    display: block;
+    margin-top: 2rem;
+    border-left: 2px solid #fff;
+    padding-left: 12px;
+    color: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400 !important;
+    letter-spacing: 0;
+    margin-bottom: 2rem
+}
+
+.BrandDefra .Logo:before {
+    display: block;
+    content: "";
+    width: 36px;
+    height: 36px;
+    background: transparent url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIwIiB5PSIwIiB2aWV3Qm94PSIwIDAgMzA4IDI1My4zIiB4bWw6c3BhY2U9InByZXNlcnZlIj48c3R5bGU+LnN0MHtmaWxsOiNmZmZ9PC9zdHlsZT48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTMwLjEgNDEuNmMtMS40IDIuNy0yLjYgNC4zLTIuNSA2LjQuMiAyLjEgMi40IDMuNiAzLjQgNS43IDEtMi41IDIuNS00LjMgMi4zLTYuMi0uMS0xLjktMi44LTQuNC0zLjItNS45TTE2Ni41IDQxLjZjMS40IDIuNyAyLjYgNC4zIDIuNSA2LjQtLjIgMi4xLTIuNCAzLjYtMy40IDUuNy0uOS0yLjUtMi41LTQuMy0yLjMtNi4yLjEtMS45IDIuNy00LjQgMy4yLTUuOU0xMDkuMSA0MC4xYzEuNCAwIDIuNS0xLjEgMi41LTIuNXMtMS4xLTIuNS0yLjUtMi41LTIuNSAxLjEtMi41IDIuNWMuMSAxLjQgMS4yIDIuNSAyLjUgMi41TTExMC44IDQzLjZjMC0xLjQtMS4xLTIuNS0yLjUtMi41cy0yLjUgMS4xLTIuNSAyLjUgMS4xIDIuNSAyLjUgMi41IDIuNS0xLjIgMi41LTIuNU0xMTIgNDkuNWMwLTEuNC0xLjEtMi41LTIuNS0yLjUtMS4zIDAtMi41IDEuMS0yLjUgMi41czEuMSAyLjUgMi41IDIuNSAyLjUtMS4xIDIuNS0yLjVNMTIyLjcgMjguNGMxLjQgMCAyLjUtMS4xIDIuNS0yLjUgMC0xLjMtMS4xLTIuNS0yLjUtMi41cy0yLjUgMS4xLTIuNSAyLjVjLjEgMS40IDEuMiAyLjUgMi41IDIuNU0xMTYuNiAzMC4yYzEuNCAwIDIuNS0xLjEgMi41LTIuNXMtMS4xLTIuNS0yLjUtMi41LTIuNSAxLjEtMi41IDIuNWMuMSAxLjQgMS4yIDIuNSAyLjUgMi41TTExMS44IDM0LjVjMS40IDAgMi41LTEuMSAyLjUtMi41cy0xLjEtMi41LTIuNS0yLjUtMi41IDEuMS0yLjUgMi41Yy4xIDEuNCAxLjIgMi41IDIuNSAyLjVNMTI5LjIgMjguOWMxLjQgMCAyLjUtMS4xIDIuNS0yLjUgMC0xLjMtMS4xLTIuNS0yLjUtMi41LTEuMyAwLTIuNSAxLjEtMi41IDIuNSAwIDEuNSAxLjEgMi41IDIuNSAyLjVNMTM1LjMgMzAuN2MxLjQgMCAyLjUtMS4xIDIuNS0yLjUgMC0xLjMtMS4xLTIuNS0yLjUtMi41cy0yLjUgMS4xLTIuNSAyLjUgMS4xIDIuNSAyLjUgMi41TTE0MSAzMy40YzEuNCAwIDIuNS0xLjEgMi41LTIuNXMtMS4xLTIuNS0yLjUtMi41LTIuNSAxLjEtMi41IDIuNSAxLjEgMi41IDIuNSAyLjVNMTg0LjkgMzcuNmMwIDEuNCAxLjEgMi41IDIuNSAyLjVzMi41LTEuMSAyLjUtMi41LTEuMS0yLjUtMi41LTIuNWMtMS40LjEtMi41IDEuMi0yLjUgMi41TTE4OC4yIDQxLjFjLTEuNCAwLTIuNSAxLjEtMi41IDIuNXMxLjEgMi41IDIuNSAyLjUgMi41LTEuMSAyLjUtMi41Yy0uMS0xLjQtMS4yLTIuNS0yLjUtMi41TTE4NyA0Ny4xYy0xLjQgMC0yLjUgMS4xLTIuNSAyLjVzMS4xIDIuNSAyLjUgMi41IDIuNS0xLjEgMi41LTIuNWMtLjEtMS40LTEuMi0yLjUtMi41LTIuNU0xNzMuNyAyOC40YzEuNCAwIDIuNS0xLjEgMi41LTIuNSAwLTEuMy0xLjEtMi41LTIuNS0yLjUtMS4zIDAtMi41IDEuMS0yLjUgMi41LjEgMS40IDEuMiAyLjUgMi41IDIuNU0xNzkuOCAzMC4yYzEuNCAwIDIuNS0xLjEgMi41LTIuNXMtMS4xLTIuNS0yLjUtMi41LTIuNSAxLjEtMi41IDIuNWMuMSAxLjQgMS4yIDIuNSAyLjUgMi41TTE4NC43IDM0LjVjMS40IDAgMi41LTEuMSAyLjUtMi41cy0xLjEtMi41LTIuNS0yLjUtMi41IDEuMS0yLjUgMi41IDEuMSAyLjUgMi41IDIuNU0xNjcuMyAyOC45YzEuNCAwIDIuNS0xLjEgMi41LTIuNSAwLTEuMy0xLjEtMi41LTIuNS0yLjVzLTIuNSAxLjEtMi41IDIuNWMwIDEuNSAxLjEgMi41IDIuNSAyLjVNMTYxLjIgMzAuN2MxLjQgMCAyLjUtMS4xIDIuNS0yLjUgMC0xLjMtMS4xLTIuNS0yLjUtMi41LTEuMyAwLTIuNSAxLjEtMi41IDIuNS4xIDEuNCAxLjIgMi41IDIuNSAyLjVNMTUzIDMwLjljMCAxLjQgMS4xIDIuNSAyLjUgMi41czIuNS0xLjEgMi41LTIuNS0xLjEtMi41LTIuNS0yLjVjLTEuNC4xLTIuNSAxLjItMi41IDIuNU0xNDQgNDQuMmgyLjhWMzMuN2MtMS0uMS0xLjktLjQtMi44LS44djExLjN6TTE1Mi40IDMyLjljLS45LjQtMS44LjctMi44Ljh2MTAuNWgyLjhWMzIuOXpNMTQ2LjcgMjEuMlYxNWMtMy4xLjYtNS41IDMuMS02IDYuMmg2ek0xNDkuOSAyMS4yaDZjLS41LTMuMS0yLjktNS42LTYtNi4ydjYuMnpNMTQwLjcgMjQuM2MuOCAzLjUgMy45IDYgNy42IDYgMy43IDAgNi44LTIuNiA3LjUtNmgtMTUuMXpNMTUyLjUgMTRjLTEuOC0xLjQtMy4xLTMuNC0zLjQtNS40IDIgLjQgNC4yIDEuOCA1LjYgMy42VjMuNmMtMS4zIDEuNy0zLjYgMy4yLTUuNiAzLjYuMi0yIDEuNS0zLjkgMy4yLTYuMWgtOC4yYzEuNyAyLjIgMyA0IDMuMiA2LjEtMi0uMy00LjMtMS44LTUuNi0zLjZ2OC41YzEuMy0xLjcgMy42LTMuMiA1LjYtMy42LS4zIDIuMS0xLjYgNC4xLTMuNCA1LjRoOC42di4xek0xNTIuNyAxOTAuNWMtMS43IDAtMy0xLjQtMy0zIDAtMS43IDEuNC0zIDMtMyAxLjcgMCAzIDEuNCAzIDNzLTEuMyAzLTMgM20tMTQuNS00LjVjLTEuOCAwLTMuMy0xLjUtMy4zLTMuM3MxLjUtMy4zIDMuMy0zLjMgMy4zIDEuNSAzLjMgMy4zYzAgMS44LTEuNSAzLjMtMy4zIDMuM20tNS0xNC43bC0uOC0uNmMtMS41LTEuMS0yLjgtMS4xLTQuMSAwLS42LjUtMS4yIDEuMi0xLjggMS45bC0uOCAxIC42LjVjMS42IDEuMyAxLjggMi43IDEuNCAzLjUtLjIuMy0uNC41LS44LjYtLjguMi0xLjktLjEtMy0uOGwtLjYtLjQtLjQuNmMtLjEuMS0uMi4zLS4zLjQtLjEuMi0uMy40LS40LjYtLjcgMS4yLTEgMi4xLTEgMi44IDAgLjIgMCAuNC4xLjYuMi45LjkgMS4zIDEuNSAxLjZsLjQuMmMuNy41IDEuNyAxIDIuNSAxLjUtMS40LjgtMi44LjktNC4yLjItMi4xLTEtMy41LTMuNS0zLjUtNC43IDAtMS44LjgtNC4yIDIuMy02LjVsLjItLjQtLjItLjRjLS41LS43LS44LTEuNC0xLjEtMi4xLjguMSAxLjYuMyAyLjQuNGwuNC4xLjMtLjNjLjktMSA0LjItNC4zIDcuMi00LjMgMS40IDAgMi44LjcgMy44IDEuOS44LjkgMS4zIDEuOSAxLjQgMy0uNi0uMi0xLjEtLjUtMS41LS45bTI4LjMgMTEuNmMtNy43LTEuOS0xNy01LjItMjUuNi05LjJ2LS4xYy4yLTEuNy0uNC0zLjctMS44LTUuMi0xLjMtMS41LTMuMS0yLjQtNC45LTIuNC0uOCAwLTEuNi4yLTIuMy41LTEuMi0xLjEtMi40LTIuMy0zLjYtMy43LTMuMi0zLjgtNS44LTguMy03LjYtMTMuMi0xLTIuOC0xLjgtNS44LTIuMi04LjgtLjQgMi41LTMuMiA1LjgtOC4xIDUuOS4xLS41IDAtMS44LS40LTEuOS0xLjMgMS40LTMuMiAyLjktNy42IDEuNC43IDMuNCAxLjYgNi44IDIuOCAxMCAyLjYgNyA2LjQgMTMuMyAxMS4xIDE4LjcgMS42IDEuOCAzLjIgMy40IDUgNSAwIC4zLS4xLjctLjEgMSAwIDEuOCAxLjcgNC43IDQuMyA1LjkgMi4xIDEgNC4zLjcgNi4zLS43IDMuOCAyIDguNiAzLjkgMTMuNyA1LjMgNS44IDEuNiAxMS40IDIuNSAxNS44IDIuNSAzLjggMCA4LjgtMS44IDEzLjctNC45IDItMS4yIDMuOC0yLjYgNS4yLTMuOS4yLS4yLjQtLjMuNS0uNS0zLjcuNi05LjQtLjUtMTQuMi0xLjdNMTU5LjQgMjE0LjNjLS42LTEtMS40LTEuNi0yLjEtMS42LTMuMiAwLTEuOSA4LjMtNS43IDguMy0xLjYgMC0yLjUtMS0yLjUtMi4ycy44LTEuNS44LTIuNWMwLS45LS43LTEuMy0xLjYtMS4zLS44IDAtMS42LjMtMS42IDEuMyAwIC45LjggMS4zLjggMi41cy0uOSAyLjItMi41IDIuMmMtMy44IDAtMi41LTguMy01LjctOC4zLS43IDAtMS41LjYtMi4xIDEuNi0uNi0xLjItMS0yLjQtMS0zLjMgMC0xLjUgMS4yLTMuNiAzLjYtMy42IDQuMiAwIDMuMiA1LjggNS4yIDUuOC45IDAgMS42LS41IDEuNi0xLjQgMC0xLjYtMi45LTMuMi0yLjktNS41czIuMS00LjMgNC41LTYuMmMyLjQgMS45IDQuNSAzLjkgNC41IDYuMiAwIDIuNC0yLjkgMy45LTIuOSA1LjUgMCAuOS42IDEuNCAxLjUgMS40IDIgMCAxLTUuOCA1LjMtNS44IDIuNSAwIDMuNiAyLjEgMy42IDMuNi4xLjktLjIgMi4xLS44IDMuM00xNDguMyAyMjZjLTEuMSAwLTIuMS0uOS0yLjEtMi4xIDAtMS4xLjktMi4xIDIuMS0yLjEgMS4xIDAgMi4xLjkgMi4xIDIuMXMtLjkgMi4xLTIuMSAyLjFtOC40LTIwLjJjLS42IDAtMS4xLjEtMS42LjJ2LTkuM2MtNC0uMS04LjgtLjgtMTMuNS0yVjIwNmMtLjUtLjItMS4xLS4zLTEuNi0uMy0zLjMgMC01LjMgMi43LTUuMyA1LjMgMCAyLjQgMS40IDQuNiAyLjYgNiAuNi0xLjQgMS4yLTIuNiAyLTIuNiAxLjYgMCAuOSA4IDUuNiA4LjMtLjIuNC0uMi44LS4yIDEuMyAwIDIgMS42IDMuNyAzLjcgMy43IDIgMCAzLjctMS42IDMuNy0zLjcgMC0uNS0uMS0uOS0uMi0xLjMgNC43LS4yIDMuOS04LjMgNS41LTguMy44IDAgMS4zIDEuMSAyIDIuNiAxLjItMS40IDIuNi0zLjYgMi42LTYgMC0yLjUtMi01LjItNS4zLTUuMiIvPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yNjUuNCAyMTYuOWMtLjItLjUtLjctLjctMS4yLS42LTEwLjkgMy4yLTI0LjMtNS44LTM3LjMtMTQuNS0xMS03LjMtMjEuMy0xNC4yLTMwLjItMTQuMi0zLjMgMC02LjIuNy04LjcgMi4xLTMuMSAxLjctNS40IDQuNC02LjkgOHMtMy4xIDYuMS00LjMgOC4xYy0xLjUgMi40LTIuNiA0LjEtMi42IDYuMiAwIDEuNy44IDMuMyAyLjMgNC44IDEuMyAxLjMgMy4xIDIuNSA1LjcgMy45LjYuMyAxLjEuNiAxLjcuOCAyLjIgMSAzLjUgMS44IDMuNyAzLTQuMyAxLjktOS44IDMuNS0xNi4xIDQuNi03LjEgMS4yLTE0LjkgMS45LTIzLjIgMS45LTguMiAwLTE2LS42LTIzLjEtMS45LTYuMy0xLjEtMTEuOS0yLjctMTYuMi00LjYuMi0xLjggMS41LTIuNSAzLjktMy42LjUtLjMgMS4xLS41IDEuNy0uOCAyLjItMS4xIDQuMi0yLjMgNS42LTMuNSAxLjUtMS4zIDIuMi0yLjggMi4yLTQuNSAwLTIuMS0xLjEtMy44LTIuNi02LjItMS4zLTItMi44LTQuNS00LjMtOC4xcy0zLjgtNi4zLTYuOS04Yy0yLjUtMS40LTUuNC0yLjEtOC43LTIuMS04LjkgMC0xOS4yIDYuOS0zMC4yIDE0LjItMTMuMSA4LjYtMjYuNSAxNy42LTM3LjQgMTQuNC0uNS0uMS0xIC4xLTEuMi42cy4xIDEgLjUgMS4yYzMuMyAxLjUgNi4yIDMuNyA5IDUuOSAzLjkgMyA3LjYgNS45IDExLjcgNS45IDMuOCAwIDgtMS4yIDEzLTMuOSA0LjQtMi4zIDguOS01LjQgMTMuMy04LjQgOC42LTUuOSAxNy40LTExLjkgMjUuOC0xMi42LS45LjktMS43IDEuNy0yLjUgMi40LTIuNSAyLjItNC42IDQuMS00LjYgOCAwIDMuMSAxLjEgNS4yIDIuNSA4LjMuNC45LjkgMS45IDEuNCAzIC45IDIuMSAxLjMgMy43IDEuOSA2IC4yIDEgLjUgMi4xLjkgMy40LjUgMiAxLjUgNS43IDcuNyA4LjkgNy4xIDMuNiAxOS41IDUuNSAzNi42IDUuNXMyOS40LTEuOCAzNi42LTUuNWM2LjItMy4xIDcuMi02LjkgNy43LTguOS40LTEuMy42LTIuNC45LTMuNC42LTIuMyAxLTQgMS45LTYgLjctMS41IDEuMy0yLjggMS45LTMuOSAxLjMtMi40IDIuMy00LjMgMi4zLTcuMSAwLTMuOS0yLjMtNS45LTQuOS04LjMtLjgtLjctMS43LTEuNi0yLjYtMi41IDguNC43IDE3LjMgNi43IDI1LjggMTIuNiA0LjQgMyA4LjkgNi4xIDEzLjMgOC40IDUgMi42IDkuMiAzLjkgMTMgMy45IDQuMSAwIDcuOC0yLjkgMTEuNy01LjkgMi44LTIuMiA1LjctNC40IDktNS45LjUgMCAuNy0uNi41LTEuMU0xNDkuNyAxMzIuN1Y5MmM0LjIuMiA4LjQgMS4yIDEyLjMgMy4yIDQuMiAyLjEgOCA1LjEgMTEuMiA4LjkgMy4zIDMuOCA1LjggOC4zIDcuNiAxMy4yIDEuOCA0LjkgMi43IDEwLjEgMi44IDE1LjVsLTMzLjktLjF6bS0xLjQtNTcuNmMtMTEuNSAwLTE5LjUgMy40LTI0LjEgNi41LTIuNy0xLjYtMy44LTMuMS0zLjgtNSAwLTYuNiAxOC41LTcuMSAyNy45LTcuMSA5LjQgMCAyOCAuNiAyOCA3LjEgMCAxLjgtMS4yIDMuNC0zLjggNS00LjctMy4xLTEyLjctNi41LTI0LjItNi41bS0uNiA1Ny42aC0zNC42Yy4xLTUuNCAxLTEwLjYgMi44LTE1LjVzNC4zLTkuNCA3LjYtMTMuMmMzLjItMy44IDctNi44IDExLjItOC45IDQuMS0yIDguNS0zLjEgMTMuMS0zLjJ2NDAuOGgtLjF6bTUyLjYtMi42Yy0xLjItLjktMy4yLTIuNy00LjItNC45LTEuMy0yLjctNi43LTEzLjItNy41LTE0LjctLjctMS4yLTEuMS0yLjItMS4xLTMuMiAwLTEuMS42LTIgMS4xLTIuOC40LS41IDEuNi0xLjcgMi0yLjQuMy0uNS42LS45LjktMS4zLTEuOS0zLjQtNC01LjktNi41LTguOC0zLjItMy42LTYuNy02LjYtMTAuNS05LjEgMi4xLTEuMyA0LjItMy4zIDQuMi02LjUgMC0xLjktLjgtMy40LTIuMi00LjYgMi4yLTcgNi4xLTE1LjMgOS40LTE5bC03LTIuOWMxLjggMi44IDEuOSA2IDEuNSA3LjktMS44LTEuMy0zLjQtMy0zLjktNS4zLS40IDIuMS0xLjUgNS41LTIuNiA3LjYgMi0uOSAzLjYtMS40IDUuNy0uNS0xLjIgMS42LTQuMiA0LTguOCAyLjktMi41LS42LTQuOS0xLjktNC44LTMuOC4xLTEuMS45LTIuNSAyLjUtMi40IDEuNS4yIDEuNiAyLjUgMS4xIDMuNSAyLTEuMSA0LjEtNyAuOS03LjgtMi41LS43LTQuNyAyLjctNS41IDUuMy0uNS0zLjEtMS43LTYuMS00LjItNS45LTMuMi4yLTIuMiA2LjEtMSA3LjYuMi0yLjEgMS4zLTMuMiAyLjMtMy4xLjguMSAyIC43IDEuOCAyLjYtLjIgMS45LTIuOSAzLjEtNiAzLjEtMi45IDAtOC4xLS45LTguNi02LjYgMS45LjMgNC45IDEuOCA2LjIgMy43LS40LTMuNC0uNC01LjkgMC05LjQtMS42IDIuMi00LjMgMy40LTYuMSAzLjcuNS0yLjQgMi42LTUgNS4xLTYuNWgtMTIuN2MyLjQgMS41IDQuNSA0LjEgNS4xIDYuNS0xLjgtLjMtNC41LTEuNS02LTMuNy40IDMuNi40IDYgMCA5LjQgMS4yLTEuOSA0LjItMy4zIDYuMS0zLjctLjUgNS43LTUuNyA2LjYtOC42IDYuNi0zLjEgMC01LjgtMS4yLTYtMy4xLS4yLTEuOS45LTIuNSAxLjgtMi42LjktLjEgMi4xIDEgMi4zIDMuMSAxLjEtMS41IDIuMi03LjQtMS03LjYtMi41LS4yLTMuOCAyLjgtNC4yIDUuOS0uOC0yLjYtMy01LjktNS41LTUuMy0zLjEuOS0xIDYuNyAxIDcuOC0uNS0xLS40LTMuMyAxLjEtMy41IDEuNS0uMiAyLjQgMS4yIDIuNSAyLjQuMSAxLjktMi40IDMuMi00LjggMy44LTQuNiAxLjEtNy41LTEuMy04LjctMi45IDIuMS0uOSAzLjctLjUgNS43LjUtMS4xLTItMi4yLTUuNS0yLjYtNy42LS41IDIuMy0yLjEgNC4xLTQgNS4zLS40LTEuOS0uMy01LjEgMS41LTcuOWwtNyAyLjljMy4zIDMuNyA3LjIgMTIuMSA5LjQgMTkuMS0xLjMgMS4yLTIuMSAyLjctMi4xIDQuNSAwIDMuMiAyLjEgNS4yIDQuMSA2LjUtMy44IDIuNS03LjMgNS41LTEwLjUgOS4xLTQuOCA1LjMtOC41IDExLjYtMTEuMSAxOC41IDEgMSA1LjEgNS41IDYuMSA2LjggMS43IDIuMiAyLjggNC40IDIuOCA2LjEuMSAzLjIuOCA0LjQgMi41IDYuNS41LjcgMS4zIDMuMSAxLjQgNC43aDM0LjZ2MzcuN2MtMS40LjEtMi44LjQtNCAxLjkgNCAxLjYgNy44IDMuMSAxMS42IDQuMy40LTIuNS45LTQgMi4xLTUuNSAwIDAtNS0uNS03LjctLjZ2LTM3LjZoMzMuOWMtLjEgNS4yLTEgMTAuMi0yLjcgMTQuOS0xLjggNC45LTQuMyA5LjQtNy42IDEzLjItMy4yIDMuOC03IDYuOC0xMS4yIDguOS0uNy4zLS43LjgtMS4zIDEuMS0uNi42LTEuMiAxLjgtMS43IDMuMS0uNCAxLjEtLjYgMS45LS44IDMuNCAxLjYuNSAyLjUuNyA0IDEuMSAxMS45IDMgMTQuOCAyLjEgMTUuNSAxLjYgMi43LTIgNS4yLTQuNCA3LjUtNyA0LjgtNS40IDguNS0xMS43IDExLjEtMTguNyAyLjctNy4yIDQuMS0xNC45IDQuMS0yMi44LS4yLTEuNi0uMS0yLS4yLTMuNSIvPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xNjguNyAxMDguNmMtLjMuMy0uNC43LS4zLjkuMS4zLjQuNiAxIC43LS40LjMtLjcuOC0uOCAxLjQuNi4xIDEuMi0uMSAxLjYtLjQtLjEuNi4xIDEgLjQgMS4xLjIuMi42LjIuOSAwIDIuNiA0LjEgNC4zIDguOSA1LjEgMTMuNy0uMy0uMi0uNy0uNC0xLjMtLjQgMCAuNy4zIDEuMi43IDEuNmgtOC41Yy4xLS41LS4yLTEtLjYtMS4xLS4zLS4xLS43LS4xLTEuMS40IDAtLjUtLjItMS0uNy0xLjUtLjQuNS0uNiAxLS42IDEuNS0uNC0uNS0uOC0uNS0xLjEtLjRzLS42LjYtLjYgMS4xaC03LjJjLjMtLjQuNS0uOC41LTEuNC0uNiAwLTEuMS4yLTEuNS41di0xMS43Yy42LjEgMS0uMiAxLjItLjUuMS0uMy4xLS43LS40LTEuMS41IDAgMS0uMiAxLjUtLjctLjUtLjQtMS0uNi0xLjUtLjYuNS0uNC41LS44LjQtMS4yLS4xLS40LS42LS42LTEuMi0uNXYtOS45Yy4zLjMuNy40IDEuMi41IDAtLjYtLjEtMS0uMy0xLjQgMi4zLjcgNC40IDEuOCA2LjUgMy4yIDIuNCAxLjcgNC43IDMuNyA2LjcgNi4ybTkuNSAxNy41Yy42LjQuNCAxLjMtLjQgMS4yLS43LTYuMS0zLTEyLjEtNi41LTE3LjJsLjEtLjFjLjYtLjIgMS4zLS44IDEuNC0xLjgtMS4xLS4xLTEuOC40LTIuMiAxLS4yLS4zLS41LS42LS43LTEtMi4xLTIuNy00LjYtNS03LjMtNi45LTIuNi0xLjctNS4zLTMtOC4xLTMuNyAwLS43LjktLjggMS4yLS4yLjEtMS4xLS44LTEuNi0xLjQtMS40LS4zLjEtLjUuNC0uNi44LS4zLS40LS44LS43LTEuNS0uOC0uMS43LjIgMS4yLjUgMS42LS41IDAtLjcuMi0uOS40LS4zLjUuMSAxLjUgMS4yIDEuNi0uNS0uNC0uMy0xLjIuNC0xLjJ2MTMuMmMtLjctLjItMS41LS4xLTIuMi42LjcuNyAxLjUuOCAyLjIuNnYxNC40Yy0uNy4xLS45LS44LS4zLTEuMi0xLjEgMC0xLjUgMS0xLjMgMS41LjIuMy41LjYgMS4xLjUtLjMuNC0uNi45LS42IDEuNS43IDAgMS4xLS4yIDEuNS0uNi0uMS42LjIuOS41IDEuMS41LjIgMS41LS4yIDEuNS0xLjMtLjQuNS0xLjIuNC0xLjItLjNoMTBjLS4yLjYtLjEgMS41LjYgMi4yLjctLjcuOC0xLjUuNi0yLjJoMTEuMWMuMS43LS44LjktMS4yLjMgMCAxLjEgMSAxLjUgMS41IDEuMi4zLS4yLjYtLjUuNS0xLjEuNC4zLjkuNSAxLjUuNSAwLS42LS4zLTEuMS0uNi0xLjUuNiAwIC45LS4yIDEuMS0uNS4xLS4zLS40LTEuMy0xLjUtMS4yIi8+PHBhdGggY2xhc3M9InN0MCIgZD0iTTE3Mi4zIDEyMi40Yy40LS4yLjgtLjUuOS0uOS0uNS4yLS44LS4xLS45LS4xLjMtLjIuNyAwIC4zLS42cy0uNy0uNi0xLjEtLjJjLS40LjQtMy4xLS4xLTMuMS0yLjEuMi40LjUuNi45LjguMS4xLjIuMS4zLjIuMSAwIC4yIDAgLjMuMS4zLjEuNS4xLjguMWguMXYtLjFjLjYtLjEgMS0uNSAxLjEtMS4xLjEtMS4xLTEtMS42LTIuMS0yLjYtLjUtLjQtLjgtLjctMS4xLTEtLjQtLjgtLjEtMS41LTEuMS0zLS4xLS40LS4xLS44LS4zLTEuMy0uNS45LS44IDIuOC42IDQuMyAxLjEgMS4yIDMuNSAyLjQgMy40IDMuNSAwIC4yLS4yLjUtLjYuNWgtLjNjLS4xIDAtLjEgMC0uMi0uMS0uMi0uMS0uMy0uMS0uNS0uMi0uMy0uMS0uNS0uMy0uOC0uNy0xLS45LTEuOS0yLjMtMi41LTMtMS4xLTEuNC0uNi0yLjgtLjQtNCAuOC0xLjEtLjUtMy4zLTEuMi0zLjggMCAwIC4yLS41LS4xLTEuMS0uMS4xLS41LjEtLjcuMS0uMi0uNC0uMy0uNS0uNi0uNS0uNS0uMS0uNS0uMy0uNS0uNS0uMy4zLS40LjUtLjcuNS0uNCAwLS42IDAtLjcuMS0uMy4yLS40LjMtLjguMy0uNSAwLS40LjMtLjQuNiAwIC4yLjEuNS4zLjZsLjEuMS40LjQuMi0uNWMuMi0uMi44LS4yLjkuMi4xLjMuMS40LS4yLjQtLjQuMS0uNi4xLTEgLjEtLjMgMC0uMy4zLS4yLjUgMCAuMy4zLjQuOC4zczEuNS0uMiAxLjUuMmMwIDEuMi0xLjQgMS4yLTEuNyAyLjYtLjQtLjItLjctLjUtLjgtLjgtLjItLjQtLjUtLjgtMS0xLjItLjMtLjMtLjYtLjYtMS0uOS0uNS0uMy0uNS0uNS0uNS0xIDAtLjQuMi0uOC4yLTEuMiAwIDAtLjEtLjItLjEtLjQtLjEtLjMtLjQtLjUtLjctLjQuMS4xLjIuMi4zLjRsLS4yLjJjLS4xLjEtLjEuMyAwIC40VjEwNi45YzAgLjEgMCAwLS4xIDAtLjEtLjMtLjItLjctLjUtLjhoLS4ydi0uMWMwLS4zLS40LS42LS43LS4yLjEgMCAuMiAwIC4zLjEgMCAuMS0uMS4zLS4xLjMgMCAuMy4yLjUuNi41LjEgMCAuMSAwIC4xLjF2LjFjMCAuMSAwIDAtLjEgMC0uNi0uMi0uOCAwLS44LjN2LjJjLS4yLjEtLjIuNC4xLjYgMC0uMSAwLS4zLjEtLjNoLjFjLjEuMS4xLjEuMi4xIDAgMCAuMSAwIC4zLS4xaC4xcy4xLjEuMi4xdi4xYy0uMy40LS4zLjcuMS44LS4yLjQtLjguMi0uOC0uMy0uNS44LjMgMS4zIDEgMSAwIC4zIDAgLjguMS44IDAgMCAwLS4xLjItLjF2LjFjMCAuMi4xLjQuMy40IDAtLjEgMC0uMi4xLS4yLjEuMi4yLjQuMy41LjMuNi45IDIgMi40IDIuNi0uNy40LTEuMiAxLTEuNyAxLjYtLjQuNC0xIC44LTEuNC42LS4yLS4xLS4yLS4zLS40LS40cy0uMy0uMS0uNC0uMWMwIDAtLjEgMC0uMi4xLS4zLS4xLS42IDAtLjguMi4yIDAgLjMtLjEuNS4xdi4yYzAgLjIuMS40LjkuMyAwIDAgLjEgMCAuMS4xLS4xLjEtLjIuMi0uNC4xLS4zLS4xLS41LS4zLS43IDBsLS4yLjJoLS4xYy0uMy4xLS42LjctLjIuOSAwLS4xIDAtLjMuMi0uNC4xLjEuMS4xLjEuMi4yLjMuNS41LjktLjMuMS0uMS4xIDAgLjEgMCAwIC4zLS40LjguMS45aC4ydi4xYy4xLjQuNi41LjguNC0uMS0uMS0uNC0uMi0uNS0uNWguMmMuMy0uMy0uMS0uNi4xLS44IDAtLjEuMSAwIC4xIDAgLjEuMi4zLjUuNy4zLjItLjEuMy0uMy4zLS41LjUtLjIgMS0uNCAxLjMtLjMtLjEtLjMuMi0uNi44LS44LjUtLjEuOCAwIC45LjIgMC0uMi4zLS42LjUtLjktLjEgMi4xIDIuOCAyLjEgMy41IDMuMy0uOS0uNC0xLjgtLjYtMi4zLS41LS43LjEtMS45LjgtMi4xIDEuNi0uMS42LjYgMS44IDEuMiAyLjMtLjguMi0xLjEtLjEtMS45LjFoLS4xYy0uNi4xLS43LTEuMS0xLjUtLjggMCAwLS4yLjEtLjIuMi0uMyAwLS43LjQtLjYuNy4xLS4xLjItLjIuNS0uM3YuMmMwIC4xIDAgLjMuMy4zLjIgMCAuMi0uMS4zLS4xcy4xIDAgLjEuMWMwIC4zLTEtLjItLjguNmwuMS4yYzAgLjIuMi41LjYuMy0uMS0uMS0uMi0uMi0uMi0uM2guMnMuMSAwIC4xLS4xaC4xcy4xIDAgLjEuMWMwIDAtLjEuMS0uMS4yIDAgMCAwIC4yLjEuMiAwIC4zLjQuNi44LjMtLjEgMC0uNC0uMS0uNC0uMi4xIDAgLjItLjEuMi0uMS4xIDAgLjEtLjIuMS0uMyAwLS4xIDAtLjEuMS0uMWguMmMuMSAwIC4xIDAgLjEuMS4xLjIuMy4zLjYuMi4yLS4xLjItLjEuMi0uMi4xLjEuMi4xLjMuMi0uMS0uMy4xLS41LjgtLjFsLjUtLjRzLjYuMy45IDBjLjQtLjMuMi0uNC4yLS43LS4zLS42LS40LS42LS42LTEuMi0uMi0xIDEuMi0xLjYgMi4xLTEuNS4yLjcgMS4xIDIuNCAyLjcgMi45IDEgLjMgMS40LS43IDEuNy0uNi4xIDAgLjEuMS4yLjMtLjEuNSAwIC45LS4xIDEuMXMtLjYgMC0xIDBjLS4yIDAtLjQuMS0uNC4yLS4zLjEtLjYuMy0uNi43LjEtLjEuMy0uMy41LS4zdi4xYzAgLjQuNS42LjguMyAwLS4xLjEgMCAuMSAwLS4yLjItLjcuNi0uMy43IDAgMCAuMS4xLjIuMSAwIC4zLjIuNS40LjUtLjEtLjEtLjEtLjIgMC0uNWguMmMuMyAwIC4yLS41LjQtLjdoLjFjLS4xLjMtLjEuNy4xLjdoLjJjLjEuMi40LjQuNy4yLS4xIDAtLjMtLjEtLjMtLjIuMS0uMS4yLS4yLjItLjMuMi0uNi0uNC0uNi0uNC0uOXMuNi0uMS42LS43di0uMWMuMy0uMi42LS40LjYtLjYtLjEuNC0uNS4zLS41LjJ6TTE0MC44IDE0MS4zaC0uNWMtLjUgMC0xLjIuMi0xLjMuOXMuNSAxLjEgMS4xIDEuMmguM2MwIC4yIDAgLjMtLjEuNS0uMSAxLS40IDIuOC0uNyA0LjdsLTUuMi03LjRjMi40LTEgNC40LTIgNS40LTJzMS4yLjQgMSAyLjFtLTIgMTIuOGwtOC4xLTExLjdjLjktLjIgMS44LS41IDIuNi0uOGw2LjEgOC43Yy0uMiAxLjMtLjQgMi42LS42IDMuOG0tLjggNS4zbC0xMS41LTE2LjZoMS4xYy42IDAgMS4yIDAgMS44LS4xbDkuMyAxMy4zYy0uNCAxLjMtLjYgMi40LS43IDMuNG0tMTMuMS0xNi41bDEyLjcgMTguMmMtNi44LTIuNi0xMy41LTguNy0xMi43LTE4LjJtMTguOS0xLjRoLS42di0uNmMuMS0yLTEuMS0zLjUtMy4zLTMuNS0xLjkgMC01LjcgMi41LTExIDIuNS0yLjIgMC00LjktMS4xLTYuNi0yLjFsLS43IDEuNnYtLjJjMC0uNy0uNi0xLjMtMS4zLTEuMy0uNyAwLTEuMy42LTEuMyAxLjNzLjYgMS4zIDEuMyAxLjNjLjQgMCAuOC0uMiAxLS41bC0uNyAxLjZjLjIuMS41LjIuNy4zLS44IDggNS4xIDE4LjEgMTUuNSAyMS4yIDEuNS0uNCAzLjEtLjIgMy4xIDEuNSAwIDEtLjUgMS41LTEuNCAxLjUtLjYgMC0xLS40LTEtLjggMC0uNyAxLjItLjMgMS4zLS44LjItLjYtLjMtLjktMS0uOXMtMS44LjUtMS44IDEuN2MwIDEuNCAxLjEgMi4zIDIuNCAyLjMgMS4yIDAgMy42LS43IDMuMy0zLjUuNiAwIDEuMi0uMSAxLjMtLjZsLjEtMS42LS42LS4xLjQtMTguM2guNGMuNyAwIDEuMy0uMyAxLjMtMSAuMy0uNi0uMy0uOS0uOC0xTTEzNC41IDEwMi45Yy4xLS4xLjEtLjMuMi0uM3MuMiAwIC4zLS4yLS4xLS4yLS4yLS4zYy4xIDAgLjItLjEuMS0uMnMtLjIuMS0uMyAwYzAtLjEuMS0uMS4xLS4yLjEtLjEuMSAwIC4yIDBsLjYuM2MuMSAwIC4xLjEuMS4ydi4yYy0uMSAwLS4xLS4yLS4yLS4ycy0uMS4xIDAgLjJjLS4yLS4xLS4zLS4xLS40IDAtLjEuMS0uMS4yIDAgLjMuMS4xIDAgLjIgMCAuMy0uMS4xLS4yLjQtLjUuMi0uMS4xIDAtLjEgMC0uM20uOC0xLjZjLS4xLjItLjMuMy0uNS4yLS4yLS4yIDAtLjItLjItLjYuMi4xLjYuMy43LjRtLjUuMmMuMS4xLjYuMy44LjMtLjQuMS0uMy4yLS41LjItLjIuMS0uMy0uMy0uMy0uNW01LjggMy4yYzIuNSAwIDMuNy0uOCAzLjctMS42IDAtMi43LTYuOC0xLTYuOC0yLjcgMC0uMy4yLS41LjUtLjdoLjFjMy40LS4zIDMuNS0yLjcgNS45LTMuMS0yLjktLjQtMy40IDEuOS00LjYgMiAuNy0uMy45LTEuMS45LTEuNC0uNi44LTEuOS45LTIuNyAxLjgtLjEuMS0uMi4zLS4xLjUtLjQuMy0uNy42LS43IDEgMCAyLjYgNi45LjggNi45IDIuNyAwIC43LTEuMiAxLjEtMy4xIDEuMS0xLjQgMC0yLjQtMS01LjEtLjMgMC0uNC45LTEuMy41LTEuNy4zLS4xLjQtLjMuNC0uNS0uMS0uMS0uMy0uMi0uNS0uMi4xLS4xIDAtLjMtLjEtLjQgMCAwLS4xLS4zLS4xLS40LS4xLS4xLS4zLS4zLS42LS40cy0uNS0uMS0uNi0uMmgtLjRjLS4yIDAtLjMgMC0uMy4yLS4xLS4xLS4zLS4yLS41LS4yLS4xLjItLjEuNC0uMS43LS4yIDAtLjUuNi0uNy42LjEuMi4yLjMuMi4zLS4yLjQtLjMuOC0uNS44LjEuMS4xLjIuMi4yLS4yLjUtLjMgMS4yLS40IDEuNi0uMS0uMS0uMy0uMy0uNi0uNC0uNC0uMi0uNC0uNC0uMy0uOC4xLS4zLjMtLjcuMy0xdi0uM2MtLjEtLjItLjMtLjQtLjUtLjQuMS4xLjIuMS4yLjRsLS4yLjJjLS4xLjEtLjIuMi0uMS4zVjEwMi43YzAgLjEgMCAwIDAgMC0uMS0uMi0uMS0uNi0uNC0uNmgtLjJjMC0uMy0uMi0uNS0uNi0uMi4xIDAgLjIgMCAuMy4xLS4xLjEtLjEuMi0uMS4zIDAgLjIuMS40LjQuNGguMXYuMWMwIC4xIDAgLjEgMCAwLS41LS4yLS43IDAtLjguMnYuMmMtLjIuMS0uMy4zIDAgLjUgMC0uMSAwLS4yLjItLjNoLjFsLjEuMXMuMSAwIC4zLS4xaC4xbC4xLjF2LjFjLS40LjMtLjQuNi4xLjcuMSAwIC4xIDAgLjEuMS0uMS42LS45LjQtLjgtLjEtLjUuNi4yIDEuMS44LjhoLjFjMCAuMS4xLjIuMi4yIDAgMCAwLS4xLjEtLjF2LjFjMCAuMSAwIC4zLjIuNCAwLS4xIDAtLjIuMS0uMnMuMy41LjYuOWMtLjUuMi0xLjUuNS0xLjUuNS0uMSAwLS45LS4xLTEuMi4xLS40LjItMS4zLjYtMS42LjItLjEtLjEtLjEtLjMtLjItLjUtLjEtLjEtLjItLjItLjMtLjJoLS4yYy0uMi0uMi0uNS0uMi0uNi0uMS4xIDAgLjIgMCAuNC4yIDAgLjEtLjEuMi0uMS4yLS4xLjEgMCAuMy42LjUgMCAwIC4xLjEgMCAuMXMtLjIuMS0uMyAwYy0uMi0uMi0uMy0uNS0uNi0uMyAwIDAtLjEuMS0uMi4xaC0uMWMtLjMgMC0uNy4zLS41LjYgMC0uMS4xLS4yLjMtLjMgMCAuMSAwIC4yLjEuMi4xLjMuMi42LjguMWguMWMtLjEuMy0uNi41LS4yLjcgMCAwIC4xLjEuMi4xdi4xYy0uMS40LjMuNi41LjYtLjEtLjEtLjItLjMtLjItLjUuMSAwIC4yLjEuMi4xLjMtLjEuMi0uNS4zLS42aC4xYzAgLjEuMS41LjUuNS4zIDAgLjUtLjMuNS0uNS4xLjEuMi4yLjIuNC4xIDAgLjItLjEuMy0uMy4xLjIuMS40LS4xLjYuMSAwIC41LS4yLjYtLjYuMS4xLjEuMS4xLjIuMSAwIC40LjEuNyAwIDAgMCAuMSAwIDAgMHYuNGwuMS0uMmMuMSAwIDAgLjQuMi42LjEtLjkuNi0uNiAxLjEtLjloLjFjMCAuMS0uMS4yLS4yLjMuMiAwIC43LS4yLjctLjUgMC0uMS4yLS4yLjQtLjMuMi4xLjUtLjEuNy0uMyAwIC4xLjEuNCAwIC40LjYgMCAxLjItLjYgMS41LS43IDEuMy0uMy0uOC0xLjIgMS44LTEgLjIgMCAuNi0uMS44LS4zLS4yLjQtLjIgMS4yLjIgMS4zLjIgMCAuNS4yLjcuM3YuMWMtLjIgMC0uNS4xLS42LjItLjYuNC0uNi0uOS0xLjMtLjcgMCAwLS4xLjEtLjIuMS0uMyAwLS42LjMtLjYuNi4xLS4xLjItLjIuNC0uMnYuMWMwIC4xIDAgLjIuMi4yLjEgMCAuMi0uMS4zLS4xIDAgMCAuMSAwIC4xLjEgMCAuMy0uOC0uMS0uNy41bC4xLjJjMCAuMi4xLjQuNS4zLS4xLS4xLS4yLS4xLS4yLS4yaC4ycy4xIDAgLjEtLjFjMCAwIC4xIDAgLjEuMSAwIDAtLjEuMS0uMS4yIDAgMCAwIC4yLjEuMiAwIC4yLjMuNS43LjMtLjEgMC0uMy0uMS0uMy0uMi4xIDAgLjItLjEuMi0uMS4xIDAgLjEtLjEuMS0uMnMwLS4xLjEtLjFIMTM5LjFjLjEuMi4zLjMuNS4yLjQtLjEuMS0uNS40LS42aC4zYy4zLjEuOS4xIDEtLjFzMC0uOC0uMy0xYy0uMi0uMSAwLS40LS4yLS43LjQuMi44LjMgMS4zLjMuOSAwIDAtLjEuNS0uNHMxLS4yIDEuMS0uMWMuMSAwIC4yLjEuMi4yLS4xLjUuMS42LS4xLjgtLjEuMi0uNSAwLS44IDAtLjIgMC0uMy4xLS4zLjEtLjIuMS0uNS4zLS41LjUuMS0uMS4yLS4yLjQtLjJ2LjFjMCAuMy40LjUuNi4yaC4xYy0uMi4yLS41LjUtLjIuNiAwIDAgLjEgMCAuMi4xIDAgLjIuMS40LjMuNS0uMS0uMS0uMS0uMiAwLS40aC4yYy4yIDAgLjEtLjQuNC0uNSAwIDAgLjEgMCAwIDAtLjEuMi0uMS41LjEuNmguMmMuMS4yLjMuMy42LjItLjEgMC0uMi0uMS0uMy0uMi4xLS4xLjEtLjIuMi0uMi4xLS41LS4zLS41LS4zLS43IDAtLjMuNS0uMS41LS42IDAtLjEgMC0uMi0uMi0uMy4xIDAgLjMgMCAuMy0uMi0uNCAwLS4zLS4zLS4zLS41di0uMWMuMS0uMS4yLS4yLjItLjUtLjEuMi0uNS40LS42IDAgMCAwIDAtLjMtLjQtLjItMS4xLS43LTEuNC0xLTIuNi0xLjItLjEuMS0uMi4xIDAgME0xMzAuNCAxMTcuOHMwLS4xIDAgMG0tMi00LjNjLjEtLjIuMi0uMy4yLS4zLjIgMCAuMyAwIC4zLS4yLjEtLjItLjEtLjMtLjMtLjQuMiAwIC4zLS4xLjItLjJzLS4zLjEtLjMgMCAuMS0uMS4xLS4yYy4xLS4xLjEtLjEuMiAwbC44LjRjLjEuMS4yLjEuMi4yczAgLjItLjEuM2MtLjEgMC0uMS0uMi0uMi0uMy0uMSAwLS4xLjEgMCAuMy0uMi0uMS0uNC0uMi0uNCAwLS4xLjEgMCAuMy4xLjRzMCAuMiAwIC40Yy0uMS4yLS4zLjQtLjUuMy0uNC0uMi0uMy0uNS0uMy0uN20uOS0xLjljLS4xLjItLjQuNC0uNi4yLS4yLS4yIDAtLjMtLjItLjcuMi4yLjcuNS44LjVtLjYuM2MuMS4xLjcuMy45LjQtLjQuMS0uMy4zLS42LjMtLjItLjEtLjMtLjUtLjMtLjdNMTQ1IDExNGMwLS43LS44LTEuMi0zLjItMS4ycy03LjkuOS03LjktLjVjMC0uNyAxLjEtLjYgMi40LS41LjEuMS4yLjIuNS4zIDMuMS45IDYuOC0uNyA4LjctLjItMi4yLTEuNy00LjEuMS02LjUtLjUgMS40IDAgMS45LS40IDEuOS0uOC0xLjEuNy0zLjEtLjQtNC40LjRsLS4yLjJjLTEuNyAwLTMuMSAwLTMuMSAxLjEgMCAyLjQgNi41IDEgOC41IDFzMi41LjIgMi41LjZjMCAuNi0yIC43LTMuMi43LTEuOCAwLTcuMS0uOS0xMC4zLS4zLjMtLjUuOC0xLjIuNS0xLjYuMy0uMS41LS40LjUtLjYtLjItLjItLjQtLjItLjYtLjMuMS0uMSAwLS4zLS4yLS40IDAgMC0uMS0uNC0uMi0uNC0uMS0uMS0uMy0uMy0uNy0uNXMtLjYtLjItLjctLjJjLS4xIDAtLjQuMS0uNC4xLS4yIDAtLjQgMC0uNC4yLS4xLS4xLS4zLS4yLS42LS4yLS4xLjMtLjIuNS0uMS45LS4zIDAtLjYuOC0uOS43LjEuMi4yLjMuMy4zLS4yLjQtLjMuOS0uNiAxbC40LjRjMCAuMyAwIC43LS4xLjlsLS41LS4yaC0uMWMtLjEgMC0uMSAwLS4yLS4xLjEgMCAuMSAwIC4yLjFsLS4zLS4xYy0uMy0uMi0uNi0uNi0xLjEtLjlzLS41LS41LS40LTFjMC0uNC4yLS44LjItMS4yIDAtLjEtLjEtLjMtLjEtLjQgMC0uMy0uNC0uNS0uNi0uNC4xLjEuMi4yLjIuNGwtLjIuMmMtLjEuMS0uMS4zIDAgLjRWMTExLjdjMCAuMSAwIDAgMCAwLS4xLS4zLS4yLS43LS41LS44aC0uMnYtLjFjMC0uMy0uMy0uNi0uNy0uMi4xIDAgLjIgMCAuMy4xLS4xLjEtLjEuMy0uMS4zIDAgLjMuMi40LjUuNC4xIDAgLjEgMCAuMS4xdi4xaC0uMWMtLjUtLjItLjggMC0uOC4zdi4yYy0uMi4xLS4zLjQuMS43IDAtLjEgMC0uMy4xLS4zaC4xYzAgLjEuMS4xLjEuMS4xIDAgLjEgMCAuMy0uMWguMXMuMS4xLjIuMXYuMWMtLjQuNC0uNC43LjEuOC4xIDAgLjEuMS4xLjEtLjEuNy0xIC41LS45LS4xLS41LjguMyAxLjQgMSAxaC4xYzAgLjEuMS4yLjIuMyAwIDAgMC0uMS4yLS4ydi4xYzAgLjIuMS40LjMuNCAwLS4xIDAtLjMuMS0uM3MuNC41IDEgLjhjLjUuMi44LjcgMS4xLjQtLjEuNS40IDEgLjMgMS0uMiAwLTEuNC0uMS0xLjcuMS0uNS4yLTEuNi42LTEuOS4yLS4xLS4yLS4xLS4zLS4yLS42LS4xLS4yLS4zLS4zLS40LS4zaC0uM2MtLjItLjItLjYtLjItLjgtLjEuMSAwIC4zLjEuNC4zIDAgLjEtLjEuMi0uMS4yLS4xLjEgMCAuNC43LjYgMCAwIC4xLjEgMCAuMXMtLjMuMS0uNCAwYy0uMy0uMi0uMy0uNS0uNy0uMyAwIDAtLjEuMS0uMi4xaC0uMWMtLjMgMC0uOC4zLS42LjcgMC0uMS4yLS4zLjQtLjMgMCAuMS4xLjIuMS4yLjEuNC4yLjYgMSAuMi4xLS4xLjEgMCAuMSAwLS4yLjMtLjcuNi0uMy45IDAgMCAuMS4xLjIuMXYuMWMtLjEuNC40LjcuNi43LS4xLS4xLS4zLS4zLS4yLS42LjEgMCAuMi4xLjIuMS40LS4xLjItLjYuNC0uNy4xLS4xLjEgMCAuMSAwIDAgLjIuMS42LjUuNS40IDAgLjYtLjQuNi0uNi4xLjEuMy4yLjIuNC4xIDAgLjItLjEuMy0uMy4xLjIuMS41LS4yLjcuMi0uMS42LS4zLjctLjcuMS4xLjEuMi4yLjJzLjQuMS44IDBoLjF2LjRjMC0uMS4xLS4yLjItLjJzMCAuNC4zLjdjLjEtMS4xLjctLjYgMS4zLTEuMWguMWMwIC4xLS4xLjMtLjMuNC43LjIgMS45LTEgMi4xLTEuNC4zIDAgLjYtLjEuNy0uMSAyLjEuMi42LTEuOSA0LjEtMS4zLjIgMCAuNi0uMi44LS40LS4yLjQtLjMgMS40LjIgMS40LjIgMCAuNi4yLjguMy4xIDAgMCAuMSAwIC4xLS4zIDAtLjYuMS0uNi4yLS43LjUtLjctMS4xLTEuNS0uOGwtLjIuMWMtLjMgMC0uNy40LS42LjcuMS0uMS4zLS4zLjUtLjN2LjJjMCAuMSAwIC4yLjMuMi4xIDAgLjItLjEuMy0uMXMuMSAwIC4xLjFjMCAuMy0xLS4yLS44LjZsLjEuMmMwIC4yLjIuNS42LjMtLjEgMC0uMi0uMi0uMi0uM2guMnMuMSAwIC4xLS4xYzAgMCAuMSAwIC4xLjF2LjJzMCAuMi4xLjJjMCAuMy40LjYuOC4zLS4xIDAtLjQtLjEtLjQtLjIuMSAwIC4yLS4xLjItLjEuMS0uMS4xLS4yLjEtLjMgMC0uMSAwLS4xLjEtLjFIMTM2LjVjLjEuMi4zLjQuNi4zLjUtLjIuMS0uNi41LS43aC4zYy40LjEgMSAuMSAxLjEtLjFzLjEtLjktLjQtMS4yYy0uMi0uMSAwLS40LS4yLS44LjUuMi45LjQgMS41LjQgMS4xIDAgMS40LS4yIDEuOS0uNXMxLjItLjEgMS4zLS4xLjMuMS4yLjNjLS4xLjYuMS42LS4xLjktLjEuMi0uNiAwLS45IDAtLjIgMC0uMy4xLS4zLjEtLjMuMS0uNi4zLS42LjYuMS0uMS4zLS4yLjUtLjN2LjFjMCAuNC41LjUuNy4zIDAgMCAuMSAwIC4xLjEtLjIuMi0uNi41LS4zLjcgMCAwIC4xLjEuMi4xIDAgLjIuMi41LjQuNS0uMS0uMS0uMS0uMiAwLS41aC4yYy4yIDAgLjEtLjUuNC0uNmguMWMtLjEuMy0uMS42LjEuN2guMmMuMS4yLjMuNC43LjItLjEgMC0uMi0uMS0uMy0uMi4xLS4xLjItLjIuMi0uMy4yLS42LS4zLS42LS4zLS44IDAtLjMuNi0uMS42LS43IDAtLjEgMC0uMy0uMi0uNC4yIDAgLjMgMCAuNC0uMi0uNCAwLS4zLS4zLS40LS42di0uMWMuMS0uMS4yLS4zLjItLjYtLjEuMi0uNi40LS43IDAgMCAwIDAtLjMtLjUtLjItLjcuMS0xLjMtLjEtMi42LS4yIDEuNS4zIDMuOS0uMiAzLjktMU0xMjUuNyAxMjQuMmMuMS0uMi4xLS4zLjItLjMuMiAwIC4yIDAgLjMtLjJzLS4xLS4zLS4zLS40Yy4yIDAgLjMtLjEuMi0uMnMtLjMuMS0uMyAwIC4xLS4xLjEtLjJjLjEtLjEuMS0uMS4yIDBsLjcuM2MuMSAwIC4xLjEuMS4ydi4yYy0uMSAwLS4xLS4yLS4yLS4ycy0uMS4xIDAgLjNjLS4yLS4xLS4zLS4xLS40IDAtLjEuMSAwIC4zLjEuNCAwIC4xIDAgLjItLjEuNHMtLjMuNC0uNS4zYy0uMy0uMS0uMi0uNC0uMS0uNm0uOC0xLjhjLS4xLjItLjQuNC0uNi4yLS4yLS4yIDAtLjItLjItLjYuMy4xLjcuNC44LjRtLjYuM2MuMS4xLjYuMy45LjQtLjQuMS0uMy4yLS42LjJzLS40LS40LS4zLS42bTE2LjggMS45YzAtLjctLjgtMS4yLTMuMS0xLjJzLTkuNC45LTkuNC0uNGMwLS44IDIuNC0uNSA0LjItLjQuMS4xLjIuMi41LjMgMyAuOCA2LjEtMS4xIDguMi0uNC0xLjctMS41LTMuOS4yLTYuMS0uMyAxLjMgMCAyLjctLjMgMi44LS42LTEgLjctMy45LS41LTUuMS4zLS4xIDAtLjEuMS0uMi4yLTIuMiAwLTQuOS0uMy00LjkgMSAwIDIuMyA4LjEuOSAxMCAuOXMyLjMuMiAyLjMuNmMwIC41LTEuOS43LTMgLjctMS44IDAtOS4zLTEtMTIuMy0uMS4yLS41LjktMS4zLjUtMS43LjMtLjEuNS0uMy41LS42LS4yLS4yLS40LS4yLS42LS4zLjEtLjEgMC0uMy0uMS0uNCAwIDAtLjEtLjMtLjItLjQtLjEtLjEtLjMtLjMtLjctLjUtLjMtLjEtLjYtLjEtLjctLjItLjEgMC0uNC4xLS40LjEtLjIgMC0uNCAwLS40LjItLjEtLjEtLjMtLjItLjUtLjItLjEuMy0uMi40LS4xLjgtLjMgMC0uNi43LS44LjYuMS4yLjIuMy4zLjMtLjIuNC0uMy45LS42LjlsLjMuM2MtLjEuMi0uMS41LS4xLjdsLS4yLS4xaC0uNGMtLjEgMC0uMi0uMS0uNC0uMS0uNCAwLS42LS42LTEuMi0xLS41LS4zLS41LS41LS41LTEgMC0uNC4yLS44LjItMS4xIDAgMC0uMS0uMi0uMS0uMy0uMS0uMy0uNC0uNS0uNi0uNC4xLjEuMi4yLjIuNGwtLjIuMmMtLjEuMS0uMS4zIDAgLjRWMTIyLjFjMCAuMS0uMSAwLS4xIDAtLjEtLjMtLjItLjctLjUtLjdoLS4ydi0uMWMwLS4zLS4zLS41LS43LS4yLjEgMCAuMiAwIC4zLjEgMCAuMS0uMS4zLS4xLjMgMCAuMy4yLjQuNS40LjEgMCAuMSAwIC4xLjF2LjFjMCAuMSAwIC4xIDAgMC0uNS0uMi0uNyAwLS43LjJ2LjJjLS4yLjEtLjIuNC4xLjYgMC0uMSAwLS4zLjEtLjNoLjFsLjEuMXMuMSAwIC4zLS4xaC4xcy4xLjEuMi4xdi4xYy0uNC4zLS4zLjcuMi43IDAgMCAuMSAwIC4xLjEgMCAuNi0uOS41LS44LS4xLS41LjcuNCAxLjMgMSAuOWguMWMwIC4xLjEuMi4yLjIgMCAwIDAtLjEuMi0uMXYuMWMwIC4yLjEuNC4zLjQgMC0uMSAwLS4zLjEtLjNzLjYuOSAxLjUgMS40Yy4yIDAgLjQgMCAuNS0uMyAwIC4xLjEuMS4yLjIgMCAuNC4zIDEgLjIgMXMtMS42LS4xLTEuOS4xYy0uNC4yLTEuNS42LTEuOC4yLS4xLS4yLS4xLS4zLS4yLS41cy0uMi0uMy0uMy0uM2gtLjNjLS4yLS4yLS42LS4yLS43LS4xLjEgMCAuMy4xLjQuMyAwIC4xLS4xLjItLjEuMi0uMS4yIDAgLjQuNi42IDAgMCAuMS4xIDAgLjEtLjEuMS0uMi4xLS40IDAtLjMtLjItLjMtLjUtLjYtLjMgMCAwLS4xLjEtLjIuMWgtLjFjLS4zIDAtLjcuMy0uNS43IDAtLjEuMS0uMy40LS4zIDAgLjEuMS4yLjEuMi4xLjMuMi42LjkuMS4xIDAgLjEgMCAuMS4xLS4yLjMtLjYuNi0uMy44IDAgMCAuMS4xLjIuMXYuMWMtLjEuNC4zLjcuNi43LS4xLS4xLS4zLS4zLS4yLS42LjEgMCAuMi4xLjIuMS4zLS4xLjItLjUuNC0uNy4xIDAgLjEgMCAuMS4xcy4xLjUuNS41LjYtLjQuNS0uNmMuMS4xLjIuMi4yLjQuMSAwIC4yLS4xLjMtLjMuMS4yLjEuNC0uMi43LjEgMCAuNi0uMi43LS43LjEuMS4xLjIuMS4yLjEuMS40LjEuOCAwdi40cy4xLS4yLjItLjIgMCAuNC4yLjZjLjEtMSAxLjMtLjUgMS45LS45aC4xYzAgLjEtLjEuMy0uMy4zLjIgMCAuNi0uMS44LS4zbC0uMS4xIDEtLjVjMC0uMSAwLS4yLjEtLjMuMSAwIC4yLS4xLjQtLjEuNy4xLjYtLjUuOS0uNCAzLjguNSAxLjYtMS42IDYtMS4yLjIgMCAuMy0uMS41LS4zLS4yLjQtLjIgMS4xLjIgMS4yLjIgMCAuNi4yLjguM3YuMWMtLjMgMC0uNS4xLS42LjItLjcuNC0uNy0xLTEuNC0uNyAwIDAtLjEuMS0uMi4xLS4zIDAtLjcuMy0uNi42LjEtLjEuMi0uMi41LS4zdi4xYzAgLjEgMCAuMi4zLjIuMiAwIC4yLS4xLjMtLjFzLjEgMCAuMS4xYzAgLjMtLjktLjItLjcuNmwuMS4yYzAgLjIuMi40LjYuMy0uMSAwLS4yLS4yLS4yLS4zaC4ycy4xIDAgLjEtLjFoLjFzLjEgMCAuMS4xdi4yczAgLjIuMS4yYzAgLjMuNC42LjguMy0uMSAwLS40LS4xLS40LS4yLjEgMCAuMi0uMS4yLS4xLjEgMCAuMS0uMi4xLS4zczAtLjEuMS0uMWguMmMuMSAwIC4xIDAgLjEuMS4xLjIuMy4zLjYuMi41LS4yLjEtLjYuNS0uN2guM2MuNC4xIDEgLjEgMS0uMS4xLS4yLjEtLjktLjQtMS4xLS4yLS4xIDAtLjQtLjItLjguNC4yLjkuMyAxLjQuMyAxIDAgMS4zLS4yIDEuOC0uNC41LS4zIDEuMS0uMSAxLjMtLjEuMSAwIC4yLjEuMi4zLS4xLjUuMS42LS4xLjgtLjEuMi0uNi4xLS45IDAtLjIgMC0uMy4xLS4zLjItLjMgMC0uNi4zLS42LjYuMS0uMS4zLS4yLjUtLjJ2LjFjMCAuNC40LjUuNy4yaC4xYy0uMi4yLS42LjUtLjMuNyAwIDAgLjEgMCAuMi4xIDAgLjIuMS41LjMuNS0uMS0uMS0uMS0uMiAwLS40aC4yYy4yIDAgLjEtLjUuNC0uNiAwIDAgLjEgMCAwIDAtLjEuMy0uMS42LjEuN2guMmMuMS4yLjMuNC42LjItLjEgMC0uMi0uMS0uMy0uMmwuMi0uMmMuMi0uNi0uMy0uNi0uMy0uOCAwLS4zLjYtLjEuNi0uNyAwLS4xIDAtLjMtLjItLjMuMiAwIC4zIDAgLjQtLjItLjQgMC0uMy0uMy0uMy0uNnYtLjFjLjEtLjEuMi0uMy4yLS42LS4xLjItLjYuNC0uNiAwIDAgMCAwLS4zLS41LS4yLS43LjEtMS4yLS4xLTIuNS0uMi45LjIgMy4zLS4xIDMuMy0uOU0xNTguMSAxMzguNnptLjYgMWMuMS0uMi4yLS4zLjItLjMuMiAwIC4yIDAgLjMtLjJzLS4xLS4zLS4zLS40Yy4yLS4xLjMtLjEuMi0uMi0uMS0uMS0uMy4xLS4zIDBzLjEtLjEuMS0uMmguMmwuNy4zYy4xLjEuMS4xLjEuMnYuMmMtLjEgMC0uMS0uMi0uMi0uMnMtLjEuMSAwIC4zYy0uMi0uMS0uMy0uMi0uNCAwLS4xLjEgMCAuMi4xLjQuMS4xIDAgLjItLjEuNC0uMS4xLS4zLjQtLjUuMi0uMi0uMS0uMi0uNC0uMS0uNW0uOC0xLjljLS4xLjItLjQuNC0uNi4yLS4yLS4yIDAtLjItLjItLjYuMy4xLjcuNC44LjRtLjYuM2MuMS4xLjYuMy45LjQtLjQuMS0uMy4yLS42LjJzLS40LS4zLS4zLS42bTE2LjYgNC4zczAtLjEgMCAwYy4yLS4yLjMtLjQuMy0uNy0uMi4yLS42LjQtLjcgMCAwIDAgMC0uMy0uNC0uMi0uNy4xLTEuNC0uMS0yLjctLjItLjEgMC0uMS0uMSAwLS4xIDEuMy0uMSAzLjctLjMgMy43LTEuMSAwLS43LS44LTEuMi0zLjEtMS4ycy05LjQuOC05LjQtLjRjMC0uOCAyLjQtLjUgNC4xLS40LjEuMS4yLjIuNS4zIDMgLjggNi40LTEuNCA4LjEtLjktMi4zLS44LTMuOC42LTYgLjEgMS4zIDAgMi43LS4zIDIuOC0uNi0xIC43LTMuOS0uNS01LjEuMy0uMS4xLS4yLjEtLjIuMi0yLjIgMC00LjgtLjMtNC44IDEgMCAyLjMgOC4xIDEgMTAgMXMyLjQuMiAyLjQuNmMwIC42LTEuOS43LTMgLjctMS44IDAtOS4zLTEtMTIuMy0uMS4yLS41LjktMS4zLjYtMS43LjMtLjEuNS0uMy41LS42LS4yLS4yLS40LS4yLS42LS4zLjEtLjEgMC0uMy0uMS0uNCAwIDAtLjEtLjMtLjItLjQtLjEtLjEtLjMtLjMtLjctLjUtLjMtLjItLjUtLjItLjctLjItLjEgMC0uNC4xLS40LjEtLjIgMC0uNCAwLS40LjItLjEtLjEtLjMtLjItLjUtLjItLjEuMy0uMi41LS4xLjgtLjMgMC0uNi43LS44LjYuMS4yLjIuMy4zLjMtLjIuNC0uMy45LS42LjkuMi4yLjMuMy40LjMgMCAuMi0uMS41LS4xLjdsLS40LS4xaC0uNGMtLjEgMC0uMiAwLS40LS4xLS40IDAtLjYtLjYtMS4zLTEtLjUtLjMtLjUtLjUtLjUtMSAwLS40LjItLjcuMi0xLjEgMCAwLS4xLS4zLS4xLS40LS4xLS4yLS40LS40LS42LS40LjEuMS4yLjIuMi40bC0uMi4yYy0uMS4xLS4xLjMgMCAuNFYxMzcuNGMwIC4xIDAgMCAwIDAtLjEtLjMtLjItLjctLjUtLjdoLS4ydi0uMWMwLS4zLS4zLS41LS43LS4yLjEgMCAuMiAwIC4zLjEgMCAuMS0uMS4zLS4xLjMgMCAuMy4yLjQuNS40LjEgMCAuMSAwIC4xLjF2LjFjMCAuMSAwIDAgMCAwLS41LS4yLS43IDAtLjguMnYuMmMtLjIuMS0uMi40LjEuNiAwLS4xIDAtLjMuMS0uM2guMWwuMS4xYy4xIDAgLjEgMCAuMy0uMWguMXMuMS4xLjIuMXYuMWMtLjQuMy0uMy43LjIuOCAwIDAgLjEgMCAuMS4xIDAgLjctLjkuNS0uOS0uMS0uNS43LjQgMS4zIDEgLjloLjFjMCAuMS4xLjIuMi4yIDAgMCAwLS4xLjEtLjF2LjFjMCAuMi4xLjQuMy40IDAtLjEgMC0uMi4xLS4ycy41LjkgMS41IDEuNWMwLS4xLjMtLjIuNS0uMyAwIC4yLjIuMy4zLjRsLjItLjFjLS4xLjQuNS45LjQuOXMtMS0uMS0xLjMgMGMtLjQuMi0xLjUuNi0xLjguMi0uMS0uMi0uMS0uMy0uMi0uNXMtLjItLjMtLjMtLjNoLS4yYy0uMi0uMi0uNi0uMi0uNy0uMS4xIDAgLjMuMS40LjMgMCAuMS0uMS4yLS4xLjItLjEuMiAwIC40LjYuNiAwIDAgLjEuMSAwIC4xcy0uMi4xLS40LS4xYy0uMy0uMi0uMy0uNS0uNi0uMyAwIDAtLjEuMS0uMi4xaC0uMWMtLjMgMC0uNy4zLS42LjcgMC0uMS4xLS4zLjQtLjMgMCAuMS4xLjIuMS4yLjEuNC4yLjYuOS4yaC4xYy0uMi4zLS42LjYtLjMuOGwuMS4xdi4xYy0uMS40LjQuNy42LjctLjEtLjEtLjMtLjMtLjItLjYuMSAwIC4yLjEuMi4xLjMtLjEuMi0uNS40LS43aC4xYzAgLjIuMS41LjUuNXMuNi0uNC41LS42aC4xYy4xLjEuMi4yLjIuNC4xIDAgLjItLjIuMy0uMy4xLjIuMS40LS4yLjcuMi0uMS42LS4zLjctLjcuMS4xLjEuMS4xLjIuMS4xLjQuMS44IDBoLjF2LjRzLjEtLjIuMi0uMiAwIC40LjIuNmMuMS0xIC42LS42IDEuMy0xIC4xLS4xLjEgMCAuMSAwIDAgLjEtLjEuMi0uMy4zLjIuMiAxLjItLjQgMS4yLS44IDAtLjEuNC0uMS43LS4yLjcgMCAuNi0uNS44LS41IDMuOC41IDEuNi0xLjYgNi0xLjIuMiAwIC4zLS4yLjUtLjQtLjIuNC0uMiAxLjMuMiAxLjQuMiAwIC42LjIuOC4zdi4xYy0uMiAwLS41LjEtLjYuMi0uNy41LS43LTEtMS40LS44IDAgMC0uMi4xLS4yLjItLjMgMC0uNy4zLS42LjYuMS0uMS4zLS4zLjUtLjN2LjFjMCAuMSAwIC4yLjMuMi4xIDAgLjItLjEuMy0uMSAwIDAgLjEgMCAuMS4xIDAgLjMtLjktLjEtLjcuNmwuMS4yYzAgLjIuMi41LjYuMy0uMS0uMS0uMi0uMi0uMi0uM2guMnMuMSAwIC4xLS4xYzAgMCAuMSAwIC4xLjEgMCAwLS4xLjEtLjEuMiAwIDAgMCAuMi4xLjMgMCAuMy40LjYuOC4zLS4xIDAtLjQtLjEtLjQtLjIuMSAwIC4yLS4xLjItLjEuMS0uMS4xLS4yLjEtLjNzMC0uMS4xLS4xaC4yYy4xIDAgLjEgMCAuMS4xLjEuMi4zLjMuNi4yLjUtLjIuMS0uNi41LS43aC4zYy40LjEuOS4xIDEtLjEuMS0uMi4xLS45LS40LTEuMS0uMi0uMSAwLS40LS4yLS44LjQuMi44LjQgMS40LjQgMS4xIDAgMS40LS4xIDEuOS0uNC41LS4zIDEuMS0uMiAxLjMtLjEuMSAwIC4yLjEuMi4zLS4yLjYgMCAuNi0uMS45LS4xLjItLjYgMC0uOSAwLS4yIDAtLjMuMS0uMy4yLS4zIDAtLjYuMy0uNi42LjEtLjEuMy0uMi41LS4ydi4xYzAgLjQuNC41LjcuMiAwIDAgLjEgMCAuMS4xLS4yLjItLjcuNS0uMy42IDAgMCAuMS4xLjIuMSAwIC4yLjEuNS4zLjUtLjEtLjEtLjEtLjIuMS0uNGguMmMuMiAwIC4yLS41LjQtLjYgMCAwIC4xIDAgMCAwLS4xLjMtLjIuNiAwIC43aC4yYy4xLjIuMy40LjYuMi0uMSAwLS4yLS4xLS4zLS4yLjEtLjEuMi0uMi4yLS4zLjItLjYtLjMtLjYtLjItLjggMC0uMy42LS4xLjYtLjcgMC0uMSAwLS4zLS4yLS4zLjIgMCAuMyAwIC40LS4yLS43LjItLjYtLjItLjYtLjRNMTYwIDE0OC44Yy0uMyAwLS40LS4zLS4zLS42LjEuMS42LjMuOC40LS4zIDAtLjIuMi0uNS4ybS0uMy41Yy0uMSAwLS4xLS4yLS4yLS4ycy0uMS4xIDAgLjJjLS4yLS4xLS4zLS4yLS40IDAtLjEuMSAwIC4yLjEuNC4xLjEgMCAuMiAwIC4zLS4xLjEtLjMuNC0uNS4yLS4zLS4xLS4yLS40LS4xLS41LjEtLjIuMS0uMy4yLS4zLjIgMCAuMiAwIC4zLS4ycy0uMS0uMy0uMy0uNGMuMiAwIC4yLS4xLjItLjItLjEtLjEtLjMuMS0uMyAwcy4xLS4xLjEtLjJjLjEtLjEuMS0uMS4yIDBsLjcuM2MuMS4xLjEuMS4xLjItLjEuMi0uMS40LS4xLjRtLS41LTEuM2MtLjEuMi0uNC40LS42LjItLjItLjIgMC0uMi0uMi0uNi4zLjEuNy4zLjguNG03LjEuMWMuMS4yLjIuMy41LjQgMi44LjggNi0xLjMgNy44LS44LTIuMi0uOC0zLjYuNi01LjguMSAxLjMgMCAyLjYtLjMgMi43LS42LTEgLjYtMy43LS40LTQuOS4zLS4xIDAtLjEuMS0uMi4xLTEuNSAwLTIuOCAwLTIuOCAxIDAgMi4yIDUuOS45IDcuNy45czEuNi4yIDEuNi41YzAgLjUtMi4xLjctMy4xLjctMS42IDAtNi40LS44LTkuMy0uMi4yLS41LjgtMS4xLjUtMS40LjMtLjEuNC0uMy41LS42LS4yLS4xLS40LS4yLS41LS4yLjEtLjEgMC0uMy0uMS0uNCAwIDAtLjEtLjMtLjItLjQtLjEtLjEtLjMtLjMtLjYtLjQtLjMtLjItLjUtLjItLjctLjItLjEgMC0uMy4xLS40IDAtLjIgMC0uMyAwLS40LjItLjEtLjEtLjMtLjItLjUtLjItLjEuMi0uMi40LS4xLjgtLjMgMC0uNS43LS44LjYuMS4yLjIuMy4yLjMtLjIuNC0uMy45LS41LjkuMS4xLjEuMi4yLjItLjEuMy0uMS42LS4yLjhsLS4yLS4xaC0uMWMtLjMgMC0uNSAwLTEuMS0uMy0uNC0uMi0uNC0uNS0uNC0uOXMuMi0uNy4yLTEuMWMwIDAtLjEtLjItLjEtLjMtLjEtLjItLjQtLjQtLjYtLjQuMS4xLjIuMi4yLjRsLS4yLjJjLS4xLjEtLjEuMyAwIC40VjE0OC43YzAgLjEgMCAwLS4xIDAtLjEtLjMtLjItLjctLjUtLjdoLS4yYzAtLjMtLjMtLjUtLjYtLjIuMSAwIC4yIDAgLjMuMSAwIC4xLS4xLjMtLjEuMyAwIC4zLjIuNC41LjQuMSAwIC4xIDAgLjEuMXYuMWMwIC4xIDAgMCAwIDAtLjUtLjItLjcgMC0uNy4ydi4yYy0uMi4xLS4yLjQuMS42IDAtLjEgMC0uMy4xLS4zaC4xYzAgLjEuMS4xLjEuMXMuMSAwIC4zLS4xaC4xbC4xLjF2LjFjLS4zLjMtLjMuNi4xLjcuMSAwIC4xLjEuMS4xIDAgLjYtLjkuNS0uOC0uMS0uNC43LjQgMS4yIDEgLjloLjFjMCAuMS4xLjIuMi4yIDAtLjEgMC0uMS4xLS4xdi4xYzAgLjIuMS40LjMuNCAwLS4xIDAtLjIuMS0uMnMuMS0uMy44LjFjLjEuMS4xLjIuMy4zbC42LS4xYy0uMS40LjEgMS4xIDAgMS4xcy0xLS4xLTEuMy4xYy0uNC4yLTEuNC42LTEuNy4yLS4xLS4yLS4xLS4zLS4yLS41LS4xLS4xLS4yLS4zLS4zLS4zaC0uMmMtLjItLjItLjUtLjItLjctLjEuMSAwIC4zLjEuNC4zIDAgLjEtLjEuMi0uMS4yLS4xLjEgMCAuNC42LjYgMCAwIC4xLjEgMCAuMXMtLjIuMS0uNCAwYy0uMy0uMi0uMy0uNS0uNi0uMyAwIDAtLjEgMC0uMi4xaC0uMWMtLjMgMC0uNy4zLS41LjcgMC0uMS4xLS4zLjMtLjMgMCAuMSAwIC4yLjEuMi4xLjMuMi42LjkuMWguMWMtLjIuMy0uNi42LS4zLjggMCAwIC4xLjEuMi4xdi4xYzAgLjQuNC43LjYuNi0uMS0uMS0uMi0uMy0uMi0uNi4xIDAgLjIuMS4yLjEuMy0uMS4yLS41LjMtLjZoLjFjMCAuMi4xLjUuNS41cy41LS4zLjUtLjVoLjFjLjEuMS4yLjIuMi40LjEgMCAuMi0uMS4zLS4zLjEuMi4xLjQtLjIuNy4yLS4xLjUtLjIuNi0uNy4xIDAgLjEuMS4xLjIuMSAwIC40LjEuOCAwdi40cy4xLS4yLjItLjIgMCAuNC4yLjZjLjEtMSAuOS0uNyAxLjUtMS4xaC4xYzAgLjEtLjEuMi0uMy4zLjYuNCAxLjMtLjUgMS41LTFsLjItLjJjMCAuMS4xLjItLjEuMy42IDAgLjYtLjUuOC0uNCAxLjkuMi41LTEuNiAzLjUtMS4xLjIgMCAuNi0uMi43LS4zLS4yLjQtLjIgMS4yLjIgMS4zLjIgMCAuNi4yLjcuM3YuMWMtLjIgMC0uNS4xLS42LjItLjYuNC0uNy0xLTEuMy0uN2wtLjIuMWMtLjMgMC0uNy4zLS42LjYuMS0uMS4yLS4yLjUtLjN2LjJjMCAuMSAwIC4yLjMuMi4yIDAgLjItLjEuMy0uMSAwIDAgLjEgMCAuMS4xIDAgLjMtLjgtLjEtLjcuNmwuMS4yYzAgLjIuMS40LjUuMy0uMSAwLS4yLS4yLS4yLS4zaC4ycy4xIDAgLjEtLjFjLjEgMCAuMSAwIC4xLjFsLS4xLjFzMCAuMi4xLjJjMCAuMy40LjUuNy4zLS4xIDAtLjQtLjEtLjQtLjIuMSAwIC4yLS4xLjItLjEuMSAwIC4xLS4xLjEtLjMgMC0uMS4xLS4xLjEtLjFoLjJjLjEgMCAuMSAwIC4xLjEuMS4yLjMuMy41LjIuNS0uMi4xLS42LjQtLjYuMSAwIC4yLS4xLjMgMCAuNC4xLjkuMSAxLS4xLjEtLjIuMS0uOC0uNC0xLjEtLjItLjEgMC0uNC0uMi0uNy40LjIuOC4zIDEuNC4zIDEgMCAxLjUtLjEgMi0uNC42LS4zIDEuMS0uMiAxLjItLjEuMSAwIC4yLjEuMS4zLS4yLjUtLjEuNi0uMy44cy0uNS4xLS44IDBjLS4yIDAtLjMuMS0uMy4xLS4zLjEtLjYuMy0uNy42LjEtLjEuMy0uMi41LS4ydi4xYy0uMS40LjMuNS42LjIgMCAwIC4xIDAgLjEuMS0uMi4yLS43LjUtLjQuNiAwIDAgLjEuMS4yLjEtLjEuMiAwIC41LjIuNSAwLS4xIDAtLjIuMS0uNGguMmMuMiAwIC4yLS41LjUtLjYgMCAwIC4xIDAgMCAwLS4yLjMtLjMuNi0uMS42aC4yYzAgLjIuMi4zLjYuMi0uMSAwLS4yLS4xLS4yLS4ybC4yLS4yYy4zLS41LS4yLS41LS4xLS44LjEtLjMuNS0uMS43LS42IDAtLjEgMC0uMy0uMS0uMy4yIDAgLjMgMCAuNC0uMi0uNCAwLS4yLS4zLS4yLS41di0uMWMuMi0uMS4zLS4zLjMtLjYtLjIuMi0uNy40LS42IDAgMCAwIC4xLS4zLS40LS4yLS43LjEtMS42LS4xLTIuOS0uMi0uMSAwLS4xLS4xIDAtLjEgMS4zLS4xIDMuOC0uMyAzLjgtMS4xIDAtLjctLjEtMS4xLTIuMy0xLjFzLTcuMS44LTcuMS0uNGMwLTEgMS0xIDIuMS0uOU0xNTcuNSAxNTkuOWMuMS0uMS4xLS4zLjItLjNzLjIgMCAuMy0uMWMuMS0uMi0uMS0uMi0uMi0uMy4yLS4xLjItLjEuMi0uMi0uMS0uMS0uMy4xLS4zIDBzLjEtLjEuMS0uMmMuMS0uMS4xIDAgLjIgMGwuNy4zYy4xLjEuMS4xLjEuMnMwIC4yLS4xLjIgMC0uMi0uMi0uMmMtLjEgMC0uMS4xIDAgLjItLjIgMC0uMy0uMS0uNCAwLS4xLjEgMCAuMi4xLjMgMCAuMSAwIC4yLS4xLjNzLS4yLjQtLjUuMmMtLjIgMC0uMi0uMi0uMS0uNG0uNy0xLjZjLS4xLjItLjMuMy0uNS4yLS4yLS4yIDAtLjItLjItLjYuMi4xLjYuMy43LjRtLjUuMmMuMS4xLjYuMy44LjMtLjQuMS0uMy4yLS41LjJzLS4zLS4zLS4zLS41bTUuMy0uMmMuMS4xLjIuMy41LjQgMi44LjggNi0xLjMgNy44LS44LTIuMi0uOC0zLjYuNi01LjguMSAxLjMgMCAyLjYtLjMgMi43LS42LTEgLjYtMy43LS40LTQuOS4zLS4xLjEtLjIuMS0uMi4yLS45LjItMS42LjctMS42IDEuMyAwIDEuOSA3LjIuNCA3LjIgMSAwIC41LTEuNCAxLTMuMyAxLTEuNCAwLTMuOS0xLTcuMS0uMi4yLS41LjktMS4zLjYtMS43LjMtLjEuNC0uMy40LS41LS4xLS4yLS4zLS4yLS41LS4yLjEtLjEgMC0uMy0uMS0uNCAwIDAtLjEtLjMtLjEtLjQtLjEtLjEtLjMtLjMtLjYtLjQtLjMtLjEtLjUtLjEtLjYtLjItLjEgMC0uMy4xLS40LjEtLjEgMC0uMyAwLS40LjEtLjEtLjEtLjMtLjItLjUtLjItLjEuMi0uMi40LS4xLjgtLjMgMC0uNS42LS43LjYuMS4yLjIuMy4yLjMtLjIuNC0uMy44LS41LjhsLjMuM2MtLjEuNi0uMiAxLjMtLjEgMS44LS40LS41LTEuMS0xLjUtMS41LTEuOC0uNC0uMi0uNC0uNC0uNC0uOSAwLS40LjItLjcuMS0xIDAgMC0uMS0uMi0uMS0uMy0uMS0uMi0uNC0uNC0uNi0uNC4xLjEuMi4yLjIuNGwtLjIuMmMtLjEuMS0uMS4yIDAgLjRWMTU4LjdjMCAuMSAwIDAgMCAwLS4xLS4zLS4yLS42LS40LS42aC0uMnYtLjFjMC0uMy0uMy0uNS0uNi0uMi4xIDAgLjIgMCAuMi4xcy0uMS4zLS4xLjNjMCAuMy4yLjQuNS40aC4xdi4xYzAgLjEgMCAwIDAgMC0uNS0uMi0uNyAwLS43LjJ2LjJjLS4yLjEtLjIuNC4xLjYgMC0uMSAwLS4zLjEtLjNoLjFjMCAuMS4xLjEuMS4xcy4xIDAgLjMtLjFoLjFsLjEuMXYuMWMtLjMuMy0uMy42LjEuNy4xIDAgLjEgMCAuMS4xIDAgLjYtLjguNS0uOC0uMS0uNC43LjMgMS4yLjkuOWguMWMwIC4xLjEuMi4yLjIgMCAwIDAtLjEuMS0uMXYuMWMwIC4yLjEuNC4zLjQgMC0uMSAwLS4yLjEtLjJzMCAuOS44IDEuNGMuMS41LjYuOCAxIC43LjEuMy40LjcuMy43LS4xIDAtMS4xLS4xLTEuNCAwLS4yLjEtLjYuMy0uOS4zbC0uMS4xdi0uMWMtLjMgMC0uNiAwLS43LS4xLS4xLS4xLS4xLS4zLS4yLS41LS4xLS4xLS4yLS4yLS4zLS4yaC0uMmMtLjItLjItLjUtLjItLjYtLjEuMSAwIC4zLjEuNC4yIDAgLjEtLjEuMi0uMS4yLS4xLjEgMCAuMy42LjUgMCAwIC4xLjEgMCAuMXMtLjIuMS0uMyAwYy0uMi0uMi0uMy0uNC0uNi0uMyAwIDAtLjEuMS0uMi4xaC0uMWMtLjMgMC0uNy4zLS41LjYgMC0uMS4xLS4yLjMtLjMgMCAuMS4xLjIuMS4yIDAgLjMuMi42LjguMS4xIDAgLjEgMCAwIC4xLS4xLjMtLjYuNS0uMi43IDAgMCAuMSAwIC4xLjF2LjFjLS4xLjQuMy42LjUuNi0uMS0uMS0uMi0uMy0uMi0uNS4xIDAgLjIuMS4yLjEuMy0uMS4xLS41LjMtLjZoLjFjMCAuMS4xLjUuNS41LjMgMCAuNS0uMy41LS41LjEuMS4yLjIuMi40LjEgMCAuMi0uMS4zLS4zLjEuMi4xLjQtLjIuNi4xIDAgLjUtLjIuNi0uNi4xLjEuMS4xLjEuMi4xLjEuNC4xLjcgMGguMXYuNHMuMS0uMi4yLS4yIDAgLjMuMi42Yy4xLS45LjYtLjYgMS4yLS45aC4xYzAgLjEtLjEuMi0uMy4zLjIgMCAuOS0uMy45LS42IDAtLjEuNC0uNS41LTEuNmguMmMuOC0uMSAxLjEtLjYgMS45LS43LS4yLjItLjMuOC0uMiAxLjEgMCAuNC41LjkuNyAxdi4xYy0uMiAwLS41LjEtLjYuMi0uNi40LS42LS45LTEuMy0uNyAwIDAtLjEuMS0uMi4xLS4zIDAtLjYuMy0uNi42LjEtLjEuMi0uMi40LS4ydi4xYzAgLjEgMCAuMi4yLjIuMSAwIC4yLS4xLjMtLjEgMCAwIC4xIDAgLjEuMSAwIC4zLS44LS4xLS43LjYgMCAwIC4xLjEuMS4yIDAgLjIuMi40LjUuMy0uMS0uMS0uMi0uMS0uMi0uM2guMnMuMSAwIC4xLS4xYzAgMCAuMSAwIC4xLjEgMCAwLS4xLjEtLjEuMiAwIDAgMCAuMi4xLjIgMCAuMy4zLjUuNy4zLS4xIDAtLjMgMC0uNC0uMi4xIDAgLjItLjEuMi0uMS4xIDAgLjEtLjEuMS0uMnMwLS4xLjEtLjFoLjJjLjEgMCAuMSAwIC4xLjEuMS4xLjMuMy41LjIuNC0uMS4xLS41LjQtLjZoLjNjLjMuMS42LjIuNyAwIC4xLS4yIDAtLjgtLjMtMS0uMi0uMS4zLTEuNS0uNy0yLjEuNS4xIDIuMS4zIDIuNCAwIC41LjEgMSAuNCAxLjEuNXMuMS4yLS4xLjNjLS40LjMtLjQuNC0uNi41LS4xLS4xLS4zLS40LS40LS40LS4yLS4xLS4zIDAtLjMgMC0uMi0uMS0uNiAwLS43LjMuMSAwIC4zLS4xLjUgMHYuMWMwIC4xIDAgLjIuMS4ydi4xYy0uMiAwLS43LS4xLS42LjJ2LjJjLS4yLjEtLjIuNC0uMS41IDAtLjEuMS0uMi4zLS4zIDAgLjEuMS4xLjEuMS4xLjEuNC0uMi42LS4xdi4xYy0uMi4xLS41LjMtLjQuNSAwIDAgMCAuMS4xLjItLjEuMiAwIC40LjMuNSAwLS4xLS4xLS4yIDAtLjNoLjNjLjUtLjIuMi0uNi4zLS43LjItLjIuNC4zLjgtLjEuMS0uMS4xLS4yLjEtLjQuMS4xLjIuMi40LjEtLjMtLjIgMC0uNC4xLS42IDAgMCAwLS4xLjEgMCAuMSAwIC4zIDAgLjUtLjMtLjIgMC0uOC0uMy0uNC0uNC41LS4yLjYtLjQuNC0uNy0uNC0uNS0xLjItLjUtMS4yLTEuMWguN2MyLjUgMCA0LS43IDQtMS41LS4xLTEuNi03LjQuMS03LjQtMS4xLjEtMS4xLjYtMS4zIDEuMS0xLjVNNDUuOCAzMS4xYzAtMS0uOC0xLjgtMS44LTEuOHMtMS44LjgtMS44IDEuOC44IDEuOCAxLjggMS44YzEuMSAwIDEuOC0uOCAxLjgtMS44TTQ1LjIgMjYuNGMwLTEtLjgtMS44LTEuOC0xLjhzLTEuOC44LTEuOCAxLjguOCAxLjggMS44IDEuOCAxLjgtLjggMS44LTEuOE00Ni4yIDI0LjNjMSAwIDEuOC0uOCAxLjgtMS44cy0uOC0xLjgtMS44LTEuOC0xLjguOC0xLjggMS44Yy4xIDEgLjkgMS44IDEuOCAxLjhNNTAuOSAyNGMxIDAgMS44LS44IDEuOC0xLjhzLS44LTEuOC0xLjgtMS44LTEuNy44LTEuNyAxLjguOCAxLjggMS43IDEuOE03MSAyMC43Yy43LjcgMS44LjcgMi41IDBzLjctMS44IDAtMi41LTEuOC0uNy0yLjUgMC0uNyAxLjggMCAyLjVNNzAuNiAxN2MuNy0uNy43LTEuOCAwLTIuNXMtMS44LS43LTIuNSAwLS43IDEuOCAwIDIuNWMuNy42IDEuOS42IDIuNSAwTTY2IDE2LjJjLjctLjcuNy0xLjggMC0yLjVzLTEuOC0uNy0yLjUgMC0uNyAxLjggMCAyLjVjLjYuNyAxLjguNyAyLjUgME02MS45IDE5LjJjLjctLjcuNy0xLjggMC0yLjVzLTEuOC0uNy0yLjUgMC0uNyAxLjggMCAyLjUgMS45LjcgMi41IDBNNTAuNyAxNi43bDEuNCAzLjEgMS44LTIuMmMuMSAwIC4xLjEuMi4xLjIgMSAuMiAyLjguMiAzLjkgMCAxLjIgMSAyLjMgMi4zIDIuM3MyLjMtMSAyLjMtMi4zYzAtLjktLjUtMS42LTEuMi0yLS45LS43LTEuOC0xLjYtMi41LTIuMyAwLS4xLjEtLjIuMS0uM2wzIC4zLTEuMi0zLjItMi4yIDEuOS0uMS0uMS0uMi0zLjMtMy4xIDEuMiAyLjEgMi40Yy0uMS4xLS4xLjItLjEuMmwtMi44LjN6TTcxLjEgMjIuMmMuNyAxLjEuOSAxLjYgMSAyLjQtLjUtLjItMS4xLS44LTEuOC0xLjdsLjQgNC4xYy41LS43LjktMS4yIDEuNS0xLjUtLjEgMi43LTEuMiAzLjgtMi4xIDQtMS4xLjItMi0uNS0yLjEtMS40LS4yLTEuMi44LTEuOSAxLjktLjkuMi0yLjUtMS44LTIuNS0yLjctMS40IDEtMi40LjYtNC0xLjUtNS4yLTEuMyAyLjItLjggMy43LjkgNS40LTEuNi0uOC0zLjEuNi0xLjYgMi40LjMtMS42IDEuNy0xLjIgMiAwIC4zIDEuMS0uOCAyLjUtMi41IDMtMi41LjgtMy40LS45LTQtMi4yLjUtLjQgMS45LS4yIDMuMy43bC0xLjItNGMtLjYgMS40LTEuNCAyLTIuNCAyLjQtLjEtMS4yLjgtMy41LjgtMy41bC00LjkgMnMyLjMgMS4xIDMgMmMtMSAuNC0yIC42LTMuNC0uMWwxLjkgMy43Yy40LTEuNyAxLjItMi43IDEuOS0yLjguNSAxLjQgMS4xIDMuMi0xLjMgNC40LTEuNi44LTMuMy42LTMuOS0uNC0uNy0xLjEuMS0yLjQgMS40LTEuNC0uMi0yLjMtMi4zLTIuMy0yLjgtLjYgMC0yLjQtLjYtMy44LTMuMS00LjUtLjYgMi40LjIgMy44IDIuNiA0LjgtMS40LS4yLTIuOCAxLjItLjkgMi45IDAtMS41IDEuMy0xLjcgMS45LS43LjUuNy40IDEuOC0uNiAyLjUtLjguNS0yLjMuNS00LjMtMS40LjYtLjIgMS4yLS4xIDIuMSAwTDQ4IDMyYy4xIDEuMS4xIDItLjEgMi41LS42LS42LS43LTEuMi0xLTIuNGwtMiAxLjhjMS45IDEuMSA0LjEgMi45IDYuNyA2LjYgMi44LTEuNyA3LjctNC4xIDEwLjgtNS40IDMuMS0xLjIgOC4zLTMgMTEuNS0zLjctLjctNC40LS40LTcuMi4yLTkuNGwtMyAuMnoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNNzYuNyA0NS42Yy0yLjUgMS45LTUuNy4yLTcuMi0yLjQgMy40LTEuNCA3LjMtMyAxMC00LjYtMi41IDMuOC0uOCA1LjUtMi44IDdtLS41IDI1LjdjLTMuMiAxLjQtNS43LTEuNC02LjMtMy4zLS42LTEuOS0xLjEtMy41LS40LTQuMiAxLjQtMS40IDEuOC0yLjQgMS00LjEtMS0xLjktMy0xLTUuMy0uNSAxLTEuOSAxLjEtMy4yLS4zLTMtMS43LjItMS43IDIuOS0yLjcgMi42LS45LS4zLS40LTEuOS0uNC0yLjcgMC0xLjIuOC0xLjYgMS45LTIuMWw5LjItMy41YzEuMi0uNCAyLS43IDIuOC4yLjYuNiAyLjEgMS40IDEuNiAyLjMtLjUuOS0yLjQtMS4xLTMuNyAwLTEuMS45LS4xIDEuOCAxLjkgMi40LTIgMS4yLTQuMSAxLjktMy40IDQgLjYgMS44IDEuNiAyLjIgMy41IDIuMyAxIDAgMS44IDEuNSAyLjcgMy4zIDEgMS42IDEuMyA0LjktMi4xIDYuM001OC43IDUyLjdjLTIuNS4yLTIuNC0yLjEtNi44LTMuMiAzLjEtLjYgNy0yLjIgMTAuNC0zLjUuNyAyLjktLjUgNi41LTMuNiA2LjdtNTEuMyA4Mi4xYy43LTEuOS0yLjgtNC0zLjItNi44LS40LTIuNy0uMS01LjMtMy4yLTguOS0zLTMuNi0xMy42LTE0LjktMTYuOC0xOC41LjgtLjEgMi43LS41IDQuNiAxLjMgMS4xIDEuMSAzLjQgMy4yIDUuNSA1LjMgMi44LTcuMSA2LjMtMTIuNSAxMS4yLTE4IC42LS43IDEuMy0xLjQgMS45LTIuMS0xLjguNS00LjYgMS02LjMgMi4xLS4xLTMuMS4xLTUuNi0yLTcuNi44LTQuMy4xLTkuNi05LjYtMTYuMSA1IDEuMiA3LjkgNS43IDExLjcgMi4zLTMuNC0uMS0zLjUtNy42LTE1LjktMTMuOCA0LjctLjEgOC40IDcuNSAxMy45IDMuMi01LjEtLjYtNi45LTkuOC0xNi4xLTEyLjYgMy4yLjQgNi41IDEuOSA5LjMtMS44LTMuMi44LTUuMS0yLjItOC42LTIuNSAxLjMtNCAxLTYuNS0uNC05LjUtMi40LjItNC45LjktNi43IDIuNC0uMy0yLjItMi42LTIuMy00LjYtMi4yLjEgMSAuNiAyLjMtLjUgMi41LTEuNy4zLTcuMiAxLjgtMTEuNCAzLjUtNC4zIDEuNy05LjEgNC43LTEwLjUgNS42LS45LjYtMS42LS44LTIuMS0xLjQtMS41IDEuMy0zIDIuOS0xLjkgNC42LTIuNC4yLTUgLjgtNy4yIDIuNiAwIDIuNyAyLjMgNS40IDUuNyA2LjktNS43IDUuNy0uNSAxMS01LjYgMTUuOSA3LjEuMyA1LjktOS42IDkuNC0xMS0uNCA2LjktNC4yIDguMi00LjIgMTUuNyAwIDQgMi40IDguMy4zIDExIDUuOS0xLjYgNC40LTE0LjcgOC4xLTE4LjcuNiAyLjIuMyA0LjQtLjUgNi43LTIuMSA2LjEuMiAxNC41LTMgMTcuMiA2LjEtLjYgNi44LTEwLjMgMTEuOC0xMy45LTQuMyA4LjgtOC43IDI3LjQtMTUuMSAzNi43LTEwLjQgMTQtMTYuNCAzMS0yNS45IDMxLTQuMiAwLTcuMy0yLjYtNy4zLTcuOCAwLTE1LjggMjcuMi0yNi43IDI3LjItNDMuNiAwLTcuNS02LjEtMTAuNC0xMC0xMC40LTIuNiAwLTUuNyAxLjMtOC4zIDMuNC0xLjEtLjQtMi4zLS43LTMuMi0uNy05LjYgMC03IDE3LjMtMTUuNCAxNy4xIDMuMyAxLjkgOS0xLjggMTIuNC02LjZDMTYgMTA4LjUtLjEgMTA1LjUgMS4yIDExOWMyLjMtMTAuNSAyNy45LTkgMjcuOS0yNC45IDAtMS44LS45LTMuMy0yLjItNC41IDEuOS0xLjIgMy43LTEuNyA1LjQtMS43IDMuMSAwIDUuOSAyLjMgNS45IDYuOCAwIDE0LjEtMjcgMjYuMS0yNyA0My40IDAgMi45LjkgNS40IDIuMiA3LjMtMS45LjgtMy45LjQtNS41LTEuNS0uMiA0LjUgNi4yIDcuMyAxMC4yIDUgLjkuMyAxLjguNSAyLjguNi0xLjIgMy4zLTUuMyA0LjMtNy41IDQuMiA2LjYgNS4yIDE4LjItMS42IDE3LjUtNy41IDUuMi00LjIgOC42LTExLjUgMTIuNC0xNi4zbC0uNiAzLjNjLTMuOSA3LTcuNSAxMy4zLTguNSAyMi42LS44IDcuNy00LjcgMTQuNy0xMC4xIDE0LjctMS4yIDAtMy4yLTEuNi00LjEtLjgtMS43IDEuNC0uMSAzLS4xIDQuNCAwIDIuMi00LjMgNC40LTQuMyAxMS4yIDAgMy4xIDEuOCA2LjggMS4xIDguOCAxLjctLjkgNC0zLjggNS03LjYgMS45IDktMy44IDguNi4zIDE2LjYuNS0yLjYgMy4yLTMuNyA0LjgtMi42IDEuNiAxLjEuOSAxLjktLjMgMy4xLTEuMiAxLjItMi4zIDcuMiAzLjIgNi44LTEtLjctMS4xLTIuMyAxLjYtMi44IDMuOC0uOCA0LjggMSA4LjkgMSAyLjUgMCAzLjEtMy4yIDUuMS0zLjJzMiAxLjUgMS4zIDIuNmMzLjItLjkgMy43LTIuNiAzLjctNC4zIDAtMS44LTEuNC0yLjktLjMtMy42IDEuMS0uNyA0LjguMSAzLjMgMy4xIDEuOS0uMyAyLjktMS43IDIuOS00cy0yLjYtMy43LTUuMS0zLjJjLS40LTEuNS0yLjYtMi4yLTQuNS0yLjItNC40IDAtMy43IDMuNS02LjggMy41LTQuOSAwLTkuNi02LjMtOS42LTE3IDAtNS43IDYuMS03LjIgMTAuNS05IDQuMy0xLjkgMTItNi42IDE2LjUtMTQuMiAzLjYtNiAzLjctMTIuNiAzLjItMjAuMyA2LjEgMy41IDYuOCA4LjYgNi44IDEyLjIgMCA0LjgtMi41IDYuNy00LjQgNy42LTEuNi44LTIuMi40LTIuNCAxLjQtLjIgMS4yLjYgMS45IDEuMyAyLjMgMi4yIDEuMSAxLjggMy4yIDIuNCA1LjUuNiAyLjMgMi43IDUuOSA2LjEgOC41LjQtMS40LjMtMy43LjEtNi42IDQuNyAyLjMuOSAxMS44IDEwLjEgMTEuOC0xLjctMS0xLjItMy40LS4zLTMuOCAxLS40IDIuMi42IDQgMy4xczEuMyAyLjMgNS42IDIuMyAyLjQtMS41IDQuNy0xLjVjMi4zIDAgMi4xIDIuNi45IDQuNiAzLjktMS4yIDUtNC4xIDMuNy03LjEgMy40LTEuOCA1LjIuOCA1LjcgMi42IDMuMy0zLjMgMC03LjQtMi42LTcuNy4xLTEuMi0xLjEtMi42LTIuNS0yLjYtMS40LS4xLTIuOC0uMi00LjMtLjEtMS42LjEtMi41IDIuNC00LjMgMi40LTUuNyAwLTE3LTEwLjQtMTctMTQuOXMxMC44LTcuMiAxMC44LTE0LjJjMC05LjEtOC45LTEyLjItMTYuNS0xOCAyLjctMyAxMC41LTMuNyAxNS0xLjUuNS0yLjUgMi4xLTEuOSAyLjctNi4zIDEuNiAzLjgtLjEgNy4yIDEuNiA4LjggMS4zLTEuOCA0LjUtMS42IDQuMy02LjMgMSAzLTEuMyA3LjUgMSA5LjUuNC0yLjUgMS45LTIuOSAyLjgtMi45czEuNy43IDEuNyAyLjFjMCAzLjYtNC41IDEuOS00LjUgNiAwIDEuNyAyLjIgMi4zIDIuMiAzLjRzLTEuOCAyLjgtNCAxLjRjLjcgMS42IDIuMiAzIDQgMyAyIDAgNC4xLTEuNiA0LjktMy42IDEgMi42LjIgNS41LTEuNiA1LjkgMiAxIDYuNyAwIDYuMS02IDIuNy40IDQgMi4yIDIuNSA1LjQgMi4yLS41IDQuMi0xLjYgNC4yLTMuOS0uMi0yLTIuMS0yLjUtMS4yLTQuOE0yODQuOSAxNzguNGMwLTMuMSAyLjYtNS43IDUuNy01LjdzNS42IDIuNSA1LjYgNS43YzAgMy4xLTIuNSA1LjctNS42IDUuNy0zLjEgMC01LjctMi42LTUuNy01LjdtLTEuOSAwYzAgNC4yIDMuNCA3LjYgNy43IDcuNiA0LjIgMCA3LjYtMy40IDcuNi03LjYgMC00LjItMy40LTcuNi03LjYtNy42LTQuMyAwLTcuNyAzLjQtNy43IDcuNk0yNTggMTkyLjJjLTIuMi0uNC0zLjctMi0zLjQtMy42LjEtLjguNy0xLjMgMS4xLTEuNi45LS42IDIuMS0uOCAzLjQtLjYgMiAuNCAzLjUgMS44IDMuNSAzLjJ2LjRjLS41IDEuNi0yLjUgMi42LTQuNiAyLjJtLTMuNS02LjhjLTEgLjctMS43IDEuNy0xLjkgMi44LS4yIDEuMy4yIDIuNyAxLjIgMy44LjkgMSAyLjMgMS44IDMuOCAyLjFzMy4xLjEgNC4zLS42YzEuMy0uNyAyLjItMS44IDIuNC0zLjIuNS0yLjctMS44LTUuMy01LTUuOS0xLjctLjItMy41LjEtNC44IDFNMjEyIDgyLjhjMC0xIC42LTIuMSAxLjYtMi45LjktLjcgMS45LTEgMi45LS45LjQgMCAxIC4yIDEuNC44LjQuNS40IDEuMS40IDEuNi0uMS45LS43IDEuOS0xLjYgMi42LTEuNSAxLjEtMy41IDEuMi00LjMuMS0uMi0uNC0uNC0uOC0uNC0xLjNtLjUtNC41Yy0yLjQgMS44LTMuMSA0LjktMS41IDYuOSAxLjUgMiA0LjcgMiA3LjEuMiAxLjMtMSAyLjEtMi40IDIuMy0zLjkuMS0xLjEtLjEtMi4yLS44LTMtLjYtLjgtMS42LTEuNC0yLjctMS41LTEuNS0uMS0zLjEuMy00LjQgMS4zTTI0OC41IDE4My40em0wLTJjLS44IDAtMS40LS40LTEuNy0uOC0uNy0uOC0xLjItMi0xLjEtMy4zIDAtMS4zLjUtMi41IDEuMy0zLjIuNC0uNCAxLS44IDEuOC0uOCAxLjYgMCAyLjkgMS45IDIuOSA0LjEgMCAxLjMtLjUgMi41LTEuMyAzLjItLjUuNC0xLjEuOC0xLjkuOG0tMy04LjdjLTEuMSAxLjEtMS44IDIuOC0xLjkgNC42di4yYzAgMS43LjYgMy40IDEuNyA0LjUuOC45IDEuOSAxLjQgMy4xIDEuNCAxLjEgMCAyLjMtLjQgMy4yLTEuMyAxLjEtMS4xIDEuOC0yLjggMS45LTQuNiAwLTEuNS0uNC0zLTEuMy00LjJzLTIuMi0xLjktMy41LTEuOWMtMS4xIDAtMi4zLjUtMy4yIDEuM00yMDkuNyAxMTguNmMtMi0xLTMtMi45LTIuMy00LjQuMy0uNyAxLTEuMSAxLjQtMS4yIDEtLjQgMi4zLS4zIDMuNC4zIDEuMS41IDIgMS41IDIuNCAyLjUuMi41LjMgMS4yIDAgMS45cy0xIDEtMS40IDEuMmMtMSAuMy0yLjMuMi0zLjUtLjNtLTEuNS03LjVjLTEuMi40LTIuMSAxLjItMi42IDIuMi0xLjIgMi41LjMgNS42IDMuMyA3IDEuNi44IDMuNC45IDQuOS40IDEuMi0uNCAyLjEtMS4yIDIuNi0yLjJzLjUtMi4yLjEtMy40Yy0uNS0xLjUtMS44LTIuOC0zLjQtMy42LTEuNi0uOC0zLjQtLjktNC45LS40Ii8+PHBhdGggY2xhc3M9InN0MCIgZD0iTTI2My41IDE0NS44Yy0xLjIgMS44LTMuNCAyLjQtNC44IDEuNHMtMS41LTMuMi0uMi01IDMuNC0yLjQgNC44LTEuNCAxLjUgMy4zLjIgNW0tOSAxNC4yYy0xLjMgMS44LTMuNCAyLjQtNC44IDEuNHMtMS41LTMuMi0uMi01YzEuMi0xLjcgMy40LTIuNCA0LjgtMS40IDEuNCAxLjEgMS41IDMuMy4yIDVtLTMwLjgtNzcuN2MxLjEtMy4zIDMuMS05LjkgMy4xLTkuOWwzLjUgMS4zYy0xIC40LTIuMiAxLjQtMy4zIDIuNC44LjQgMi4yLjQgMy4xLS4ybC0xLjQgMy41Yy0uMy0uNi0xLjMtMS44LTIuMy0yLS43IDIuOCAxIDMuOCAyLjMgNC41IDIuMSAxLjEgMy41IDEuMyA0LjEuMy43LTEuMi0uNy0yLjktMi41LTIuMS0uMi0xLjguOC0yLjggMi0yLjggMSAwIDEuNy45IDIgMi4xLS4xLTMgMS4yLTUuMiAzLjktNi4xIDEgMi45LjIgNC44LTIgNi45IDEuMS0uNSAyLjQtLjQgMyAuNC43IDEgLjQgMi40LTEuMiAzLjItLjQtMS45LTIuNi0yLjEtMy4yLS44LS42IDEuMi4zIDIuNCAyLjMgMy41IDIuMyAxLjIgNC4xLjUgNS4zLTEuNS0uOC0uMi0yLS4xLTMuMi43bDIuMy00LjNjLjEuNi41IDEuNyAxLjUgMi41LjMtMSAuOC0yLjcuMS00LjJsNSAyLjljLTEuNy4yLTIuOSAxLjQtMy41IDIuMiAxLjIuNCAyLjMuMiAyLjkgMGwtMi42IDQuMmMwLTEuNC0uNS0yLjYtMS0zLjEtMS4xIDItLjggNCAxLjQgNS4zIDEuOSAxLjEgMy40IDEuNCA0LjEuMi43LTEuMi0uNS0zLTIuMy0yLjQtLjEtMS44IDEtMi43IDIuMi0yLjcgMSAuMSAxLjcgMS4yIDEuOCAyLjQuNy0yLjkgMi00LjYgNS01LjEuNiAyLjgtLjcgNS4xLTMuMyA2LjUgMS4yLS40IDIuMy0uMSAyLjguNy42IDEgLjMgMi40LTEuNCAzLjItLjItMS45LTIuNC0yLjMtMy4xLTEuMS0uNSAxIC4zIDIuMSAyLjMgMy40IDEuMi44IDMgMS44IDUuMS0uMi0uNy0uOC0yLjMtMS0yLjktMWwyLjMtMi45Yy0uMSAxLjEuNyAyLjMgMS40IDIuOC4zLTEuNC42LTMgLjQtNC4xbDIuOSAyLjNzLTQuNyA1LTcgNy42bC0zMS45LTE4LjV6bTM3LjMgNDIuNGMwLS41LjItMS4yLjctMS43LjYtLjUgMS4zLS42IDEuOC0uNiAxLjEgMCAyLjIuNiAzLjEgMS41czEuNCAyLjEgMS4zIDMuMmMwIC41LS4yIDEuMi0uNyAxLjctLjYuNS0xLjMuNi0xLjguNi0xLjEgMC0yLjItLjYtMy4xLTEuNS0uOC0uOS0xLjMtMi4xLTEuMy0zLjJtMTMuNyA2Mi44Yy4yLTEgMS0yLjEgMi0yLjggMS4xLS43IDIuMy0xIDMuNC0uOC41LjEgMS4yLjQgMS42IDEgLjQuNi40IDEuNC4zIDEuOC0uMiAxLTEgMi4xLTIgMi44LTEuOCAxLjItNC4xIDEuMS01LS4zLS40LS40LS40LTEuMi0uMy0xLjdtLTY1LTk0LjdjLS4xIDEuMS0uNSAyLjEtMS4yIDIuNy0uMy4zLS44LjYtMS40LjYtMS4zLS4xLTIuMy0xLjUtMi4zLTMuM3YtLjNjLjEtMS4xLjUtMi4xIDEuMi0yLjcuMy0uMy44LS42IDEuNS0uNi42IDAgMS4xLjQgMS40LjcuNS44LjggMS45LjggMi45bTIwLjEtNDEuM2MxLjEtMiAwLTUuMSAzLjctNS4xIDEuOCAwIDMuNSAxLjggNS43IDIuNS0zLjYuMy02LjggMS4xLTkuNCAyLjZtNTguNiA1MS43YzIuNSA2LjggNy40IDkuMyAxMS4yIDcuNS04LjQtMS0xLjYtMTUuNC0xMi40LTE1LjQtLjYgMC0xLjIuMS0xLjcuMi0xLjgtMS45LTMuOS0yLjgtNy4xLTIuOC00LjYgMC0xMi41IDQuNC0xMi41IDEzLjYgMCAxOS43IDIyLjkgMjEuNCAyMi45IDM4LjggMCA1LjEtMy44IDguMi04LjEgOC4yLTMuOCAwLTYuOS00LjMtMTAuMi0xMS4xLTEuNS0zLjItNC45LTcuNi04LjQtMTIuMiAxIC43IDIuMiAxLjIgMy40IDEuMiAxLjIgMCAyLjQtLjQgMy4yLTEuMi44LS44IDEuMy0xLjkgMS4zLTMuMXYtLjJjMC0xLjYtLjctMy4yLTEuOC00LjQtMS4zLTEuMy0yLjktMi4xLTQuNS0yLjEtMS4yIDAtMi40LjQtMy4yIDEuMi0uOC44LTEuMyAxLjktMS4zIDMuMXYuMmMwIC43LjEgMS40LjQgMi00LjktNi40LTkuNS0xMi43LTkuNS0xNi4yIDAtMyAyLjEtNS43IDQuNy04LjkuMS4xLjkuNS45LjVsLjctLjhjLjktMSAyLjgtMy4xIDYuOC03LjNsLjItLjIuOS0xLTIuNS0yYy42LTEuNSAxLjItMy4xIDEuNi00LjguOCAzLjIgMi40IDUuMiA0LjYgNC41LTEuNS0zLjMgMS41LTcuNi0uNS0xNS43IDEuOSAzLjEgNC42IDQuNyA2LjUgNC4yLTUuMS00LjUgMS41LTEwLjgtNS4xLTIwLjUgMi4yLjcgMy42LjMgNC41LS44LTYtLjgtMy4zLTguNS0xMy44LTExLjMgMi42LS41IDQuMi0yIDMuOC0zLjQtMi44IDItNS4yLTMuOC0xNC40LTMuNi0uNS0zLjQtMy43LTctNy4zLTguOC43IDIuNyAwIDUtLjYgN0wyMTEuMiA4LjVjLS45LS44LTEuNC0xLTEuNi0uNy0uMy4zLS4yLjguMyAxLjRsMjUuNyAzMi4yYy0xLjkuNy0zLjggMS41LTUuOCAyLjItMS4yLjQtMi4yIDEuNy0yLjIgMy4zLTQuNyAyLjQtOC45IDUuMy0xMSA3LjItMS42IDEuNC0yLjggMS44LTEuNCA1IC41IDEuMi0xLjEgNC4zIDIuNiAyIDIuNC0xLjUgOC00LjUgOC44LTIuNi40IDEtMi4zIDIuMy00LjIgM3MtMy45IDIuMi0zLjYgMi45Yy4zLjcgMS44LS4xIDEuOS43LjEuOS43IDEuNiAxLjQgMS42czEuNy0xLjYgMi4zLTFjLjYuNS0uMyA0LS45IDQuOSAyLjktLjQgNC44LTMuMSA0LjgtNS4zLjEtMi4yLjctMi43IDEuMS0zIC40LS4zIDEgMi4zLjQgMy45IDEuNS0uMyAzLjEtMi4zIDIuOS02LjEuOC0uNiAxLjYtMS4xIDIuMi0xLjEgMSAwIDIuOSAyLjcgNS43IDIuNyA1LjEgMCA3LjktNC4xIDguMi02IC4yLTEuNi4xLTMuMS0uNy00LjIgMS44IDEuNCAyLjQgMy43IDIuNCA1LjQgMCA3LjItMTIuNyAxMC42LTE3LjkgMTUuNS0uMi4yLS40LjQtLjYuNWwtNi0yLjMtLjQgMS4zYzAgLjEtLjEuMy0uMyAxLjEtLjYgMi0xLjkgNi4zLTIuNyA4LjdsLS4zIDEgLjUuM2MtMy41IDQuNy02LjQgMTAtNyAxNS40LTEuNC0xLjUtMi44LTIuNy00LjMtNCAuMi0uNS4zLTEuMS4zLTEuNi4xLTEuNi0uNC0zLjEtMS40LTQuMi0uNy0uOC0xLjctMS4zLTIuOC0xLjQtMS0uMS0yLjEuMy0yLjkgMS4xLS4yLjItLjQuMy0uNS41LS4yLS4yLS40LS4zLS42LS41LTItMS41LTQuNC0zLjMtNS45LTQuOS0uNi0uNy0xLjItMS4xLTIuNi0xLjEtLjUgMC0xLjgtLjEtMi43LS4xcy0xLjQuNy0yLjQgMS42Yy0uNS40LTEuOCAxLjUtMy40IDIuNy43LjcgMS41IDEuNSAyLjIgMi4zLjQuNC44LjkgMS4xIDEuMy40LS4zLjgtLjYgMS0uOC42LS41IDEuNC0uNiAyLjItLjZzMS44LjYgMi42IDEuN2MuNS44IDUuNCA3LjEgOS40IDExLjYtLjQuMS0uOS4zLTEuMy41LTEuNy43LTUuNi42LTcuMy40LTEuNy0uMS0yLjEtLjYtMy4yIDEuMy0uNC43LTEgMS41LTEuNiAyLjJzLTEgMS41LjIgMy41YzEuOCAzIDYuMSAxMC44IDcuNiAxNC4zIDEuNCAzLjUgMy4yIDQuMSA1LjkgNS4yIDIuOCAxLjEgNy41IDMuOSA4LjEgNC41bC4yLTIuN2MtLjgtLjgtMy41LTEuOC00LjUtMi4ycy0xLjMtLjgtLjEtLjggNC41IDEuMiA2LjkgMi4yYy0uNy0yLjctMy4yLTUuNi00LjctNy4yLTItLjYtNC0uNi00LjkuMS4xLjYtLjMgMS4zLTEuMSAxLjNzLTEuMy0uNy0xLjEtMS40Yy4zLS44IDEuNC0xLjEgMS4yLTIuNnMtMi4xLTEuOC0zLjQtMS45Yy0xLjctMi41LTMuNy02LjEtNC41LTcuNS0uOS0xLjUtLjQtMi4zLjMtMi44IDEuNS0xLjIgNC41LjYgMTAuNiAxIDIuMS4xIDQuOC4zIDcuNS40LjggNyAzLjYgMTMuNyAxMy40IDE2LjIgNC44IDEuMiA5LjcgNC43IDExLjQgOS4zLTE5LjYtLjMtMjIuNiA3LjMtMjIuNiAxNC41IDAgOC4yIDYuOSA3LjcgNi45IDEzLjkgMCA1LjMtMTYuNSA3LjYtMjEuNCA4LjMtNC4yLjYtNi42IDEuNS04LjYgMy42LTIgMi00LjEgNC03LjcgNy42IDAgMCAxLjYuNCAzLjEuM2wyLjgtMy42Yy44LTEuMiAxLjQtMi4yIDEuOS0yLjEuNi4xLjIgMS0uNSAyLjNsLTIuMyAzLjljOS43LjcgMTAuMy0yLjkgMTAuMy00LjRzLTIuNC0yLjUtMS0zLjQgMi42LS4zIDMuNyAxIDEuNSAyLjQgNC4xIDEuNGMwIDAgMjEuMS04LjcgMjMuNy05LjkgMi40LTEuMSAxLjctMi4xLjMtMy4zLTEuNi0xLjMtMS44LTMuNC0xLjgtNS42IDAtNi40IDMuOC04LjMgMTAuNy04LjItLjEgMS4xLS4yIDIuMS0uMiAzLjEgMCA5LjkgMTUgMTkuNyAxOS4xIDE5LjcgMS44IDAgNC4zLTEuMyA0LjQgNC42LjEgNC40IDEgNy41LjIgMTIuNnMtMi4zIDUuOS01LjMgOGMtMy4xIDIuMi01LjkgOC45LTcuMiAxMC4zIDEuNC45IDIuOCAxIDQtMi4zLjktMi43IDItNC42IDMuMi01LjMtMS4yIDMtMi4xIDcuNC0yLjYgOC43IDMuOC43IDEwLjEtMi44IDEwLjEtNS41cy0yLjItMi41LTIuMi00LjNjMC0uOCAxLTEuNyAyLjItMS43IDEuNSAwIDIuNyAxLjIgMi44IDEuOCAxLjctLjkgMi44LTIuNiAyLjctNi42IDAtMS41LS4xLTMuMi0uMi00LjhsLjMuNmMuNyAxLjEgMiAxLjggMy41IDEuOSAxLjQuMSAyLjktLjMgNC4yLTEuMSAxLjUtMSAyLjYtMi41IDIuOS00IC4xLS4zLjEtLjcuMS0xIDAtLjktLjItMS43LS43LTIuNC0uNi0xLTEuNi0xLjYtMi44LTEuOS0xLjYtLjMtMy4zLjEtNC44IDEtMS40LjktMi40IDIuMy0yLjggMy43LS4zLTUuNC0uNy0xMC41LS42LTEyLjYuMi0zIC4zLTQuNC0uNy00LjktMS0uNC0yLjEgMS4yLTMuNiAxLjJzLTUuOS00LjEtNS45LTguNGMwLTQuMyA0LjYtOS44IDQuNC0xNS43LS4xLTEuOCAxLjEtMi44IDEuOC0xLjEuOSAyIDIuMiA0LjcgNC4yIDYuOS0xLjIgNy40IDYuOSAxNC42IDEzLjYgOS4zLTMuMy41LTUuNi0yLjUtNy4xLTUuNC42LjEgMS4yLjIgMS44LjJoMWMyLjQgMi45IDkuOCAyLjcgMTEuNy00LjUtMS4zIDEuNS00IDIuNy01LjkgMi40IDIuOC0yLjIgNC4zLTUuOCA0LjMtOS42IDAtMTguOC0yMi44LTIwLjktMjIuOC0zOCAwLTYuMyA1LjUtMTAuNCA5LjQtMTAuNCAxLjUgMCAyLjYuNCAzLjUgMS4xLTEuNSAxLjUtMi4zIDMuOC0yLjEgNi41LjYgMTMuNSAyMi42IDEyLjggMjIuOSAxOS4zIDIuMy05LjYtMTQuMS02LjYtMTQuNy0xOS44Ii8+PC9zdmc+") no-repeat 0 0
+}
+
+.BrandDefra .Logo .break {
+    display: block;
+    padding-top: 4px
+}
+
+@media screen and (min-width:961px) {
+    .BrandDefra .Logo {
+        overflow: hidden;
+        white-space: nowrap;
+        height: 36px;
+        position: relative
+    }
+
+    .BrandDefra .Logo:before {
+        display: inline-block;
+        height: 36px;
+        background-position: 0 3px;
+        margin-right: 12px
+    }
+
+    .BrandDefra .Logo .wordmark {
+        display: inline-block;
+        font-size: 21px;
+        line-height: 21px;
+        position: relative;
+        top: -9px
+    }
+
+    .BrandDefra .Logo .break {
+        display: inline;
+        padding: 0
+    }
+}
+
+.status-error .BrandDefra *,
+.status-error .BrandDefra *>*,
+.status-error .BrandDefra *>*>*,
+.status-error .BrandDefra a,
+.status-error .BrandDefra a:active,
+.status-error .BrandDefra a:hover,
+.status-error .BrandDefra a:visited {
+    color: #fff !important
+}
+
+.theme-Defra footer.Footer {
+    padding-bottom: 1.5rem
+}
+
+.theme-Defra footer.Footer .Page {
+    padding-top: 2.5rem
+}
+
+.theme-Defra footer.Footer p {
+    font-size: 16px
+}
+
+.theme-Defra footer.Footer small p {
+    padding-top: 0
+}
+
+.theme-Defra footer.Footer ol li a,
+.theme-Defra footer.Footer ol li button {
+    font-size: 16px
+}
+
+.theme-Defra footer.Footer ol.Flat li:not(:last-child):after {
+    content: "" !important
+}
+
+.theme-Defra footer.Footer ol.Flat li:not(:last-child) {
+    margin-right: 1rem
+}
+
+.theme-Defra footer.Footer .Spacer {
+    display: none
+}
+
+div:not(.status-error)>.theme-Defra footer.Footer {
+    background-color: #f8f8f8;
+    border-top: 1px solid #cbd3da
+}
+
+@media (prefers-color-scheme:dark) {
+    div:not(.status-error)>.theme-Defra footer.Footer {
+        background-color: rgba(0, 0, 0, .2);
+        border-top: 1px solid #000
+    }
+}
+
+div:not(.status-error)>.theme-Defra footer.Footer .Page {
+    border-top: none
+}
+
+.theme-Defra,
+.theme-Defra .Page .Collapsible #menuBurger span {
+    background: #fff
+}
+
+.theme-Defra {
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra {
+        color: #fff;
+        background: #292d33
+    }
+}
+
+.theme-Defra svg {
+    fill: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra svg {
+        fill: #fff
+    }
+}
+
+.theme-Defra a {
+    color: #000;
+    border-bottom-color: #000
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra a {
+        border-bottom-color: #fff;
+        color: #fff
+    }
+}
+
+.theme-Defra a:visted {
+    color: #000;
+    border-bottom-color: #000
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra a:visted {
+        border-bottom-color: #fff;
+        color: #fff
+    }
+}
+
+.theme-Defra a:active {
+    color: #000;
+    border-bottom-color: #000
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra a:active {
+        border-bottom-color: #fff;
+        color: #fff
+    }
+}
+
+.theme-Defra fieldset {
+    border-top: 1px solid rgba(0, 0, 0, .1)
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra fieldset {
+        border-top: 1px solid hsla(0, 0%, 100%, .1)
+    }
+}
+
+.theme-Defra .panel {
+    background: rgba(0, 0, 0, .1)
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .panel {
+        background: hsla(0, 0%, 100%, .1)
+    }
+}
+
+.theme-Defra .status-attention,
+.theme-Defra .status-cool,
+.theme-Defra .status-error,
+.theme-Defra .status-info,
+.theme-Defra .status-success {
+    color: #000 !important
+}
+
+.theme-Defra .status-attention a,
+.theme-Defra .status-attention a:active,
+.theme-Defra .status-attention a:hover,
+.theme-Defra .status-attention a:visited,
+.theme-Defra .status-cool a,
+.theme-Defra .status-cool a:active,
+.theme-Defra .status-cool a:hover,
+.theme-Defra .status-cool a:visited,
+.theme-Defra .status-error a,
+.theme-Defra .status-error a:active,
+.theme-Defra .status-error a:hover,
+.theme-Defra .status-error a:visited,
+.theme-Defra .status-info a,
+.theme-Defra .status-info a:active,
+.theme-Defra .status-info a:hover,
+.theme-Defra .status-info a:visited,
+.theme-Defra .status-success a,
+.theme-Defra .status-success a:active,
+.theme-Defra .status-success a:hover,
+.theme-Defra .status-success a:visited {
+    color: #000 !important;
+    border-color: #000 !important
+}
+
+.theme-Defra .status-attention {
+    background: #fcc5fc
+}
+
+.theme-Defra .status-cool {
+    background: #c5e6fc
+}
+
+.theme-Defra .status-info {
+    background: #fffe54 !important
+}
+
+.theme-Defra.status-error,
+.theme-Defra .status-error,
+.theme-Defra.status-error>*,
+.theme-Defra .status-error>* {
+    background: #ffbdbd !important
+}
+
+.theme-Defra.status-error *,
+.theme-Defra .status-error * {
+    color: #000
+}
+
+.theme-Defra.status-error .weak,
+.theme-Defra .status-error .weak {
+    color: rgba(0, 0, 0, .5) !important
+}
+
+.theme-Defra.status-error *>* * svg,
+.theme-Defra .status-error *>* * svg {
+    stroke: #000 !important
+}
+
+.theme-Defra.status-error .Navigation .inner,
+.theme-Defra .status-error .Navigation .inner {
+    border-color: #000 !important
+}
+
+.theme-Defra.status-error #menuBurger span,
+.theme-Defra .status-error #menuBurger span {
+    background: #000
+}
+
+.theme-Defra.status-error .Footer .Page,
+.theme-Defra .status-error .Footer .Page {
+    border-color: #000
+}
+
+.theme-Defra.status-error .Footer .InlineButton,
+.theme-Defra .status-error .Footer .InlineButton,
+.theme-Defra.status-error .Footer a,
+.theme-Defra .status-error .Footer a,
+.theme-Defra.status-error .Footer a:active,
+.theme-Defra .status-error .Footer a:active,
+.theme-Defra.status-error .Footer a:hover,
+.theme-Defra .status-error .Footer a:hover,
+.theme-Defra.status-error .Footer a:visited,
+.theme-Defra .status-error .Footer a:visited {
+    border-color: #000 !important
+}
+
+@media screen and (max-width:960px) {
+
+    .theme-Defra.status-error header .Sidebar,
+    .theme-Defra .status-error header .Sidebar {
+        display: none
+    }
+}
+
+@media screen and (min-width:961px) {
+
+    .theme-Defra.status-error .Navigation,
+    .theme-Defra .status-error .Navigation {
+        border-bottom-color: #000 !important
+    }
+}
+
+.theme-Defra .status-success {
+    background: #8dfb88 !important
+}
+
+.theme-Defra table thead tr {
+    border-bottom: 2px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra table thead tr {
+        border-bottom: 2px solid #fff
+    }
+}
+
+.theme-Defra table .thead .tr {
+    border-bottom: 2px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra table .thead .tr {
+        border-bottom: 2px solid #fff
+    }
+}
+
+.theme-Defra .table thead tr {
+    border-bottom: 2px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .table thead tr {
+        border-bottom: 2px solid #fff
+    }
+}
+
+.theme-Defra .table .thead .tr {
+    border-bottom: 2px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .table .thead .tr {
+        border-bottom: 2px solid #fff
+    }
+}
+
+.theme-Defra table tr:not(:last-child) {
+    border-bottom: 1px solid #999
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra table tr:not(:last-child) {
+        border-bottom: 1px solid #999
+    }
+}
+
+.theme-Defra table .tr:not(:last-child) {
+    border-bottom: 1px solid #999
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra table .tr:not(:last-child) {
+        border-bottom: 1px solid #999
+    }
+}
+
+.theme-Defra .table tr:not(:last-child) {
+    border-bottom: 1px solid #999
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .table tr:not(:last-child) {
+        border-bottom: 1px solid #999
+    }
+}
+
+.theme-Defra .table .tr:not(:last-child) {
+    border-bottom: 1px solid #999
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .table .tr:not(:last-child) {
+        border-bottom: 1px solid #999
+    }
+}
+
+@media screen and (min-width:961px) {
+    .theme-Defra .TableWhenWide .thead .tr {
+        border-bottom: 2px solid #fff
+    }
+
+    @media (prefers-color-scheme:dark) {
+        .theme-Defra .TableWhenWide .thead .tr {
+            border-bottom: 2px solid #fff
+        }
+    }
+
+    .theme-Defra .TableWhenWide .tr:not(:last-child) {
+        border-bottom: 1px solid #999
+    }
+
+    @media (prefers-color-scheme:dark) {
+        .theme-Defra .TableWhenWide .tr:not(:last-child) {
+            border-bottom: 1px solid #999
+        }
+    }
+}
+
+.theme-Defra .weak {
+    color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .weak {
+        color: #999
+    }
+}
+
+.theme-Defra .knockback {
+    color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .knockback {
+        color: #999
+    }
+}
+
+.theme-Defra .AdminHeader {
+    background: rgba(0, 0, 0, .1)
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .AdminHeader {
+        background: rgba(0, 0, 0, .2)
+    }
+}
+
+.theme-Defra .AdminHeader address {
+    color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .AdminHeader address {
+        color: #999
+    }
+}
+
+.theme-Defra .Button {
+    background: #fff;
+    box-shadow: inset 0 0 0 2px #000;
+    color: #000
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Button {
+        color: #fff;
+        box-shadow: inset 0 0 0 2px #fff;
+        background: #292d33
+    }
+}
+
+.theme-Defra .Button.Hero {
+    background: #000;
+    color: #fff
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Button.Hero {
+        color: #292d33;
+        background: #fff
+    }
+}
+
+.theme-Defra .Button.Danger {
+    box-shadow: inset 0 0 0 2px red;
+    color: red
+}
+
+.theme-Defra .Button.Disabled {
+    box-shadow: inset 0 0 0 2px #999;
+    color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Button.Disabled {
+        color: #999;
+        box-shadow: inset 0 0 0 2px #999
+    }
+}
+
+.theme-Defra .Catalogue td button.pill {
+    box-shadow: inset 0 0 0 2px #fff
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Catalogue td button.pill {
+        box-shadow: inset 0 0 0 2px #292d33
+    }
+}
+
+.theme-Defra .Catalogue .TableWhenWide .tr {
+    border-top-color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Catalogue .TableWhenWide .tr {
+        border-top-color: #fff
+    }
+}
+
+.theme-Defra .Checkbox label:before {
+    border: 1px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Checkbox label:before {
+        border: 1px solid #fff
+    }
+}
+
+.theme-Defra .Checkbox label:after {
+    border-left: 2px solid #292d33;
+    border-bottom: 2px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Checkbox label:after {
+        border-bottom: 2px solid #fff;
+        border-left: 2px solid #fff
+    }
+}
+
+.theme-Defra .CodelistViewDrilldown .scrolling {
+    background: rgba(0, 0, 0, .2)
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .CodelistViewDrilldown .scrolling {
+        background: rgba(0, 0, 0, .2);
+        background: #292d33
+    }
+}
+
+.theme-Defra .Nested .children .NestedConcept {
+    border-left: 1px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Nested .children .NestedConcept {
+        border-left: 1px solid #fff
+    }
+}
+
+.theme-Defra .Nested .children .NestedConcept:last-child:before {
+    border-left: 1px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Nested .children .NestedConcept:last-child:before {
+        border-left: 1px solid #fff
+    }
+}
+
+.theme-Defra .Nested .children .NestedConcept .instead {
+    border-left: 1px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Nested .children .NestedConcept .instead {
+        border-left: 1px solid #fff
+    }
+}
+
+.theme-Defra .Nested .NestedConcept .box:before {
+    border-top: 1px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Nested .NestedConcept .box:before {
+        border-top: 1px solid #fff
+    }
+}
+
+.theme-Defra .Selection {
+    background: #fff !important
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Selection {
+        background: #181a1e !important
+    }
+}
+
+.theme-Defra .Geography .clickable {
+    border: 3px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Geography .clickable {
+        border: 3px solid #fff
+    }
+}
+
+.theme-Defra .Geography .clickable.selected {
+    background: #fff
+}
+
+.theme-Defra .Geography .clickable.selected:before {
+    color: #000
+}
+
+.theme-Defra .CodelistConcept.concept {
+    background: #efefef
+}
+
+.theme-Defra .CodelistConcept.concept .clickable {
+    border: 1px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .CodelistConcept.concept .clickable {
+        border: 1px solid #fff
+    }
+}
+
+.theme-Defra .CodelistConcept.concept .clickable.selected {
+    background: #fff
+}
+
+.theme-Defra .CodelistConcept.concept .clickable.selected:before {
+    color: #000
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .CodelistConcept.concept {
+        background: #efefef;
+        background: hsla(0, 0%, 100%, .1)
+    }
+}
+
+.theme-Defra .Geography .CodelistConcept.concept {
+    background: #efefef
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Geography .CodelistConcept.concept {
+        background: #efefef;
+        background: hsla(0, 0%, 100%, .1)
+    }
+}
+
+.theme-Defra .Copiable .Field {
+    background: rgba(0, 0, 0, .1)
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Copiable .Field {
+        background: hsla(0, 0%, 100%, .1)
+    }
+}
+
+.theme-Defra .Copiable textarea {
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Copiable textarea {
+        color: #fff
+    }
+}
+
+.theme-Defra .Footer .Page {
+    border-top: 2px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Footer .Page {
+        border-top: 2px solid #fff
+    }
+}
+
+@media screen and (max-width:960px) {
+    .theme-Defra td.dimension {
+        border-top: 1px solid #fff !important
+    }
+
+    @media (prefers-color-scheme:dark) {
+        .theme-Defra td.dimension {
+            border-top: 1px solid #fff !important
+        }
+    }
+}
+
+.theme-Defra .FileUpload svg {
+    fill: none;
+    stroke: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .FileUpload svg {
+        fill: none;
+        stroke: #fff
+    }
+}
+
+.theme-Defra .FileUpload .button {
+    background: #fff;
+    box-shadow: inset 0 0 0 2px #000;
+    color: #000
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .FileUpload .button {
+        color: #fff;
+        box-shadow: inset 0 0 0 2px #fff;
+        background: #292d33
+    }
+}
+
+.theme-Defra .highlight {
+    background: #ffffb3;
+    color: #000 !important
+}
+
+.theme-Defra .Icon {
+    stroke: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Icon {
+        stroke: #fff
+    }
+}
+
+.theme-Defra .status-error .Icon,
+.theme-Defra .status-info .Icon {
+    stroke: #000
+}
+
+.theme-Defra .IconButton.Hero {
+    background: #292d33;
+    border-radius: 50%;
+    padding: 1rem
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .IconButton.Hero {
+        border-radius: 50%;
+        padding: 1rem;
+        background: #fff
+    }
+}
+
+.theme-Defra .IconButton.Hero .Icon {
+    stroke: #fff
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .IconButton.Hero .Icon {
+        stroke: #292d33
+    }
+}
+
+.theme-Defra .IconButton.Danger .Icon {
+    stroke: red
+}
+
+.theme-Defra .IconButton.Disabled .Icon {
+    opacity: .3
+}
+
+.theme-Defra .InlineButton {
+    color: inherit;
+    border-bottom-color: #000
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .InlineButton {
+        color: inherit;
+        border-bottom-color: #fff
+    }
+}
+
+.theme-Defra .InlineButton.invisible {
+    border-bottom: 0 !important
+}
+
+.theme-Defra .Message {
+    background: #fffe54;
+    color: #000 !important
+}
+
+.theme-Defra .Message>.Icon {
+    stroke: #000 !important
+}
+
+.theme-Defra .Message .Button,
+.theme-Defra .Message a {
+    color: #000 !important;
+    border-color: #000 !important
+}
+
+.theme-Defra .Message .Button {
+    background: transparent;
+    box-shadow: inset 0 0 0 2px #000 !important
+}
+
+.theme-Defra .Loading {
+    background: transparent
+}
+
+.theme-Defra .Loading span:before {
+    background: #000
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Loading span:before {
+        background: #fff
+    }
+}
+
+.theme-Defra .Loading span:after {
+    background: #000
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Loading span:after {
+        background: #fff
+    }
+}
+
+.theme-Defra .Metadata .Columns:not(:first-child) {
+    border-top: 1px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Metadata .Columns:not(:first-child) {
+        border-top: 1px solid #fff
+    }
+}
+
+.theme-Defra dd .content[lang]:before {
+    color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra dd .content[lang]:before {
+        color: #999
+    }
+}
+
+.theme-Defra dd .prefix {
+    color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra dd .prefix {
+        color: #999
+    }
+}
+
+.theme-Defra dd .type {
+    color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra dd .type {
+        color: #999
+    }
+}
+
+.theme-Defra dt .content[lang]:before {
+    color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra dt .content[lang]:before {
+        color: #999
+    }
+}
+
+.theme-Defra dt .prefix {
+    color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra dt .prefix {
+        color: #999
+    }
+}
+
+.theme-Defra dt .type {
+    color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra dt .type {
+        color: #999
+    }
+}
+
+.theme-Defra .Modal {
+    background: #f2f2f2
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Modal {
+        background: #292d33
+    }
+}
+
+.theme-Defra .ModalGDPR {
+    background: #fff
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .ModalGDPR {
+        background: #292d33
+    }
+}
+
+.theme-Defra .ModalGDPR .footer {
+    background: rgba(0, 0, 0, .1)
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .ModalGDPR .footer {
+        background: hsla(0, 0%, 100%, .1)
+    }
+}
+
+.theme-Defra .Navigation {
+    border-color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Navigation {
+        border-color: #fff
+    }
+}
+
+.theme-Defra .Navigation .inner {
+    border-color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Navigation .inner {
+        border-color: #fff
+    }
+}
+
+.theme-Defra .Navigation .inner a {
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Navigation .inner a {
+        color: #fff
+    }
+}
+
+.theme-Defra #menuBurger span {
+    background: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra #menuBurger span {
+        background: #fff
+    }
+}
+
+.theme-Defra .OntologyContent div:not(:first-child) {
+    border-top: 1px solid #999
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .OntologyContent div:not(:first-child) {
+        border-top: 1px solid #999
+    }
+}
+
+.theme-Defra .pill .Inner,
+.theme-Defra .Pill .Inner {
+    background-color: #ddd;
+    color: #000 !important
+}
+
+.theme-Defra .pill:after,
+.theme-Defra .Pill:after,
+.theme-Defra .pill:before,
+.theme-Defra .Pill:before {
+    background-color: #ddd;
+    color: #ddd
+}
+
+.theme-Defra .Pill.Clearable:before {
+    background-color: #292d33;
+    color: #fff
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Pill.Clearable:before {
+        color: #292d33;
+        background-color: #fff
+    }
+}
+
+@media (prefers-color-scheme:light) {
+    .theme-Defra .Pill.Clearable .Inner {
+        background: #fff !important;
+        color: #292d33 !important;
+        background: #292d33 !important;
+        color: #fff !important
+    }
+
+    @media (prefers-color-scheme:dark) {
+        .theme-Defra .Pill.Clearable .Inner {
+            color: #fff !important;
+            background: #292d33 !important
+        }
+    }
+
+    .theme-Defra .pill.Clearable .Inner {
+        background: #fff !important;
+        color: #292d33 !important;
+        background: #292d33 !important;
+        color: #fff !important
+    }
+
+    @media (prefers-color-scheme:dark) {
+        .theme-Defra .pill.Clearable .Inner {
+            color: #fff !important;
+            background: #292d33 !important
+        }
+    }
+
+    .theme-Defra .Pill.Clearable:after {
+        background: #fff !important;
+        color: #fff !important;
+        background: #292d33 !important;
+        color: #292d33 !important
+    }
+
+    @media (prefers-color-scheme:dark) {
+        .theme-Defra .Pill.Clearable:after {
+            color: #292d33 !important;
+            background: #292d33 !important
+        }
+    }
+
+    .theme-Defra .pill.Clearable:after {
+        background: #fff !important;
+        color: #fff !important;
+        background: #292d33 !important;
+        color: #292d33 !important
+    }
+
+    @media (prefers-color-scheme:dark) {
+        .theme-Defra .pill.Clearable:after {
+            color: #292d33 !important;
+            background: #292d33 !important
+        }
+    }
+}
+
+.theme-Defra .RawSource {
+    border: 1px solid rgba(0, 0, 0, .4)
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .RawSource {
+        border: 1px solid rgba(0, 0, 0, .4);
+        background: rgba(0, 0, 0, .2)
+    }
+}
+
+.theme-Defra .RawSource.Highlighted {
+    color: #999
+}
+
+.theme-Defra .Select select {
+    background: #fff;
+    box-shadow: inset 0 0 0 1px #292d33;
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Select select {
+        color: #fff;
+        box-shadow: inset 0 0 0 1px #fff;
+        background: #292d33
+    }
+}
+
+.theme-Defra .Select .react-select__menu {
+    background: #fff;
+    border: 1px solid #fff
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Select .react-select__menu {
+        background: #292d33;
+        border: 1px solid #fff
+    }
+}
+
+.theme-Defra .Select .react-select__control {
+    background: #fff
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Select .react-select__control {
+        background: #292d33
+    }
+}
+
+.theme-Defra .Select .react-select__single-value {
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Select .react-select__single-value {
+        color: #fff
+    }
+}
+
+.theme-Defra .Select .react-select__multi-value,
+.theme-Defra .Select .react-select__multi-value__remove {
+    background: #ddd;
+    color: #000
+}
+
+.theme-Defra .Select .react-select__option--is-disabled {
+    color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Select .react-select__option--is-disabled {
+        color: #999
+    }
+}
+
+.theme-Defra .Select .react-select__option--is-focused {
+    color: #000
+}
+
+.theme-Defra .Sorter svg {
+    stroke: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Sorter svg {
+        stroke: #999
+    }
+}
+
+.theme-Defra .Sorter.ascending .asc {
+    stroke: #000;
+    stroke-width: 4px
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Sorter.ascending .asc {
+        stroke-width: 4px;
+        stroke: #fff
+    }
+}
+
+.theme-Defra .Sorter.descending .desc {
+    stroke: #000;
+    stroke-width: 4px
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Sorter.descending .desc {
+        stroke-width: 4px;
+        stroke: #fff
+    }
+}
+
+.theme-Defra .Sparql .Editor {
+    border: 1px solid rgba(0, 0, 0, .4)
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Sparql .Editor {
+        border: 1px solid rgba(0, 0, 0, .4);
+        background: rgba(0, 0, 0, .2)
+    }
+}
+
+.theme-Defra .Sparqlv2 .Editor,
+.theme-Defra .Sparqlv2 .HistoryItem {
+    border: 1px solid rgba(0, 0, 0, .4)
+}
+
+@media (prefers-color-scheme:dark) {
+
+    .theme-Defra .Sparqlv2 .Editor,
+    .theme-Defra .Sparqlv2 .HistoryItem {
+        border: 1px solid hsla(0, 0%, 100%, .2)
+    }
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Sparqlv2 .Editor {
+        background: rgba(0, 0, 0, .2)
+    }
+}
+
+.theme-Defra .Sparqlv2 .HistoryItem .Header.favourite {
+    background: #fffe54;
+    color: #000
+}
+
+.theme-Defra .Sparqlv2 .HistoryItem .Header.favourite svg {
+    stroke: #000
+}
+
+.theme-Defra .Sparqlv2 .HistoryItem .Header.favourite .toggleFavourite svg {
+    fill: #000 !important
+}
+
+.theme-Defra .Sparqlv2 .HistoryItem .Header.favourite .Accessory {
+    border-color: #000
+}
+
+.theme-Defra .StickyList .heading {
+    background: #fff
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .StickyList .heading {
+        background: #292d33
+    }
+}
+
+.theme-Defra .StickyList .heading h4 {
+    background: rgba(0, 0, 0, .1);
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .StickyList .heading h4 {
+        color: #fff;
+        background: hsla(0, 0%, 100%, .1)
+    }
+}
+
+.theme-Defra .StickyList .item {
+    border-top: 1px solid #999
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .StickyList .item {
+        border-top: 1px solid #999
+    }
+}
+
+.theme-Defra .StickyList .heading+.item {
+    border-top: 1px solid transparent
+}
+
+.theme-Defra .Switch label {
+    color: #fff
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Switch label {
+        color: #292d33
+    }
+}
+
+.theme-Defra .Switch label .h3 {
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Switch label .h3 {
+        color: #fff
+    }
+}
+
+.theme-Defra .Switch label>input+.Accessory>.switch {
+    background: #fff
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Switch label>input+.Accessory>.switch {
+        background: #292d33
+    }
+}
+
+.theme-Defra .Switch label>input+.Accessory+.label {
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Switch label>input+.Accessory+.label {
+        color: #fff
+    }
+}
+
+.theme-Defra .Switch label>input:not(:checked)+.Accessory {
+    background: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Switch label>input:not(:checked)+.Accessory {
+        background: #999
+    }
+}
+
+.theme-Defra .Switch label>input:not(:checked)+.Accessory>.switch {
+    border-color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Switch label>input:not(:checked)+.Accessory>.switch {
+        border-color: #999
+    }
+}
+
+.theme-Defra .Switch label>input:checked+.Accessory {
+    background: #ff5a05
+}
+
+.theme-Defra .Switch label>input:checked+.Accessory>.switch {
+    border-color: #ff5a05
+}
+
+.theme-Defra .Switch label>input.active+.Accessory,
+.theme-Defra .Switch label>input:focus+.Accessory {
+    box-shadow: 0 0 5px 3px rgba(0, 119, 200, .5)
+}
+
+.theme-Defra .TabularData ol li:first-child>span {
+    border-bottom: 2px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .TabularData ol li:first-child>span {
+        border-bottom: 2px solid #fff
+    }
+}
+
+.theme-Defra .TabularData ol li>span {
+    border-bottom: 1px solid rgba(0, 0, 0, .1)
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .TabularData ol li>span {
+        border-bottom: 1px solid hsla(0, 0%, 100%, .1)
+    }
+}
+
+.theme-Defra .TabularData ol li:last-child>span {
+    oborder-bottom: 0
+}
+
+.theme-Defra .TabularList li:first-child>span {
+    border-bottom: 2px solid #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .TabularList li:first-child>span {
+        border-bottom: 2px solid #fff
+    }
+}
+
+.theme-Defra .TabularList li>span {
+    border-bottom: 1px solid rgba(0, 0, 0, .1)
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .TabularList li>span {
+        border-bottom: 1px solid hsla(0, 0%, 100%, .1)
+    }
+}
+
+.theme-Defra .TabularList li:last-child>span {
+    border-bottom: 0
+}
+
+.theme-Defra .TextArea {
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .TextArea {
+        color: #fff
+    }
+}
+
+.theme-Defra .TextArea textarea {
+    background: #fff;
+    border: 1px solid #292d33;
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .TextArea textarea {
+        color: #fff;
+        border: 1px solid #fff;
+        background: #292d33
+    }
+}
+
+.theme-Defra .TextArea textarea:focus {
+    box-shadow: inset 0 0 0 1px #1e90ff
+}
+
+.theme-Defra .TextInput {
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .TextInput {
+        color: #fff
+    }
+}
+
+.theme-Defra .TextInput input {
+    background: #fff;
+    border: 1px solid #292d33;
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .TextInput input {
+        color: #fff;
+        border: 1px solid #fff;
+        background: #292d33
+    }
+}
+
+.theme-Defra .TextInput input:focus {
+    box-shadow: inset 0 0 0 1px #1e90ff
+}
+
+.theme-Defra .TextInput button {
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .TextInput button {
+        color: #fff
+    }
+}
+
+.theme-Defra .Twirl .Accessory {
+    border-color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Twirl .Accessory {
+        border-color: #fff
+    }
+}
+
+.theme-Defra .Twirl .weak {
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Twirl .weak {
+        color: #fff
+    }
+}
+
+.theme-Defra .status-error .Twirl .Accessory,
+.theme-Defra .status-info .Twirl .Accessory,
+.theme-Defra .status-success .Twirl .Accessory {
+    border-color: #000
+}
+
+.theme-Defra .Progress li {
+    color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Progress li {
+        color: #999
+    }
+}
+
+.theme-Defra .Progress li .node {
+    border: 2px solid #999;
+    background-color: #fff
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Progress li .node {
+        background-color: #292d33;
+        border: 2px solid #999
+    }
+}
+
+.theme-Defra .Progress li.current {
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Progress li.current {
+        color: #fff
+    }
+}
+
+.theme-Defra .Progress li.current .node {
+    border-color: #292d33;
+    background-color: #292d33;
+    color: #fff
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Progress li.current .node {
+        color: #292d33;
+        background-color: #fff;
+        border-color: #fff
+    }
+}
+
+.theme-Defra .Progress li.complete {
+    color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Progress li.complete {
+        color: #fff
+    }
+}
+
+.theme-Defra .Progress li.complete .node {
+    border-color: #292d33;
+    background-color: #8dfb88;
+    color: #000
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Progress li.complete .node {
+        background-color: #8dfb88;
+        color: #000;
+        border-color: #fff
+    }
+}
+
+.theme-Defra .Progress li:not(:last-child):before {
+    background-color: #999
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Progress li:not(:last-child):before {
+        background-color: #999
+    }
+}
+
+.theme-Defra .Progress li.complete:before {
+    background-color: #292d33
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Progress li.complete:before {
+        background-color: #fff
+    }
+}
+
+.theme-Defra .Progress li.current:before {
+    background: linear-gradient(90deg, #292d33 0, #999)
+}
+
+@media (prefers-color-scheme:dark) {
+    .theme-Defra .Progress li.current:before {
+        background: linear-gradient(90deg, #fff 0, #999)
+    }
+}
+
+@media (prefers-color-scheme:dark) {
+
+    .theme-Defra .status-attention,
+    .theme-Defra .status-cool,
+    .theme-Defra .status-error,
+    .theme-Defra .status-info,
+    .theme-Defra .status-success {
+        color: #000 !important
+    }
+
+    .theme-Defra .status-attention a,
+    .theme-Defra .status-attention a:active,
+    .theme-Defra .status-attention a:hover,
+    .theme-Defra .status-attention a:visited,
+    .theme-Defra .status-cool a,
+    .theme-Defra .status-cool a:active,
+    .theme-Defra .status-cool a:hover,
+    .theme-Defra .status-cool a:visited,
+    .theme-Defra .status-error a,
+    .theme-Defra .status-error a:active,
+    .theme-Defra .status-error a:hover,
+    .theme-Defra .status-error a:visited,
+    .theme-Defra .status-info a,
+    .theme-Defra .status-info a:active,
+    .theme-Defra .status-info a:hover,
+    .theme-Defra .status-info a:visited,
+    .theme-Defra .status-success a,
+    .theme-Defra .status-success a:active,
+    .theme-Defra .status-success a:hover,
+    .theme-Defra .status-success a:visited {
+        color: #000 !important;
+        border-color: #000 !important
+    }
+
+    .theme-Defra .status-attention {
+        background: #fcc5fc
+    }
+
+    .theme-Defra .status-cool {
+        background: #c5e6fc
+    }
+
+    .theme-Defra .status-info {
+        background: #fffe54 !important
+    }
+
+    .theme-Defra.status-error,
+    .theme-Defra .status-error,
+    .theme-Defra.status-error>*,
+    .theme-Defra .status-error>* {
+        background: #ffbdbd !important
+    }
+
+    .theme-Defra.status-error *,
+    .theme-Defra .status-error * {
+        color: #000
+    }
+
+    .theme-Defra.status-error .weak,
+    .theme-Defra .status-error .weak {
+        color: rgba(0, 0, 0, .5) !important
+    }
+
+    .theme-Defra.status-error *>* * svg,
+    .theme-Defra .status-error *>* * svg {
+        stroke: #000 !important
+    }
+
+    .theme-Defra.status-error .Navigation .inner,
+    .theme-Defra .status-error .Navigation .inner {
+        border-color: #000 !important
+    }
+
+    .theme-Defra.status-error #menuBurger span,
+    .theme-Defra .status-error #menuBurger span {
+        background: #000
+    }
+
+    .theme-Defra.status-error .Footer .Page,
+    .theme-Defra .status-error .Footer .Page {
+        border-color: #000
+    }
+
+    .theme-Defra.status-error .Footer .InlineButton,
+    .theme-Defra .status-error .Footer .InlineButton,
+    .theme-Defra.status-error .Footer a,
+    .theme-Defra .status-error .Footer a,
+    .theme-Defra.status-error .Footer a:active,
+    .theme-Defra .status-error .Footer a:active,
+    .theme-Defra.status-error .Footer a:hover,
+    .theme-Defra .status-error .Footer a:hover,
+    .theme-Defra.status-error .Footer a:visited,
+    .theme-Defra .status-error .Footer a:visited {
+        border-color: #000 !important
+    }
+
+    .theme-Defra .status-success {
+        background: #8dfb88 !important
+    }
+
+    .theme-Defra .Button.Danger {
+        box-shadow: inset 0 0 0 2px red;
+        color: red
+    }
+
+    .theme-Defra .Geography .clickable.selected {
+        background: #fff
+    }
+
+    .theme-Defra .Geography .clickable.selected:before {
+        color: #000
+    }
+
+    .theme-Defra .CodelistConcept.concept .clickable.selected {
+        background: #fff
+    }
+
+    .theme-Defra .CodelistConcept.concept .clickable.selected:before {
+        color: #000
+    }
+
+    .theme-Defra .highlight {
+        background: #ffffb3;
+        color: #000 !important
+    }
+
+    .theme-Defra .status-error .Icon,
+    .theme-Defra .status-info .Icon {
+        stroke: #000
+    }
+
+    .theme-Defra .IconButton.Danger .Icon {
+        stroke: red
+    }
+
+    .theme-Defra .IconButton.Disabled .Icon {
+        opacity: .3
+    }
+
+    .theme-Defra .InlineButton.invisible {
+        border-bottom: 0 !important
+    }
+
+    .theme-Defra .Message {
+        background: #fffe54;
+        color: #000 !important
+    }
+
+    .theme-Defra .Message>.Icon {
+        stroke: #000 !important
+    }
+
+    .theme-Defra .Message .Button,
+    .theme-Defra .Message a {
+        color: #000 !important;
+        border-color: #000 !important
+    }
+
+    .theme-Defra .Message .Button {
+        background: transparent;
+        box-shadow: inset 0 0 0 2px #000 !important
+    }
+
+    .theme-Defra .Loading {
+        background: transparent
+    }
+
+    .theme-Defra .pill .Inner,
+    .theme-Defra .Pill .Inner {
+        background-color: #ddd;
+        color: #000 !important
+    }
+
+    .theme-Defra .pill:after,
+    .theme-Defra .Pill:after,
+    .theme-Defra .pill:before,
+    .theme-Defra .Pill:before {
+        background-color: #ddd;
+        color: #ddd
+    }
+
+    .theme-Defra .RawSource.Highlighted {
+        color: #999
+    }
+
+    .theme-Defra .Select .react-select__multi-value,
+    .theme-Defra .Select .react-select__multi-value__remove {
+        background: #ddd;
+        color: #000
+    }
+
+    .theme-Defra .Select .react-select__option--is-focused {
+        color: #000
+    }
+
+    .theme-Defra .Sparqlv2 .HistoryItem .Header.favourite {
+        background: #fffe54;
+        color: #000
+    }
+
+    .theme-Defra .Sparqlv2 .HistoryItem .Header.favourite svg {
+        stroke: #000
+    }
+
+    .theme-Defra .Sparqlv2 .HistoryItem .Header.favourite .toggleFavourite svg {
+        fill: #000 !important
+    }
+
+    .theme-Defra .Sparqlv2 .HistoryItem .Header.favourite .Accessory {
+        border-color: #000
+    }
+
+    .theme-Defra .StickyList .heading+.item {
+        border-top: 1px solid transparent
+    }
+
+    .theme-Defra .Switch label>input:checked+.Accessory {
+        background: #ff5a05
+    }
+
+    .theme-Defra .Switch label>input:checked+.Accessory>.switch {
+        border-color: #ff5a05
+    }
+
+    .theme-Defra .Switch label>input.active+.Accessory,
+    .theme-Defra .Switch label>input:focus+.Accessory {
+        box-shadow: 0 0 5px 3px rgba(0, 119, 200, .5)
+    }
+
+    .theme-Defra .TabularData ol li:last-child>span {
+        oborder-bottom: 0
+    }
+
+    .theme-Defra .TabularList li:last-child>span {
+        border-bottom: 0
+    }
+
+    .theme-Defra .TextArea textarea:focus,
+    .theme-Defra .TextInput input:focus {
+        box-shadow: inset 0 0 0 1px #1e90ff
+    }
+
+    .theme-Defra .status-error .Twirl .Accessory,
+    .theme-Defra .status-info .Twirl .Accessory,
+    .theme-Defra .status-success .Twirl .Accessory {
+        border-color: #000
+    }
+}

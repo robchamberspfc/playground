@@ -1,0 +1,109 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "licence-dataset.csv",
+  "dc:title": "licence-dataset",
+  "dc:description": "",
+  "dc:license": "",
+  "dcat:keyword": [],
+  "aboutUrl": "http://datadock.io/robchamberspfc/datasets/id/resource/licenceDataset/row_{_row}",
+  "tableSchema": {
+    "columns": [
+      {
+        "name": "licenceId",
+        "titles": [
+          "Licence ID"
+        ],
+        "datatype": "integer",
+        "propertyUrl": "http://datadock.io/robchamberspfc/datasets/id/definition/licenceId"
+      },
+      {
+        "name": "afANumber",
+        "titles": [
+          "AfA Number"
+        ],
+        "datatype": "integer",
+        "propertyUrl": "http://datadock.io/robchamberspfc/datasets/id/definition/afANumber"
+      },
+      {
+        "name": "afAName",
+        "titles": [
+          "AfA Name"
+        ],
+        "datatype": "string",
+        "propertyUrl": "http://datadock.io/robchamberspfc/datasets/id/definition/afAName"
+      },
+      {
+        "name": "licenceName",
+        "titles": [
+          "Licence Name"
+        ],
+        "datatype": "string",
+        "propertyUrl": "http://datadock.io/robchamberspfc/datasets/id/definition/licenceName"
+      },
+      {
+        "name": "licenceUrl",
+        "titles": [
+          "Licence URL"
+        ],
+        "propertyUrl": "http://datadock.io/robchamberspfc/datasets/id/definition/licenceUrl",
+        "valueUrl": "{licenceUrl}"
+      },
+      {
+        "name": "specialConditions",
+        "titles": [
+          "Special Conditions"
+        ],
+        "datatype": "string",
+        "propertyUrl": "http://datadock.io/robchamberspfc/datasets/id/definition/specialConditions"
+      },
+      {
+        "name": "metadataStatement",
+        "titles": [
+          "Metadata Statement"
+        ],
+        "datatype": "string",
+        "propertyUrl": "http://datadock.io/robchamberspfc/datasets/id/definition/metadataStatement"
+      },
+      {
+        "name": "informationWarning",
+        "titles": [
+          "Information Warning"
+        ],
+        "datatype": "string",
+        "propertyUrl": "http://datadock.io/robchamberspfc/datasets/id/definition/informationWarning"
+      },
+      {
+        "name": "attributionStatement",
+        "titles": [
+          "Attribution Statement"
+        ],
+        "datatype": "string",
+        "propertyUrl": "http://datadock.io/robchamberspfc/datasets/id/definition/attributionStatement"
+      },
+      {
+        "name": "startDate",
+        "titles": [
+          "Start date"
+        ],
+        "datatype": "string",
+        "propertyUrl": "http://datadock.io/robchamberspfc/datasets/id/definition/startDate"
+      },
+      {
+        "name": "supersededDate",
+        "titles": [
+          "Superseded Date"
+        ],
+        "datatype": "boolean",
+        "propertyUrl": "http://datadock.io/robchamberspfc/datasets/id/definition/supersededDate"
+      },
+      {
+        "name": "machineReadableLicence",
+        "titles": [
+          "Machine Readable Licence"
+        ],
+        "datatype": "boolean",
+        "propertyUrl": "http://datadock.io/robchamberspfc/datasets/id/definition/machineReadableLicence"
+      }
+    ]
+  }
+}

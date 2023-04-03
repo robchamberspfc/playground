@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script data-require="d3@3.5.3" data-semver="3.5.3" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.js"></script>
+        
+    </head>
+<body> <button onClick="downloadFile()">Download</button></body>
+     
+
+<script>
+
+
+url = "http://localhost:3001/v1/sparql/live?query=prefix%20rdfs%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3ESELECT%20DISTINCT%3FDescription%20%3FStatus%20%3FType%20%3FScale%20%3FTimetable%20WHERE%20%7B%3Frow%20%3Fp%20%3Chttp%3A%2F%2Fenvironment.data.gov.uk%2Fflood-risk-planning%2Fdef%2FMeasure%3E%20.%20%3Frow%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23label%3E%20%3FDescription%20%20.%20%3Frow%20%3Chttp%3A%2F%2Fenvironment.data.gov.uk%2Fflood-risk-planning%2Fdef%2FimplementationStatus%3E%20%3FStatusURI%20.%20%3FStatusURI%20rdfs%3Alabel%20%3FStatus%20%20.%20%3Frow%20%3Chttp%3A%2F%2Fenvironment.data.gov.uk%2Fflood-risk-planning%2Fdef%2FtypeOfWork%3E%20%3FTypeURI%20.%20%3FTypeURI%20rdfs%3Alabel%20%3FType%20%20.%20%3Frow%20%3Chttp%3A%2F%2Fenvironment.data.gov.uk%2Fflood-risk-planning%2Fdef%2FmeasureScale%3E%20%3FScaleURI%20.%20%3FScaleURI%20rdfs%3Alabel%20%3FScale%20%20.%20%3Frow%20%3Chttp%3A%2F%2Fenvironment.data.gov.uk%2Fflood-risk-planning%2Fdef%2FimplementationTimescale%3E%20%3FTimetable%20%20.%7D%20ORDER%20BY%20asc%20(%3FDescription)%20LIMIT%2010000";
+
+function downloadFile() {
+     var req = new XMLHttpRequest();
+     req.open("GET", url, true);
+     req.responseType = "blob";
+     req.onload = function (event) {
+         var blob = req.response;
+         var fileName = "download.csv"
+         var link=document.createElement('a');
+         link.href=window.URL.createObjectURL(blob);
+         link.download=fileName;
+         link.click();
+     };
+
+     req.send();
+ }
+
+//  downloadFile()
+</script>
+
+</html>

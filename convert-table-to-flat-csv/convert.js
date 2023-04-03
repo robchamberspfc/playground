@@ -2,9 +2,9 @@ const d3 = require('d3-fetch');
 if (typeof fetch !== 'function') {
     global.fetch = require('node-fetch-polyfill');
 }
-const createCsvWriter = require('csv-writer').createObjectCsvWriter;
+const createCsvWriter = require('txt-writer').createObjectTxtWriter;
 
-fetch("http://127.0.0.1:8887/input/config.json").then((response) => response.json())
+fetch("http://localhost:5000/convert-table-to-flat-csv/input/config.json").then((response) => response.json())
     .then(json => {
         afterConfigLoaded(json)
     }).catch(function (error) {
@@ -64,7 +64,7 @@ function afterConfigLoaded(config) {
         //     notation: d[0].Months,
         //     latest: d[0]["Price ppl"]
         // })
-        csvWriter.writeRecords(data)
+        txtWriter.writeRecords(data)
             .then(() => {
                 console.log('...Done');
             });

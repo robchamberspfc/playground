@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Add multiple geometries from one GeoJSON source</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script>
+        // TO MAKE THE MAP APPEAR YOU MUST
+        // ADD YOUR ACCESS TOKEN FROM
+        mapboxToken = 'pk.eyJ1Ijoicm9iMTFwZmMiLCJhIjoiY2s2N3NsdndwMGIxeDNqcGJqdno1aXlqOCJ9.JmqgMDa_Q__r1DZV99ggsg';
+
+        mapboxgl.accessToken = mapboxToken;
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/outdoors-v11',
+            center: [-2, 53],
+            zoom: 5.5
+        });
+
+        map.on('load', () => {
+            map.addSource('national-park', {
+            type: 'geojson',
+            // Use a URL for the value for the `data` property.
+            data: 'National_SMP_Layer_Final.geojson'
+            });
+            
+            let symbol = ["literal", ['464','465','466']]
+            map.addLayer({
+                'id': 'park-volcanoes',
+                'type': 'line',
+                'source': 'national-park',
+                'layout': {
+            'line-join': 'round',
+            'line-cap': 'round'
+        },
+        'paint': {
+            'line-color': '#888',
+            'line-width': 2
+        },
+        
+        "filter": ["all",
+            [">=", '$id', 464],
+            ["<=", '$id', 487]
+            ]
+                // 'filter': ['==', '$type', 'LineString']
+                // 'filter': ['in', '$id', ['464','465','466']],
+                // 487-464
+                // 'filter': ['=', '$SMP', "08 - Essex and South Suffolk"]
+
+                
+            });
+        });
+        console.log(centre)
+    </script>
+
+</body>
+
+</html>
