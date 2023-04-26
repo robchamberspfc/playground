@@ -12,7 +12,7 @@
     "d3": "5",
     "node-fetch": "^2.6.0",
     "node-fetch-polyfill": "^2.0.6",
-    "serve": "^11.3.2",
+    "serve": "^14.2.0",
     "xlsx": "^0.16.9"
   },
   "author": "",
