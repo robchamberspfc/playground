@@ -1,2 +1,3 @@
 .DS_Store
 login-slack/credentials.json
+*node_modules
