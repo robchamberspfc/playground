@@ -10,7 +10,7 @@
     "csv-parser": "^3.0.0",
     "csv-writer": "^1.6.0",
     "d3": "5",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.7",
     "node-fetch-polyfill": "^2.0.6",
     "serve": "^11.3.2",
     "xlsx": "^0.16.9"
