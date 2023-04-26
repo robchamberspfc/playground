@@ -9,7 +9,7 @@
   "dependencies": {
     "csv-parser": "^3.0.0",
     "csv-writer": "^1.6.0",
-    "d3": "5",
+    "d3": "7",
     "node-fetch": "^2.6.0",
     "node-fetch-polyfill": "^2.0.6",
     "serve": "^11.3.2",
