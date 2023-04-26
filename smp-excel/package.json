@@ -13,7 +13,7 @@
     "node-fetch": "^2.6.0",
     "node-fetch-polyfill": "^2.0.6",
     "serve": "^11.3.2",
-    "xlsx": "^0.16.9"
+    "xlsx": "^0.18.5"
   },
   "author": "",
   "license": "ISC"
